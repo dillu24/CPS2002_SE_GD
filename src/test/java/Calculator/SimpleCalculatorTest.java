@@ -27,6 +27,21 @@ public class SimpleCalculatorTest {
         assertEquals(3,calc.subtract(5,2));
     }
 
+    @Test
+    public void testSubtractNegativeAnswer(){
+        assertEquals(-7,calc.subtract(-5,2));
+    }
+
+    @Test
+    public void testAddNegativeAnswer(){
+        assertEquals(-3,calc.add(-5,2));
+    }
+
+    @Test
+    public void testMultiply(){
+        assertEquals(10,calc.multiply(5,2));
+    }
+
     @After
     public void teardown(){
         calc = null;
