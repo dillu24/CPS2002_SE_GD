@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cdaec89-58dc-4c4d-bd50-47acf7c2f74e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Calculator/SimpleCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/Calculator/SimpleCalculator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Calculator/SimpleCalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/Calculator/SimpleCalculatorTest.java" />
-    </list>
+    <list default="true" id="0cdaec89-58dc-4c4d-bd50-47acf7c2f74e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
