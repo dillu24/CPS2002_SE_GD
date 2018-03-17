@@ -14,7 +14,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CPS2002GD$All_in_CPS2002GD__1_.coverage" NAME="All in CPS2002GD (1) Coverage Results" MODIFIED="1521211876558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/CPS2002GD$All_in_CPS2002GD.coverage" NAME="All in CPS2002GD Coverage Results" MODIFIED="1521207207782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/CPS2002GD$CalculatorTests.coverage" NAME="CalculatorTests Coverage Results" MODIFIED="1521214135806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CPS2002GD$CalculatorTests.coverage" NAME="CalculatorTests Coverage Results" MODIFIED="1521281226697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>CPS2002.AssignmentPart1.*</FILTER>
     </SUITE>
   </component>
@@ -35,8 +35,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,13 +58,12 @@
       <file leaf-file-name="CalculatorTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CPS2002/AssignmentPart1/CalculatorTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="286">
               <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding>
-                <element signature="e#293#294#0" expanded="false" />
-                <element signature="e#338#339#0" expanded="false" />
-                <element signature="e#379#380#0" expanded="false" />
-                <element signature="e#412#413#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,28 +145,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CPS2002GD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CPS2002GD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="emma" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -544,40 +521,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_CPS2002GD_(1) - 2018.03.16 at 14h 48m 48s.xml">
-      <configuration name="All in CPS2002GD (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_CPS2002GD_(1) - 2018.03.16 at 15h 51m 18s.xml">
-      <configuration name="All in CPS2002GD (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTests - 2018.03.16 at 14h 05m 38s.xml">
+    <history-entry file="CalculatorTests - 2018.03.16 at 16h 34m 56s.xml">
       <configuration name="CalculatorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTests - 2018.03.16 at 14h 11m 45s.xml">
+    <history-entry file="CalculatorTests - 2018.03.16 at 16h 38m 40s.xml">
       <configuration name="CalculatorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTests - 2018.03.16 at 14h 31m 57s.xml">
+    <history-entry file="CalculatorTests - 2018.03.16 at 16h 39m 04s.xml">
       <configuration name="CalculatorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTests - 2018.03.16 at 16h 02m 45s.xml">
+    <history-entry file="CalculatorTests - 2018.03.16 at 16h 55m 20s.xml">
       <configuration name="CalculatorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTests - 2018.03.16 at 16h 16m 55s.xml">
+    <history-entry file="CalculatorTests - 2018.03.16 at 16h 57m 22s.xml">
       <configuration name="CalculatorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTests - 2018.03.16 at 16h 21m 02s.xml">
+    <history-entry file="CalculatorTests - 2018.03.16 at 16h 59m 51s.xml">
       <configuration name="CalculatorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTests - 2018.03.16 at 16h 24m 05s.xml">
+    <history-entry file="CalculatorTests - 2018.03.16 at 17h 07m 38s.xml">
       <configuration name="CalculatorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTests - 2018.03.16 at 16h 28m 57s.xml">
+    <history-entry file="CalculatorTests - 2018.03.16 at 17h 13m 05s.xml">
+      <configuration name="CalculatorTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorTests - 2018.03.16 at 17h 51m 17s.xml">
+      <configuration name="CalculatorTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorTests - 2018.03.17 at 11h 07m 09s.xml">
       <configuration name="CalculatorTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -595,7 +572,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -651,10 +628,9 @@
         <state relative-caret-position="306">
           <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -683,10 +659,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -715,10 +690,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -747,10 +721,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -779,10 +752,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -811,10 +783,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -832,21 +803,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CPS2002/AssignmentPart1/CalculatorTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="286">
           <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module_cps2002gd.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cps2002gd.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cps2002gd.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4182">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
