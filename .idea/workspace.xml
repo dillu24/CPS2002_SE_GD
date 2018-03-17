@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cdaec89-58dc-4c4d-bd50-47acf7c2f74e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Calculator/SimpleCalculator.class" afterPath="$PROJECT_DIR$/target/classes/Calculator/SimpleCalculator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/coverage-0.ec" afterPath="$PROJECT_DIR$/target/coverage-0.ec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/coverage.em" afterPath="$PROJECT_DIR$/target/coverage.em" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Calculator/SimpleCalculator.class" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Calculator/SimpleCalculator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Calculator/SimpleCalculatorTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Calculator/SimpleCalculatorTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Calculator/SimpleCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/Calculator/SimpleCalculator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Calculator/SimpleCalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/Calculator/SimpleCalculatorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/0.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/0.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/1.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/coverage.xml" afterPath="$PROJECT_DIR$/target/site/emma/coverage.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/index.html" afterPath="$PROJECT_DIR$/target/site/emma/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Calculator.SimpleCalculatorTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/Calculator.SimpleCalculatorTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Calculator.SimpleCalculatorTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Calculator.SimpleCalculatorTest.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,7 +29,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CPS2002_SE_GD$SimpleCalculatorTest.coverage" NAME="SimpleCalculatorTest Coverage Results" MODIFIED="1521291294101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CPS2002_SE_GD$SimpleCalculatorTest.coverage" NAME="SimpleCalculatorTest Coverage Results" MODIFIED="1521293176665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Calculator.*</FILTER>
     </SUITE>
   </component>
@@ -41,13 +55,13 @@
       <file leaf-file-name="SimpleCalculator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Calculator/SimpleCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="218">
+              <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding>
-                <element signature="e#184#185#0" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#241#242#0" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#456#457#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,13 +70,17 @@
       <file leaf-file-name="SimpleCalculatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Calculator/SimpleCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="153">
+              <caret line="13" column="94" lean-forward="false" selection-start-line="13" selection-start-column="94" selection-end-line="13" selection-end-column="94" />
               <folding>
-                <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#1048#1049#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
+                <element signature="e#1211#1212#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -506,9 +524,15 @@
     <history-entry file="SimpleCalculatorTest - 2018.03.17 at 14h 09m 57s.xml">
       <configuration name="SimpleCalculatorTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SimpleCalculatorTest - 2018.03.17 at 14h 17m 19s.xml">
+      <configuration name="SimpleCalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleCalculatorTest - 2018.03.17 at 14h 26m 17s.xml">
+      <configuration name="SimpleCalculatorTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -522,7 +546,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -604,26 +628,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Calculator/SimpleCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="218">
+          <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
           <folding>
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Calculator/SimpleCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        <state relative-caret-position="153">
+          <caret line="13" column="94" lean-forward="false" selection-start-line="13" selection-start-column="94" selection-end-line="13" selection-end-column="94" />
           <folding>
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
           </folding>
         </state>
       </provider>
