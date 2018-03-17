@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CPS2002GD" />
+        <module name="CPS2002_SE_GD" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CPS2002GD" target="1.6" />
+      <module name="CPS2002_SE_GD" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
