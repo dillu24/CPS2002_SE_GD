@@ -18,8 +18,13 @@ public class SimpleCalculatorTest {
     }
 
     @Test
-    public void testAdd(){
+    public void testAdd2Positives(){
         assertEquals(7,calc.add(5,2));
+    }
+
+    @Test
+    public void testSubtractPositiveAnswer(){
+        assertEquals(3,calc.subtract(5,2));
     }
 
     @After
