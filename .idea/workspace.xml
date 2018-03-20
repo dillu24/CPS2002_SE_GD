@@ -41,9 +41,18 @@
       <file leaf-file-name="Position.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="493">
+              <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+              <folding>
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#473#474#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,6 +80,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Calculator/SimpleCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/Calculator/SimpleCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Position.java" />
       </list>
     </option>
   </component>
@@ -695,9 +705,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="493">
+          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
