@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.1.5320 (stable) report, generated Sat Mar 17 14:28:53 CET 2018 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.1.5320 (stable) report, generated Tue Mar 20 17:00:01 CET 2018 -->
 
 <report>
   <stats>
-    <packages value="1"/>
-    <classes value="1"/>
-    <methods value="5"/>
-    <srcfiles value="1"/>
-    <srclines value="9"/>
+    <packages value="4"/>
+    <classes value="4"/>
+    <methods value="16"/>
+    <srcfiles value="4"/>
+    <srclines value="37"/>
   </stats>
   <data>
     <all name="all classes">
-      <coverage type="class, %" value="100% (1/1)"/>
-      <coverage type="method, %" value="100% (5/5)"/>
-      <coverage type="block, %" value="83%  (29/35)"/>
-      <coverage type="line, %" value="84%  (7.6/9)"/>
+      <coverage type="class, %" value="100% (4/4)"/>
+      <coverage type="method, %" value="100% (16/16)"/>
+      <coverage type="block, %" value="95%  (125/131)"/>
+      <coverage type="line, %" value="96%  (35.6/37)"/>
 
       <package name="Calculator">
         <coverage type="class, %" value="100% (1/1)"/>
@@ -57,6 +57,124 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (3/3)"/>
               <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+      <package name="Part2_Multiplayer_Game.Exceptions">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="100% (2/2)"/>
+        <coverage type="block, %" value="100% (9/9)"/>
+        <coverage type="line, %" value="100% (4/4)"/>
+
+        <srcfile name="InvalidCharacterInputMoveException.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (2/2)"/>
+          <coverage type="block, %" value="100% (9/9)"/>
+          <coverage type="line, %" value="100% (4/4)"/>
+
+          <class name="InvalidCharacterInputMoveException">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (9/9)"/>
+            <coverage type="line, %" value="100% (4/4)"/>
+
+            <method name="InvalidCharacterInputMoveException (char): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="getInvalidCharacter (): char">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+      <package name="Part2_Multiplayer_Game.Player">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="100% (4/4)"/>
+        <coverage type="block, %" value="100% (70/70)"/>
+        <coverage type="line, %" value="100% (17/17)"/>
+
+        <srcfile name="TreasureFinderPlayer.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (4/4)"/>
+          <coverage type="block, %" value="100% (70/70)"/>
+          <coverage type="line, %" value="100% (17/17)"/>
+
+          <class name="TreasureFinderPlayer">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (4/4)"/>
+            <coverage type="block, %" value="100% (70/70)"/>
+            <coverage type="line, %" value="100% (17/17)"/>
+
+            <method name="TreasureFinderPlayer (int, int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (12/12)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="getPosition (): Position">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="move (char): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (46/46)"/>
+              <coverage type="line, %" value="100% (9/9)"/>
+            </method>
+            <method name="setPosition (int, int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (9/9)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+      <package name="Part2_Multiplayer_Game.Tressure_Finder_Game">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="100% (5/5)"/>
+        <coverage type="block, %" value="100% (17/17)"/>
+        <coverage type="line, %" value="100% (7/7)"/>
+
+        <srcfile name="Position.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (5/5)"/>
+          <coverage type="block, %" value="100% (17/17)"/>
+          <coverage type="line, %" value="100% (7/7)"/>
+
+          <class name="Position">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (5/5)"/>
+            <coverage type="block, %" value="100% (17/17)"/>
+            <coverage type="line, %" value="100% (7/7)"/>
+
+            <method name="Position (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getX (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getY (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="setX (int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="setY (int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
             </method>
           </class>
         </srcfile>
