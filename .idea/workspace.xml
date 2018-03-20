@@ -5,13 +5,28 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveExceptionTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveExceptionTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Position.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/6.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/7.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveExceptionTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Player.TreasureFinderPlayerTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveExceptionTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Player.TreasureFinderPlayerTest.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Position.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/coverage-0.ec" afterPath="$PROJECT_DIR$/target/coverage-0.ec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/coverage.em" afterPath="$PROJECT_DIR$/target/coverage.em" />
@@ -752,7 +767,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
