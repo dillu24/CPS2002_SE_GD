@@ -14,13 +14,22 @@ import static org.junit.Assert.*;
 
 public class InvalidCharacterInputMoveExceptionTest {
     private InvalidCharacterInputMoveException invException; //The user defined exception object
+
+    /**
+     * Creates an object of type InvalidCharacterInputMoveException with some character 'c' as to test if the
+     * correct input is stored , so that correct output will be outputted
+     */
     @Before
     public void setUp(){
         invException = new InvalidCharacterInputMoveException('c');
     }
 
+    /**
+     * Tests that the correct input has been stored.
+     */
+
     @Test
-    public void getInvalidCharacter(){ //Tests that the correct input has been stored as invalid.
+    public void testGetInvalidCharacter(){
         assertEquals('c',invException.getInvalidCharacter());
     }
 

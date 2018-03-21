@@ -64,5 +64,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveExceptionTest" name="getInvalidCharacter" time="0"/>
+  <testcase classname="Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveExceptionTest" name="testGetInvalidCharacter" time="0"/>
 </testsuite>
