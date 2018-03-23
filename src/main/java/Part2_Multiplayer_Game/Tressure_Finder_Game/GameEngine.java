@@ -3,10 +3,7 @@ package Part2_Multiplayer_Game.Tressure_Finder_Game;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
 import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
-
-import java.util.InputMismatchException;
 import java.util.Random;
-import java.util.Scanner;
 
 
 public class GameEngine {
@@ -14,6 +11,31 @@ public class GameEngine {
     Map map; //Stores the game map
     Position startingPosition[]; //An array of all the starting position of each player , so that whenever a player
                                  //Enters a water tile , he can restart again from that same position.
+    int mapSize; //Stores the size of the map
+    int numberOfPlayers; //stores the number of players playing the game
+
+    public GameEngine(){} //default constructor used for testing the GameEngine class
+
+    /**
+     * This constructor is used to initialize the game fields according to the assignment specification.Thus the
+     * game engine class is initialized correctly only when the passed mapSize and numberOfPlayers values are
+     * in the specified ranges. Other wise the game instance is not created.
+     * @param mapSize
+     * Stores the map size
+     * @param numberOfPlayers
+     * stores the number of players playing the game
+     * @throws InvalidNumberOfPlayersException
+     * Whenever the number of players passed as parameters is not as specified
+     * @throws InvalidMapSizeException
+     * Whenever the number of players passed as parameters is not as specified
+     */
+
+    public GameEngine(int mapSize , int numberOfPlayers) throws InvalidNumberOfPlayersException,InvalidMapSizeException{
+        validNumberOfPlayers(numberOfPlayers); //validate number of players
+        this.numberOfPlayers = numberOfPlayers; //store it if correct
+        validMapSize(numberOfPlayers,mapSize); //validate map size
+        this.mapSize = mapSize; //store it if correct
+    }
 
     /**
      * This method is used to validate that the number of players to play the game as per user input is according
@@ -64,68 +86,6 @@ public class GameEngine {
     }
 
     /**
-     * This method is used to get the number of players as user input in the range between 2 and 8. This method checks
-     * that the input is both in the range and an integer and returns the accepted size.
-     * @return
-     * The number of players entered by the user
-     */
-
-    private int getNumberOfPlayers() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter the number of players you wish to play the game , please enter a number between" +
-                "2 and 8");
-        boolean validInput = false;
-        int numberOfPlayers=0;
-        while (!validInput) { //until input is valid
-            try {
-                numberOfPlayers = sc.nextInt();
-                validNumberOfPlayers(numberOfPlayers); //check input is valid
-                validInput = true; // if valid break loop
-            } catch (InputMismatchException e) { //if input not an integer
-                System.out.println("Please enter an integer!");
-            } catch (InvalidNumberOfPlayersException e){ //if input not in range
-                System.out.println("Please enter an integer between 2 and 8 !");
-            }
-        }
-        return numberOfPlayers;
-    }
-
-    /**
-     * This method is used to get the map size from the user, where the input is both checked if it is an integer
-     * and is valid between 5 and 50 as per assignment specification. Note that the number of players had to be passed
-     * as parameter as there is different minimum values of map sizes for each number of players.
-     * @param numberOfPlayers
-     * Stores the number of players playing the game
-     * @return
-     *the map size.
-     */
-
-    private int getMapSize(int numberOfPlayers){
-        Scanner sc = new Scanner(System.in);
-
-        if(numberOfPlayers<=4){ //Each player size has different minimum size of maps
-            System.out.println("Please enter the map size , the minimum size is 5 , the maximum number is 50");
-        }else{
-            System.out.println("Please enter the map size , the minimum size is 8 , the maximum number is 50");
-        }
-
-        boolean validInput = false;
-        int mapSize=0;
-        while (!validInput) { // iterate until user enteres a valid number
-            try {
-                mapSize = sc.nextInt();
-                validMapSize(numberOfPlayers,mapSize); //check if map size is valid
-                validInput = true;
-            } catch (InputMismatchException e) { //If input is not an integer
-                System.out.println("Please enter an integer!");
-            } catch (InvalidMapSizeException e){ //If input is not in the specified range
-                System.out.println(e.getInvalidNumber()+" is not a valid number");
-            }
-        }
-        return mapSize;
-    }
-
-    /**
      * This method is used to verify that the starting position is a valid one
      * @param x
      * Stores the x co-ordinate of the Position to be validated
@@ -144,13 +104,9 @@ public class GameEngine {
      * This method initializes the players array depending on the number of players and map size the user entered ,
      * this must be done this way since when initializing a new player , his starting position must be given ,
      * thus this must be generated according to the map size , in order to not start from an invalid position
-     * @param numberOfPlayers
-     * Stores the number of players playing the game
-     * @param mapSize
-     * Stores the size of the map
      */
 
-    void initializeGamePlayers(int numberOfPlayers, int mapSize){
+    private void initializeGamePlayers(){
         Random rand = new Random(System.currentTimeMillis());
         players = new TreasureFinderPlayer[numberOfPlayers]; //initialize the player array
         startingPosition = new Position[numberOfPlayers]; // initialize the starting position array
@@ -174,10 +130,8 @@ public class GameEngine {
      */
 
     private void initializeGame(){
-        int numberOfPlayers = getNumberOfPlayers();
-        int mapSize = getMapSize(numberOfPlayers);
         map = new Map(mapSize);
-        initializeGamePlayers(numberOfPlayers,mapSize);
+        initializeGamePlayers();
     }
 
     /**
