@@ -1,54 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cdaec89-58dc-4c4d-bd50-47acf7c2f74e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/coverage-0.ec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/coverage.em" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Calculator/SimpleCalculator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Exceptions/InvalidNumberOfPlayersException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/GameLauncher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Map.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/0.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/4.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/5.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/6.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/7.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/8.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/9.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/a.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/b.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/c.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/_files/d.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/coverage.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/site/emma/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Calculator.SimpleCalculatorTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveExceptionTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidMapSizeExceptionTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersExceptionTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Player.TreasureFinderPlayerTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Tressure_Finder_Game.MapTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Calculator.SimpleCalculatorTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveExceptionTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Exceptions.InvalidMapSizeExceptionTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersExceptionTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Player.TreasureFinderPlayerTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Tressure_Finder_Game.MapTest.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" />
-    </list>
+    <list default="true" id="0cdaec89-58dc-4c4d-bd50-47acf7c2f74e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
