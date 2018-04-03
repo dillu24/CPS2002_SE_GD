@@ -110,7 +110,7 @@ public class GameEngine {
      * thus this must be generated according to the map size , in order to not start from an invalid position
      */
 
-    private void initializeGamePlayers() throws IOException {
+    private void initializeGamePlayers()  {
         Random rand = new Random(System.currentTimeMillis());
         players = new TreasureFinderPlayer[numberOfPlayers]; //initialize the player array
         startingPosition = new Position[numberOfPlayers]; // initialize the starting position array
@@ -146,7 +146,7 @@ public class GameEngine {
      * This method initializes all the game elements which are the map and the players array
      */
 
-    private void initializeGame() throws IOException {
+    private void initializeGame(){
         map = new Map(mapSize);
         initializeGamePlayers();
     }
@@ -155,7 +155,7 @@ public class GameEngine {
      * This method combines all the game logic of the Treasure game
      */
 
-    public void StartGame() throws IOException {
+    public void StartGame(){
         initializeGame();
     }
 }

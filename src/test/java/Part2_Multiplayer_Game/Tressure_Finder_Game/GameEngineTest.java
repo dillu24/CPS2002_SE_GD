@@ -121,7 +121,7 @@ public class GameEngineTest {
      * parameters for map size and numbers of players
      */
     @Test
-    public void testInitializedProperly() {
+    public void testInitializedProperly(){
         treasureGame.mapSize =5;
         treasureGame.numberOfPlayers =2;
         treasureGame.StartGame();
