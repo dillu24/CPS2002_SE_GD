@@ -106,4 +106,16 @@ public class Map {
     private void setMapSize(int size){
         this.size = size;
     }
+
+    /**
+     * This method is used to set the map's tile values to the different possible existing tile types. This will mainly
+     * be used for tests.
+     * @param tileMap
+     * Stores a pre set 2d char array of the tiles to be set for the map.
+     */
+    public void setMap(char tileMap[][]){
+        if(tileMap.length == MatrixOfTiles.length && tileMap[0].length == MatrixOfTiles[0].length) {
+            MatrixOfTiles = tileMap;
+        }
+    }
 }

@@ -3,10 +3,14 @@ package Part2_Multiplayer_Game.Tressure_Finder_Game;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
 import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
+import Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen;
+import java.io.IOException;
 import java.util.Random;
 
 
 public class GameEngine {
+
+
     TreasureFinderPlayer []players; //Stores the list of players
     Map map; //Stores the game map
     Position startingPosition[]; //An array of all the starting position of each player , so that whenever a player
@@ -69,7 +73,7 @@ public class GameEngine {
      * If the map size is not within the range.
      */
 
-    boolean validMapSize(int numberOfPlayers, int mapSize)throws InvalidMapSizeException{
+    protected boolean validMapSize(int numberOfPlayers, int mapSize)throws InvalidMapSizeException{
         if(numberOfPlayers<=4){
             if(mapSize>=5 && mapSize <=50){
                 return true;
@@ -96,7 +100,7 @@ public class GameEngine {
      * False otherwise
      */
 
-    boolean validStartingPosition(int x, int y){
+    public boolean validStartingPosition(int x, int y){
         return map.getTileType(x, y) == 'G';
     }
 
@@ -106,10 +110,12 @@ public class GameEngine {
      * thus this must be generated according to the map size , in order to not start from an invalid position
      */
 
-    private void initializeGamePlayers(){
+    private void initializeGamePlayers()  {
         Random rand = new Random(System.currentTimeMillis());
         players = new TreasureFinderPlayer[numberOfPlayers]; //initialize the player array
         startingPosition = new Position[numberOfPlayers]; // initialize the starting position array
+        boolean tempV [][] = new boolean[mapSize][mapSize]; //temporary to check functionality of HTML Gen w/ Visited array
+
         for(int i=0;i<numberOfPlayers;i++){
             int xStartPos = rand.nextInt(mapSize);
             int yStartPos = rand.nextInt(mapSize);
@@ -119,9 +125,20 @@ public class GameEngine {
                 yStartPos = rand.nextInt(mapSize);
             }
             players[i] = new TreasureFinderPlayer(xStartPos,yStartPos);
-            startingPosition[i] = new Position(); //create new player accoridng to his starting position
+            startingPosition[i] = new Position(); //create new player according to his starting position
             startingPosition[i].setX(xStartPos);
             startingPosition[i].setY(yStartPos);
+
+            /*
+            for (int j=0;j<mapSize;j++){
+                for (int k=0;k<mapSize;k++){
+                    tempV[j][k] = rand.nextBoolean(); //false
+                }
+            }
+            new HTML_Gen(players, i, mapSize, map, tempV);
+            */
+            //Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen.generatePlayerFile(players, i, mapSize, map, tempV);
+             //Temp Block to check functionality of HTML File generation
         }
     }
 

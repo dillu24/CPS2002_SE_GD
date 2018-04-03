@@ -1,6 +1,8 @@
 package Part2_Multiplayer_Game;
 
 import Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngine;
+
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,7 +13,7 @@ import java.util.Scanner;
  */
 
 public class GameLauncher {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
         int numberOfPlayers = 0; //stores the number of players to play the game
         int mapSize = 0; //stores the map size
         Scanner sc = new Scanner(System.in);
@@ -21,7 +23,7 @@ public class GameLauncher {
         while(!validInput){
             try{
                 System.out.println("Please enter the number of players you wish to play the game , please enter a number between" +
-                        "2 and 8");
+                        " 2 and 8");
                 while (!validInput) { //until input is valid
                     try {
                         numberOfPlayers = sc.nextInt();
