@@ -8,8 +8,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import java.io.IOException;
-
 import static org.junit.Assert.*;
 
 /**
@@ -123,7 +121,7 @@ public class GameEngineTest {
      * parameters for map size and numbers of players
      */
     @Test
-    public void testInitializedProperly() throws IOException {
+    public void testInitializedProperly() {
         treasureGame.mapSize =5;
         treasureGame.numberOfPlayers =2;
         treasureGame.StartGame();

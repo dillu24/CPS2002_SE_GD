@@ -129,12 +129,14 @@ public class GameEngine {
             startingPosition[i].setX(xStartPos);
             startingPosition[i].setY(yStartPos);
 
+            /*
             for (int j=0;j<mapSize;j++){
                 for (int k=0;k<mapSize;k++){
                     tempV[j][k] = rand.nextBoolean(); //false
                 }
             }
             new HTML_Gen(players, i, mapSize, map, tempV);
+            */
             //Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen.generatePlayerFile(players, i, mapSize, map, tempV);
              //Temp Block to check functionality of HTML File generation
         }
