@@ -146,7 +146,11 @@ public class GameEngine {
      * This method initializes all the game elements which are the map and the players array
      */
 
+<<<<<<< HEAD
     private void initializeGame() {
+=======
+    private void initializeGame(){
+>>>>>>> 35f7c2fc9fe6cff5d8b3008e9342ba461319529b
         map = new Map(mapSize);
         initializeGamePlayers();
     }
