@@ -11,6 +11,8 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
  */
 public class TreasureFinderPlayer {
     private Position position = new Position(); // Stores the position of the player in the map
+    //private boolean[][] isVisited;
+
 
     /**
      * A constructor used to give the created player a position in the map
@@ -21,6 +23,7 @@ public class TreasureFinderPlayer {
      */
     public TreasureFinderPlayer(int x, int y){
         setPosition(x,y);
+        //isVisited[x][y] = true;
     }
 
     /**
@@ -34,6 +37,7 @@ public class TreasureFinderPlayer {
     private void setPosition(int x,int y){
         position.setX(x);
         position.setY(y);
+        //isVisited[x][y] = true;
     }
 
     /**

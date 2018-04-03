@@ -8,6 +8,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 /**
@@ -117,29 +119,38 @@ public class GameEngineTest {
     }
 
     /**
-     * This test is used to check that the initialize game players method initialized the player array correctly
-     * i.e that it is not null and that its length is greater than 0 , this shows that the initialize player method
-     * worked correctly
+     * This test is used to check that all arrays are initialized properly when starting the game with some good
+     * parameters for map size and numbers of players
      */
     @Test
-    public void testPlayerArrayInitializedCorrectly(){
-        treasureGame.map = new Map(5);
-        treasureGame.initializeGamePlayers(2,5);
+    public void testInitializedProperly() throws IOException {
+        treasureGame.mapSize =5;
+        treasureGame.numberOfPlayers =2;
+        treasureGame.StartGame();
         assertNotNull(treasureGame.players);
+        assertNotNull(treasureGame.startingPosition);
         assertEquals(2,treasureGame.players.length);
+        assertEquals(2,treasureGame.startingPosition.length);
     }
 
     /**
-     * This test is used to check that the initialize game players method initialized the starting position array correctly
-     * i.e that it is not null and that its length is greater than 0 , this shows that the initialize player method
-     * worked correctly
+     * This test checks that whenever from the game launcher the constructor is supplied with bad input for map an
+     * exception is generated
      */
     @Test
-    public void testStartingPositionArrayInitializedCorrectly(){
-        treasureGame.map = new Map(5);
-        treasureGame.initializeGamePlayers(2,5);
-        assertNotNull(treasureGame.startingPosition);
-        assertEquals(2,treasureGame.startingPosition.length);
+    public void testInvalidMapSizeNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
+        exceptionExcepted.expect(InvalidMapSizeException.class);
+        GameEngine game = new GameEngine(1,5);
+    }
+
+    /**
+     * This test checks that whenever from the game launcher the constructor is supplied with bad input for map an
+     * exception is generated
+     */
+    @Test
+    public void testInvalidNumberOfPlayersNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
+        exceptionExcepted.expect(InvalidNumberOfPlayersException.class);
+        GameEngine game = new GameEngine(5,1);
     }
 
     /**
