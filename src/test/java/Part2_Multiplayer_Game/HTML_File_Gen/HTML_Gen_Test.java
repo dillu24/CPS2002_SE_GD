@@ -36,7 +36,9 @@ public class HTML_Gen_Test {
         mapSize = 5;
         map = new Map(mapSize);
 
-        players = new TreasureFinderPlayer[playerNo]; //initialize the player array
+        players = new TreasureFinderPlayer[1]; //initialize the player array //added 1 instead by dylan coz you were initializing empty array
+        players[0] = player; //added player by dylan coz you need to add player
+        isVisited = new boolean[mapSize][mapSize];//added by dylan to initialzie visited
 
         hGen = null;
         try {
@@ -79,6 +81,7 @@ public class HTML_Gen_Test {
         assertEquals("bgcolor = #D6D6D6",colour);
     }
 
+    @Test
     public void isPlayerHereTest(){
         xPos = 0;
         yPos = 3;
@@ -88,7 +91,7 @@ public class HTML_Gen_Test {
         playerPosition.setY(yPos);
 
         String playerPresent = hGen.isPlayerHere(players,playerNo,0,3);
-        assertEquals("P",playerPresent);
+        assertEquals("P1",playerPresent); //you wanted it p1?
         playerPresent = hGen.isPlayerHere(players,playerNo,0,4);
         assertEquals("",playerPresent);
     }

@@ -208,7 +208,8 @@ public class GameEngine {
 
     private char getMoveFromUser(int playerID){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter 'U' to move up , 'D' to move down , 'L' to move left or 'R' to move right.");
+        System.out.println("Player "+playerID+" Your position is "+players[playerID].getPosition().getX()+" "+players[playerID].getPosition().getY()+
+                " Please enter 'U' to move up , 'D' to move down , 'L' to move left or 'R' to move right.");
         boolean validInput = false; //used to check if the player input is valid
         char moveInput = 'F'; //stores the player input character
         while (!validInput) { //until input is valid
