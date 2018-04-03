@@ -47,7 +47,7 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    private void generatePlayerFile(TreasureFinderPlayer[] players, int playerNo,
+    private File generatePlayerFile(TreasureFinderPlayer[] players, int playerNo,
                                           int mapSize, Map map, boolean[][] isVisited) throws IOException {
 
         String file = "map_player_" + playerNo + ".html";
@@ -57,6 +57,10 @@ public class HTML_Gen {
         BufferedWriter bw = new BufferedWriter(new FileWriter(f));
 
         writeHTMLFile(bw, players, playerNo, mapSize, map, isVisited);
+        return f;
+    }
+
+    public void displayFile(File f)throws IOException{
         Desktop.getDesktop().browse(f.toURI());
     }
 
