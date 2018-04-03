@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddcbb3c8-e109-4db5-bdd7-b591c736fa3e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/Calculator/SimpleCalculatorTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveExceptionTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeExceptionTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Exceptions/InvalidNumberOfPlayersExceptionTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" />
-    </list>
+    <list default="true" id="ddcbb3c8-e109-4db5-bdd7-b591c736fa3e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
