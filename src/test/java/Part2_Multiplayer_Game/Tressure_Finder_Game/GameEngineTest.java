@@ -1,5 +1,6 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game;
 
+import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
 import org.junit.After;
@@ -17,6 +18,7 @@ import static org.junit.Assert.*;
 
 public class GameEngineTest {
     private GameEngine treasureGame ; //stores the treasure game to be tested
+    private GameEngine treasureGame2;
 
     /**
      * A rule done in order to test for exceptions
@@ -28,8 +30,9 @@ public class GameEngineTest {
      * This method is used to initialize the treasure game
      */
     @Before
-    public void setUp(){
+    public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
         treasureGame = new GameEngine();
+        treasureGame2 = new GameEngine(5,3);
     }
 
     /**
@@ -117,21 +120,6 @@ public class GameEngineTest {
     }
 
     /**
-     * This test is used to check that all arrays are initialized properly when starting the game with some good
-     * parameters for map size and numbers of players
-     */
-    @Test
-    public void testInitializedProperly(){
-        treasureGame.mapSize =5;
-        treasureGame.numberOfPlayers =2;
-        treasureGame.StartGame();
-        assertNotNull(treasureGame.players);
-        assertNotNull(treasureGame.startingPosition);
-        assertEquals(2,treasureGame.players.length);
-        assertEquals(2,treasureGame.startingPosition.length);
-    }
-
-    /**
      * This test checks that whenever from the game launcher the constructor is supplied with bad input for map an
      * exception is generated
      */
@@ -149,6 +137,90 @@ public class GameEngineTest {
     public void testInvalidNumberOfPlayersNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
         exceptionExcepted.expect(InvalidNumberOfPlayersException.class);
         GameEngine game = new GameEngine(5,1);
+    }
+
+    /**
+     * This test checks if the validate method returns true for valid move inputs
+     * @throws InvalidCharacterInputMoveException
+     * If this is thrown there is an error in the validate method
+     */
+    @Test
+    public void testValidMoveByUser() throws InvalidCharacterInputMoveException{
+        treasureGame2.initializeGame();
+        treasureGame2.players[0].setPosition(1,1);
+        treasureGame2.validateMove('U',0);
+        treasureGame2.validateMove('D',0);
+        treasureGame2.validateMove('L',0);
+        treasureGame2.validateMove('R',0);
+    }
+
+    /**
+     * This test checks whether the validate method returns an exception when the user tries to generate an up move
+     * if he is in the top row
+     * @throws InvalidCharacterInputMoveException
+     * If this is thrown test result is succesfull
+     */
+    @Test
+    public void testInvalidMoveUpByUser() throws InvalidCharacterInputMoveException{
+        exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
+        treasureGame2.initializeGame();
+        treasureGame2.players[0].setPosition(5,0);
+        treasureGame2.validateMove('U',0);
+    }
+
+    /**
+     * This test checks whether the validate method returns an exception when the user tries to generate a down move
+     * if he is in the bottom row
+     * @throws InvalidCharacterInputMoveException
+     * If this is thrown test result is successful
+     */
+    @Test
+    public void testInvalidMoveDownByUser() throws InvalidCharacterInputMoveException{
+        exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
+        treasureGame2.initializeGame();
+        treasureGame2.players[0].setPosition(5,treasureGame2.mapSize-1);
+        treasureGame2.validateMove('D',0);
+    }
+
+    /**
+     * This test checks whether the validate method returns an exception when the user tries to generate a left move
+     * if he is in the first column
+     * @throws InvalidCharacterInputMoveException
+     * If this is thrown test result is successful
+     */
+    @Test
+    public void testInvalidMoveLeftByUser() throws InvalidCharacterInputMoveException{
+        exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
+        treasureGame2.initializeGame();
+        treasureGame2.players[0].setPosition(0,5);
+        treasureGame2.validateMove('L',0);
+    }
+
+    /**
+     * This test checks whether the validate method returns an exception when the user tries to generate a right move
+     * if he is in the last column
+     * @throws InvalidCharacterInputMoveException
+     * If this is thrown test result is successful
+     */
+    @Test
+    public void testInvalidMoveRightByUser() throws InvalidCharacterInputMoveException{
+        exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
+        treasureGame2.initializeGame();
+        treasureGame2.players[0].setPosition(treasureGame2.mapSize-1,5);
+        treasureGame2.validateMove('R',0);
+    }
+
+    /**
+     * This test checks whether the validate method returns an exception when the user tries to enter a non move character
+     * @throws InvalidCharacterInputMoveException
+     * If this is thrown test result is successful
+     */
+    @Test
+    public void testInvalidMoveCharacterByUser() throws InvalidCharacterInputMoveException{
+        exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
+        treasureGame2.initializeGame();
+        treasureGame2.players[0].setPosition(treasureGame2.mapSize-1,5);
+        treasureGame2.validateMove('G',0);
     }
 
     /**

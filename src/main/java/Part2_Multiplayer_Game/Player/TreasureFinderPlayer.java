@@ -34,7 +34,7 @@ public class TreasureFinderPlayer {
      * Stores the new y co-ordinate of the position of the player
      */
 
-    private void setPosition(int x,int y){
+    public void setPosition(int x,int y){
         position.setX(x);
         position.setY(y);
         //isVisited[x][y] = true;

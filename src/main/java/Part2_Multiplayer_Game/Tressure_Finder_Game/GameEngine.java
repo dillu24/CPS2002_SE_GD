@@ -1,11 +1,14 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game;
 
+import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
 import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class GameEngine {
@@ -146,9 +149,86 @@ public class GameEngine {
      * This method initializes all the game elements which are the map and the players array
      */
 
-    private void initializeGame(){
+    void initializeGame(){
         map = new Map(mapSize);
         initializeGamePlayers();
+    }
+
+    /**
+     * This method checks that the input supplied by the user for moving is valid
+     * @param input
+     * Stores the input character by the user
+     * @param playerID
+     * Stores the player index in the players list of the player that is trying to move
+     * @return
+     * True if move character is valid
+     * @throws InvalidCharacterInputMoveException
+     * If move character is not a character or the player is trying to move outside the map
+     */
+
+    boolean validateMove(char input,int playerID) throws InvalidCharacterInputMoveException{
+        switch(input){
+            case 'U': //if up check if the player position is in top row
+                if(players[playerID].getPosition().getY() != 0){
+                    return true;
+                }else{
+                    throw new InvalidCharacterInputMoveException(input);
+                }
+            case 'D': //if down check if player position is in bottom row
+                if(players[playerID].getPosition().getY() != mapSize-1){
+                return true;
+            }else{
+                throw new InvalidCharacterInputMoveException(input);
+            }
+            case 'L': // if left check if player position is in first column
+                if(players[playerID].getPosition().getX() != 0){
+                    return true;
+                }else{
+                    throw new InvalidCharacterInputMoveException(input);
+                }
+            case 'R': // if right check if player position is in last column
+                if(players[playerID].getPosition().getX() != mapSize-1){
+                    return true;
+                }else{
+                    throw new InvalidCharacterInputMoveException(input);
+                }
+            default :
+                throw new InvalidCharacterInputMoveException(input);
+        }
+    }
+
+    /**
+     * This method gets the user input , this method could not be tested because user input cannot be simulated. It also
+     * checks that the input by the user is a character and that the user does not go outside the map
+     * @param playerID
+     * The index of the player that is trying to move in the players list
+     * @return
+     * The character entered by the user if valid.
+     */
+
+    private char getMoveFromUser(int playerID){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter 'U' to move up , 'D' to move down , 'L' to move left or 'R' to move right.");
+        boolean validInput = false; //used to check if the player input is valid
+        char moveInput = 'F'; //stores the player input character
+        while (!validInput) { //until input is valid
+            try {
+                moveInput = sc.next().charAt(0); // get first character in the user input
+                validateMove(moveInput,playerID); // check if valid
+                validInput = true; // if valid break loop
+            } catch (InputMismatchException e) { //if input not an integer
+                System.out.println("Please enter a character!");
+                sc.next();
+            } catch (InvalidCharacterInputMoveException e){
+                if(e.getInvalidCharacter() != 'U' && e.getInvalidCharacter() != 'D' && e.getInvalidCharacter() != 'L'
+                        && e.getInvalidCharacter() !='R'){
+                    System.out.println("You entered an invalid move character"); // if user enters an invalid move character
+                }else{ //if user tries to access outside the map
+                    System.out.println("You are moving outside your map !");
+                }
+            }
+        }
+        return moveInput;
     }
 
     /**
@@ -157,6 +237,8 @@ public class GameEngine {
 
     public void StartGame(){
         initializeGame();
-
+        for(int i=0;i<numberOfPlayers;i++){
+            players[i].move(getMoveFromUser(i)); //move every user by one position.
+        }
     }
 }
