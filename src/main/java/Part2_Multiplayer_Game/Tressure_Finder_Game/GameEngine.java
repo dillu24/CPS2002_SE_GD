@@ -5,6 +5,8 @@ import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
 import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -20,6 +22,10 @@ public class GameEngine {
                                  //Enters a water tile , he can restart again from that same position.
     int mapSize; //Stores the size of the map
     int numberOfPlayers; //stores the number of players playing the game
+    boolean treasureFound = false; //The game will end when the treasure is found.
+    boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
+    HTML_Gen htmlGenerator;
+
 
     public GameEngine(){} //default constructor used for testing the GameEngine class
 
@@ -42,6 +48,8 @@ public class GameEngine {
         this.numberOfPlayers = numberOfPlayers; //store it if correct
         validMapSize(numberOfPlayers,mapSize); //validate map size
         this.mapSize = mapSize; //store it if correct
+        playerLivingStatus = new boolean[mapSize]; //initialize li playerLiving Status
+        htmlGenerator = new HTML_Gen();
     }
 
     /**
@@ -117,31 +125,18 @@ public class GameEngine {
         Random rand = new Random(System.currentTimeMillis());
         players = new TreasureFinderPlayer[numberOfPlayers]; //initialize the player array
         startingPosition = new Position[numberOfPlayers]; // initialize the starting position array
-        boolean tempV [][] = new boolean[mapSize][mapSize]; //temporary to check functionality of HTML Gen w/ Visited array
-
         for(int i=0;i<numberOfPlayers;i++){
-            int xStartPos = rand.nextInt(mapSize);
-            int yStartPos = rand.nextInt(mapSize);
-            while(!validStartingPosition(xStartPos,yStartPos)){ //generate  random numbers until the position is a valid
+            int xStartPos = 0;// rand.nextInt(mapSize);
+            int yStartPos = 0;//rand.nextInt(mapSize);
+            /*while(!validStartingPosition(xStartPos,yStartPos)){ //generate  random numbers until the position is a valid
                                                                 // starting position
-                xStartPos = rand.nextInt(mapSize);
-                yStartPos = rand.nextInt(mapSize);
-            }
+                xStartPos = 0;//rand.nextInt(mapSize);
+                yStartPos = 0;//rand.nextInt(mapSize);
+            }*/
             players[i] = new TreasureFinderPlayer(xStartPos,yStartPos,mapSize);
             startingPosition[i] = new Position(); //create new player according to his starting position
             startingPosition[i].setX(xStartPos);
             startingPosition[i].setY(yStartPos);
-
-            /*
-            for (int j=0;j<mapSize;j++){
-                for (int k=0;k<mapSize;k++){
-                    tempV[j][k] = rand.nextBoolean(); //false
-                }
-            }
-            new HTML_Gen(players, i, mapSize, map, tempV);
-            */
-            //Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen.generatePlayerFile(players, i, mapSize, map, tempV);
-             //Temp Block to check functionality of HTML File generation
         }
     }
 
@@ -208,7 +203,7 @@ public class GameEngine {
 
     private char getMoveFromUser(int playerID){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Player "+playerID+" Your position is "+players[playerID].getPosition().getX()+" "+players[playerID].getPosition().getY()+
+        System.out.println("Player "+(playerID+1)+" Your position is "+players[playerID].getPosition().getX()+" "+players[playerID].getPosition().getY()+
                 " Please enter 'U' to move up , 'D' to move down , 'L' to move left or 'R' to move right.");
         boolean validInput = false; //used to check if the player input is valid
         char moveInput = 'F'; //stores the player input character
@@ -232,14 +227,48 @@ public class GameEngine {
         return moveInput;
     }
 
+    void playersEvents(int playerNo){
+        for(int i=0;i<numberOfPlayers;i++) {
+
+            if (map.getTileType(players[i].getPosition().getX(), players[i].getPosition().getY()) == 'W') {
+                playerLivingStatus[playerNo] = false;
+            } else if (map.getTileType(players[i].getPosition().getX(), players[i].getPosition().getY()) == 'T') {
+                treasureFound = true;
+                System.out.println("Player #"+(i+1)+" has won the game.");
+            }
+        }
+    }
     /**
      * This method combines all the game logic of the Treasure game
      */
 
     public void StartGame(){
+        File playerFiles[] = new File[numberOfPlayers];
         initializeGame();
-        for(int i=0;i<numberOfPlayers;i++){
-            players[i].move(getMoveFromUser(i)); //move every user by one position.
+        while(!treasureFound){
+            for(int i=0;i<numberOfPlayers;i++){
+                if(!playerLivingStatus[i]) {
+                    players[i].setPosition(startingPosition[i].getX(),startingPosition[i].getY());
+                    playerLivingStatus[i]=true;
+                }
+                players[i].move(getMoveFromUser(i)); //move every user by one position.
+                playersEvents(i);
+                File playerFile = null;
+                try {
+                    playerFile = htmlGenerator.generatePlayerFile(players,i,mapSize,map,players[i].isVisited);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                playerFiles[i] = playerFile;
+            }
+
+            for(int i=0;i<numberOfPlayers;i++){
+                try {
+                    htmlGenerator.displayFile(playerFiles[i]);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

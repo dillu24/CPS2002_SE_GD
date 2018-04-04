@@ -19,6 +19,7 @@ import static org.junit.Assert.*;
 public class GameEngineTest {
     private GameEngine treasureGame ; //stores the treasure game to be tested
     private GameEngine treasureGame2;
+    private GameEngine treasureGame3;
 
     /**
      * A rule done in order to test for exceptions
@@ -34,6 +35,7 @@ public class GameEngineTest {
         treasureGame = new GameEngine();
         treasureGame.mapSize =50;
         treasureGame2 = new GameEngine(50,3);
+        treasureGame3 = new GameEngine(5, 2);
     }
 
     /**
@@ -225,11 +227,74 @@ public class GameEngineTest {
     }
 
     /**
+     * This test checks if the player when accesses a water tile dies
+     */
+    @Test
+    public void testPlayerDiesByWater() {
+        treasureGame3.initializeGame();
+        treasureGame3.players[0].setPosition(0,0);
+
+        char [][] tileMap = {
+                {'G','W','G','W','W'},
+                {'T','G','G','G','G'},
+                {'G','G','G','G','G'},
+                {'G','G','G','G','G'},
+                {'G','G','G','G','G'}};
+        treasureGame3.map.setMap(tileMap);
+        treasureGame3.players[0].move('R');
+        treasureGame3.playersEvents(0);
+        assertEquals(false,treasureGame3.playerLivingStatus[0]);
+    }
+    public void testPlayerFindsTreasure() {
+        treasureGame3.initializeGame();
+        treasureGame3.players[0].setPosition(0,0);
+
+        char [][] tileMap = {
+                {'G','W','G','W','W'},
+                {'T','G','G','G','G'},
+                {'G','G','G','G','G'},
+                {'G','G','G','G','G'},
+                {'G','G','G','G','G'}};
+        treasureGame3.map.setMap(tileMap);
+        treasureGame3.players[0].move('D');
+        treasureGame3.playersEvents(0);
+        assertEquals(true,treasureGame3.treasureFound);
+    }
+
+
+
+    /**
+     * This test checks if the player when accesses a water tile dies
+
+    @Test
+    public void testPlayerEventsByWater() {
+        treasureGame3.initializeGame();
+        treasureGame3.players[0].setPosition(0,0);
+
+        char [][] tileMap = {
+                {'G','W','T','W','W'},
+                {'G','G','G','G','G'},
+                {'G','G','G','G','G'},
+                {'G','G','G','G','G'},
+                {'G','G','G','G','G'}};
+        treasureGame3.map.setMap(tileMap);
+        treasureGame3.players[0].move('R');
+        treasureGame3.playerTurn(0);
+        assertEquals(false,treasureGame3.playerLivingStatus[0]);
+    }*/
+
+
+
+
+
+    /**
      * This method makes removes the allocated memory to the object.
      */
     @After
     public void tearDown(){
         treasureGame = null;
+        treasureGame2 = null;
+        treasureGame3 = null;
     }
 
 }

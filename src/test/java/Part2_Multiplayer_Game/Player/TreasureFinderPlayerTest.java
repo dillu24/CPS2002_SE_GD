@@ -31,7 +31,7 @@ public class TreasureFinderPlayerTest {
     public void testUppCharacter(){
         player.move('U');
         assertEquals(20,player.getPosition().getX());
-        assertEquals(21,player.getPosition().getY());
+        assertEquals(19,player.getPosition().getY());
     }
 
     /**
@@ -42,7 +42,7 @@ public class TreasureFinderPlayerTest {
     public void testDownCharacter(){
         player.move('D');
         assertEquals(20,player.getPosition().getX());
-        assertEquals(19,player.getPosition().getY());
+        assertEquals(21,player.getPosition().getY());
     }
 
     /**

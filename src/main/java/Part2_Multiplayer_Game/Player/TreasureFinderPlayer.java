@@ -11,7 +11,7 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
  */
 public class TreasureFinderPlayer {
     private Position position = new Position(); // Stores the position of the player in the map
-    private boolean[][] isVisited;
+    public boolean[][] isVisited;
 
 
     /**
@@ -62,10 +62,10 @@ public class TreasureFinderPlayer {
     public void move(char direction){
         switch (direction){
             case 'U':
-                setPosition(position.getX(),position.getY()+1);
+                setPosition(position.getX(),position.getY()-1);
                 break;
             case 'D':
-                setPosition(position.getX(),position.getY()-1);
+                setPosition(position.getX(),position.getY()+1);
                 break;
             case 'L':
                 setPosition(position.getX()-1,position.getY());
