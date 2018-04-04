@@ -30,10 +30,9 @@ public class HTML_Gen_Test {
      */
     @Before
     public void setup() {
-
-        player = new TreasureFinderPlayer(0, 0);
         playerNo = 0;
         mapSize = 5;
+        player = new TreasureFinderPlayer(0, 0,mapSize);
         map = new Map(mapSize);
 
         players = new TreasureFinderPlayer[1]; //initialize the player array //added 1 instead by dylan coz you were initializing empty array
@@ -85,7 +84,7 @@ public class HTML_Gen_Test {
     public void isPlayerHereTest(){
         xPos = 0;
         yPos = 3;
-        players[playerNo] = new TreasureFinderPlayer(xPos,yPos);
+        players[playerNo] = new TreasureFinderPlayer(xPos,yPos,mapSize);
         playerPosition = new Position(); //create new player according to his starting position
         playerPosition.setX(xPos);
         playerPosition.setY(yPos);

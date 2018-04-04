@@ -127,7 +127,7 @@ public class GameEngine {
                 xStartPos = rand.nextInt(mapSize);
                 yStartPos = rand.nextInt(mapSize);
             }
-            players[i] = new TreasureFinderPlayer(xStartPos,yStartPos);
+            players[i] = new TreasureFinderPlayer(xStartPos,yStartPos,mapSize);
             startingPosition[i] = new Position(); //create new player according to his starting position
             startingPosition[i].setX(xStartPos);
             startingPosition[i].setY(yStartPos);

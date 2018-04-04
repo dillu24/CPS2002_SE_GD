@@ -20,7 +20,7 @@ public class TreasureFinderPlayerTest {
      */
     @Before
     public void setup(){
-        player = new TreasureFinderPlayer(20,20);
+        player = new TreasureFinderPlayer(20,20,50);
     }
 
     /**

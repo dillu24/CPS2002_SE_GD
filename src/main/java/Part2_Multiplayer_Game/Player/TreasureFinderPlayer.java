@@ -11,19 +11,21 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
  */
 public class TreasureFinderPlayer {
     private Position position = new Position(); // Stores the position of the player in the map
-    //private boolean[][] isVisited;
+    private boolean[][] isVisited;
 
 
     /**
      * A constructor used to give the created player a position in the map
      * @param x
      * Stores the x co-ordinate that will be given to the position of this new player
+     * @param mapSize
+     * Stores the map size so that the isVisited array is initialized
      * @param y
      * Stores the y co-ordinate that will be given to the position of this new player
      */
-    public TreasureFinderPlayer(int x, int y){
+    public TreasureFinderPlayer(int x, int y, int mapSize){
+        isVisited = new boolean[mapSize][mapSize];
         setPosition(x,y);
-        //isVisited[x][y] = true;
     }
 
     /**
@@ -37,7 +39,7 @@ public class TreasureFinderPlayer {
     public void setPosition(int x,int y){
         position.setX(x);
         position.setY(y);
-        //isVisited[x][y] = true;
+        isVisited[x][y] = true;
     }
 
     /**

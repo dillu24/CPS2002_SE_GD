@@ -32,7 +32,8 @@ public class GameEngineTest {
     @Before
     public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
         treasureGame = new GameEngine();
-        treasureGame2 = new GameEngine(5,3);
+        treasureGame.mapSize =50;
+        treasureGame2 = new GameEngine(50,3);
     }
 
     /**

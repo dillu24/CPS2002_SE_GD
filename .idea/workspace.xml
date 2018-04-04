@@ -2,35 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcbb3c8-e109-4db5-bdd7-b591c736fa3e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_tmp___" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/0.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/0.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/1.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/2.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/3.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/4.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/5.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/6.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/7.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/8.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/9.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/a.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/a.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/b.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/b.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/c.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/c.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/d.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/d.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/e.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/e.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/_files/f.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/f.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/coverage.xml" afterPath="$PROJECT_DIR$/target/site/emma/coverage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/emma/index.html" afterPath="$PROJECT_DIR$/target/site/emma/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Calculator.SimpleCalculatorTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/Calculator.SimpleCalculatorTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidMapSizeExceptionTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidMapSizeExceptionTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Player.TreasureFinderPlayerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Player.TreasureFinderPlayerTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Calculator.SimpleCalculatorTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Calculator.SimpleCalculatorTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,6 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CPS2002_SE_GD$All_in_CPS2002_SE_GD.coverage" NAME="All in CPS2002_SE_GD Coverage Results" MODIFIED="1522846400773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/CPS2002_SE_GD$All_in_CPS2002_SE_GD__2_.coverage" NAME="All in CPS2002_SE_GD (2) Coverage Results" MODIFIED="1522765732287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -52,41 +35,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameEngine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="221" column="26" lean-forward="true" selection-start-line="221" selection-start-column="26" selection-end-line="221" selection-end-column="26" />
+            <state relative-caret-position="1666">
+              <caret line="129" column="77" lean-forward="false" selection-start-line="129" selection-start-column="77" selection-end-line="129" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTML_Gen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java">
+      <file leaf-file-name="TreasureFinderPlayerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="472">
+              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+              <folding>
+                <element signature="e#776#777#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreasureFinderPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTML_Gen_Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java">
+      <file leaf-file-name="GameEngineTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameLauncher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="-782">
+              <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -110,12 +96,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Map.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java" />
         <option value="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" />
       </list>
     </option>
   </component>
@@ -147,6 +134,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -329,11 +318,39 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Part2_Multiplayer_Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exceptions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CPS2002_SE_GD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CPS2002_SE_GD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -702,51 +719,53 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.03 at 15h 32m 37s.xml">
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 22m 50s.xml">
       <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.03 at 16h 38m 29s.xml">
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 30m 19s.xml">
       <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_CPS2002_SE_GD_(1) - 2018.04.03 at 15h 47m 41s.xml">
-      <configuration name="All in CPS2002_SE_GD (1)" configurationId="JUnit" />
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 31m 13s.xml">
+      <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_CPS2002_SE_GD_(2) - 2018.04.03 at 16h 28m 55s.xml">
-      <configuration name="All in CPS2002_SE_GD (2)" configurationId="JUnit" />
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 31m 24s.xml">
+      <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameEngineTest - 2018.04.03 at 15h 32m 24s.xml">
-      <configuration name="GameEngineTest" configurationId="JUnit" />
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 47m 34s.xml">
+      <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTML_Gen_Test - 2018.04.03 at 16h 20m 40s.xml">
-      <configuration name="HTML_Gen_Test" configurationId="JUnit" />
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 49m 23s.xml">
+      <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTML_Gen_Test - 2018.04.03 at 16h 23m 29s.xml">
-      <configuration name="HTML_Gen_Test" configurationId="JUnit" />
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 49m 37s.xml">
+      <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTML_Gen_Test_isPlayerHereTest - 2018.04.03 at 16h 25m 07s.xml">
-      <configuration name="HTML_Gen_Test.isPlayerHereTest" configurationId="JUnit" />
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 50m 23s.xml">
+      <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTML_Gen_Test_isPlayerHereTest - 2018.04.03 at 16h 26m 26s.xml">
-      <configuration name="HTML_Gen_Test.isPlayerHereTest" configurationId="JUnit" />
+    <history-entry file="All_in_CPS2002_SE_GD - 2018.04.04 at 14h 53m 22s.xml">
+      <configuration name="All in CPS2002_SE_GD" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HTML_Gen_Test_isPlayerHereTest - 2018.04.03 at 16h 27m 03s.xml">
       <configuration name="HTML_Gen_Test.isPlayerHereTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28864354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -762,9 +781,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -780,6 +797,38 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2652">
@@ -851,20 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -872,35 +907,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidNumberOfPlayersException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1635">
-          <caret line="119" column="5" lean-forward="false" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Map.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="124" column="4" lean-forward="false" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
+        <state relative-caret-position="204">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="86" column="70" lean-forward="false" selection-start-line="86" selection-start-column="70" selection-end-line="86" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -912,26 +955,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        <state relative-caret-position="-236">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        <state relative-caret-position="376">
+          <caret line="124" column="4" lean-forward="false" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="221" column="26" lean-forward="true" selection-start-line="221" selection-start-column="26" selection-end-line="221" selection-end-column="26" />
+        <state relative-caret-position="1666">
+          <caret line="129" column="77" lean-forward="false" selection-start-line="129" selection-start-column="77" selection-end-line="129" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding>
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-782">
+          <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
           <folding />
         </state>
       </provider>
