@@ -62,16 +62,16 @@ public class TreasureFinderPlayer {
     public void move(char direction){
         switch (direction){
             case 'U':
-                setPosition(position.getX(),position.getY()-1);
-                break;
-            case 'D':
-                setPosition(position.getX(),position.getY()+1);
-                break;
-            case 'L':
                 setPosition(position.getX()-1,position.getY());
                 break;
-            case 'R':
+            case 'D':
                 setPosition(position.getX()+1,position.getY());
+                break;
+            case 'L':
+                setPosition(position.getX(),position.getY()-1);
+                break;
+            case 'R':
+                setPosition(position.getX(),position.getY()+1);
                 break;
         }
     }

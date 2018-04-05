@@ -126,6 +126,7 @@ public class GameEngine {
         players = new TreasureFinderPlayer[numberOfPlayers]; //initialize the player array
         startingPosition = new Position[numberOfPlayers]; // initialize the starting position array
         for(int i=0;i<numberOfPlayers;i++){
+            playerLivingStatus[i] = true;
             int xStartPos = rand.nextInt(mapSize);
             int yStartPos = rand.nextInt(mapSize);
             while(!validStartingPosition(xStartPos,yStartPos)){ //generate  random numbers until the position is a valid
@@ -164,25 +165,25 @@ public class GameEngine {
     boolean validateMove(char input,int playerID) throws InvalidCharacterInputMoveException{
         switch(input){
             case 'U': //if up check if the player position is in top row
-                if(players[playerID].getPosition().getY() != 0){
-                    return true;
-                }else{
-                    throw new InvalidCharacterInputMoveException(input);
-                }
-            case 'D': //if down check if player position is in bottom row
-                if(players[playerID].getPosition().getY() != mapSize-1){
-                return true;
-            }else{
-                throw new InvalidCharacterInputMoveException(input);
-            }
-            case 'L': // if left check if player position is in first column
                 if(players[playerID].getPosition().getX() != 0){
                     return true;
                 }else{
                     throw new InvalidCharacterInputMoveException(input);
                 }
-            case 'R': // if right check if player position is in last column
+            case 'D': //if down check if player position is in bottom row
                 if(players[playerID].getPosition().getX() != mapSize-1){
+                return true;
+            }else{
+                throw new InvalidCharacterInputMoveException(input);
+            }
+            case 'L': // if left check if player position is in first column
+                if(players[playerID].getPosition().getY() != 0){
+                    return true;
+                }else{
+                    throw new InvalidCharacterInputMoveException(input);
+                }
+            case 'R': // if right check if player position is in last column
+                if(players[playerID].getPosition().getY() != mapSize-1){
                     return true;
                 }else{
                     throw new InvalidCharacterInputMoveException(input);
@@ -228,14 +229,11 @@ public class GameEngine {
     }
 
     void playersEvents(int playerNo){
-        for(int i=0;i<numberOfPlayers;i++) {
-
-            if (map.getTileType(players[i].getPosition().getX(), players[i].getPosition().getY()) == 'W') {
-                playerLivingStatus[playerNo] = false;
-            } else if (map.getTileType(players[i].getPosition().getX(), players[i].getPosition().getY()) == 'T') {
-                treasureFound = true;
-                System.out.println("Player #"+(i+1)+" has won the game.");
-            }
+        if (map.getTileType(players[playerNo].getPosition().getX(), players[playerNo].getPosition().getY()) == 'W') {
+            playerLivingStatus[playerNo] = false;
+        } else if (map.getTileType(players[playerNo].getPosition().getX(), players[playerNo].getPosition().getY()) == 'T') {
+            treasureFound = true;
+            System.out.println("Player #"+(playerNo+1)+" has won the game.");
         }
     }
     /**

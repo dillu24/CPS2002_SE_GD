@@ -161,13 +161,13 @@ public class GameEngineTest {
      * This test checks whether the validate method returns an exception when the user tries to generate an up move
      * if he is in the top row
      * @throws InvalidCharacterInputMoveException
-     * If this is thrown test result is succesfull
+     * If this is thrown test result is sucessfull
      */
     @Test
     public void testInvalidMoveUpByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(5,0);
+        treasureGame2.players[0].setPosition(0,5);
         treasureGame2.validateMove('U',0);
     }
 
@@ -181,7 +181,7 @@ public class GameEngineTest {
     public void testInvalidMoveDownByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(5,treasureGame2.mapSize-1);
+        treasureGame2.players[0].setPosition(treasureGame2.mapSize-1,5);
         treasureGame2.validateMove('D',0);
     }
 
@@ -195,7 +195,7 @@ public class GameEngineTest {
     public void testInvalidMoveLeftByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(0,5);
+        treasureGame2.players[0].setPosition(5,0);
         treasureGame2.validateMove('L',0);
     }
 
@@ -209,7 +209,7 @@ public class GameEngineTest {
     public void testInvalidMoveRightByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(treasureGame2.mapSize-1,5);
+        treasureGame2.players[0].setPosition(5,treasureGame2.mapSize-1);
         treasureGame2.validateMove('R',0);
     }
 
@@ -245,6 +245,7 @@ public class GameEngineTest {
         treasureGame3.playersEvents(0);
         assertEquals(false,treasureGame3.playerLivingStatus[0]);
     }
+    @Test
     public void testPlayerFindsTreasure() {
         treasureGame3.initializeGame();
         treasureGame3.players[0].setPosition(0,0);
@@ -260,32 +261,6 @@ public class GameEngineTest {
         treasureGame3.playersEvents(0);
         assertEquals(true,treasureGame3.treasureFound);
     }
-
-
-
-    /**
-     * This test checks if the player when accesses a water tile dies
-
-    @Test
-    public void testPlayerEventsByWater() {
-        treasureGame3.initializeGame();
-        treasureGame3.players[0].setPosition(0,0);
-
-        char [][] tileMap = {
-                {'G','W','T','W','W'},
-                {'G','G','G','G','G'},
-                {'G','G','G','G','G'},
-                {'G','G','G','G','G'},
-                {'G','G','G','G','G'}};
-        treasureGame3.map.setMap(tileMap);
-        treasureGame3.players[0].move('R');
-        treasureGame3.playerTurn(0);
-        assertEquals(false,treasureGame3.playerLivingStatus[0]);
-    }*/
-
-
-
-
 
     /**
      * This method makes removes the allocated memory to the object.

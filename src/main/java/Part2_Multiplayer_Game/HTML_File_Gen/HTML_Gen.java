@@ -97,8 +97,8 @@ public class HTML_Gen {
             bw.write("<tr>");
             for(j = 0; j<mapSize; j++){
 
-                tileColour = getTileColour(j,i,map,isVisited);
-                player = isPlayerHere(players,playerNo,j,i);
+                tileColour = getTileColour(i,j,map,isVisited);
+                player = isPlayerHere(players,playerNo,i,j);
                 bw.write("<td "+tileColour+">"+player+"</td>");
             }
         }
