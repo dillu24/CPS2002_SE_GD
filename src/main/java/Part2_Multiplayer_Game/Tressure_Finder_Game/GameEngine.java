@@ -204,7 +204,7 @@ public class GameEngine {
 
     private char getMoveFromUser(int playerID){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Player "+(playerID+1)+" Your position is "+players[playerID].getPosition().getX()+" "+players[playerID].getPosition().getY()+
+        System.out.println("Player "+(playerID+1)+
                 " Please enter 'U' to move up , 'D' to move down , 'L' to move left or 'R' to move right.");
         boolean validInput = false; //used to check if the player input is valid
         char moveInput = 'F'; //stores the player input character
@@ -236,14 +236,33 @@ public class GameEngine {
             System.out.println("Player #"+(playerNo+1)+" has won the game.");
         }
     }
+
+     private void generateFiles(){
+         File playerFiles[] = new File[numberOfPlayers];
+         for(int i=0;i<numberOfPlayers;i++){
+             File playerFile = null;
+             try {
+                 playerFile = htmlGenerator.generatePlayerFile(players,i,mapSize,map,players[i].isVisited);
+             } catch (IOException e) {
+                 e.printStackTrace();
+             }
+             playerFiles[i] = playerFile;
+             try {
+                 htmlGenerator.displayFile(playerFiles[i]);
+             } catch (IOException e) {
+                 e.printStackTrace();
+             }
+         }
+     }
+
     /**
      * This method combines all the game logic of the Treasure game
      */
 
     public void StartGame(){
-        File playerFiles[] = new File[numberOfPlayers];
         initializeGame();
         while(!treasureFound){
+            generateFiles();
             for(int i=0;i<numberOfPlayers;i++){
                 if(!playerLivingStatus[i]) {
                     players[i].setPosition(startingPosition[i].getX(),startingPosition[i].getY());
@@ -251,22 +270,8 @@ public class GameEngine {
                 }
                 players[i].move(getMoveFromUser(i)); //move every user by one position.
                 playersEvents(i);
-                File playerFile = null;
-                try {
-                    playerFile = htmlGenerator.generatePlayerFile(players,i,mapSize,map,players[i].isVisited);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                playerFiles[i] = playerFile;
-            }
-
-            for(int i=0;i<numberOfPlayers;i++){
-                try {
-                    htmlGenerator.displayFile(playerFiles[i]);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
             }
         }
+        generateFiles();
     }
 }
