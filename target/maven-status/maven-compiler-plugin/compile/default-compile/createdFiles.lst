@@ -1,1 +1,10 @@
+Part2_Multiplayer_Game\Player\TreasureFinderPlayer.class
+Part2_Multiplayer_Game\Tressure_Finder_Game\Map.class
 Calculator\SimpleCalculator.class
+Part2_Multiplayer_Game\Exceptions\InvalidMapSizeException.class
+Part2_Multiplayer_Game\GameLauncher.class
+Part2_Multiplayer_Game\Exceptions\InvalidCharacterInputMoveException.class
+Part2_Multiplayer_Game\Tressure_Finder_Game\Position.class
+Part2_Multiplayer_Game\Exceptions\InvalidNumberOfPlayersException.class
+Part2_Multiplayer_Game\HTML_File_Gen\HTML_Gen.class
+Part2_Multiplayer_Game\Tressure_Finder_Game\GameEngine.class
