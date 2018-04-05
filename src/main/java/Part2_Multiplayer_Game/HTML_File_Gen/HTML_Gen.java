@@ -9,6 +9,8 @@ import java.io.*;
 
 public class HTML_Gen {
 
+    public HTML_Gen(){}
+
     //Constructor used to call the private methods found in the class
     /**
      * This constructor is used to all the private methods found in the class. Thus the game engine class
@@ -47,21 +49,25 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    private void generatePlayerFile(TreasureFinderPlayer[] players, int playerNo,
-                                          int mapSize, Map map, boolean[][] isVisited) throws IOException {
+    public File generatePlayerFile(TreasureFinderPlayer[] players, int playerNo,
+                                           int mapSize, Map map, boolean[][] isVisited) throws IOException {
 
-        String file = "map_player_" + playerNo + ".html";
+        String file = "map_player_" + (playerNo+1) + ".html";
 
         File f = new File(file);
 
         BufferedWriter bw = new BufferedWriter(new FileWriter(f));
 
         writeHTMLFile(bw, players, playerNo, mapSize, map, isVisited);
+        return f;
+    }
+
+    public void displayFile(File f)throws IOException{
         Desktop.getDesktop().browse(f.toURI());
     }
 
-    public void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int playerNo,
-                              int mapSize, Map map, boolean[][] isVisited) throws IOException{
+    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int playerNo,
+                               int mapSize, Map map, boolean[][] isVisited) throws IOException{
         int i,j;
         int tileSize = 20;
         int borderSize = 3;

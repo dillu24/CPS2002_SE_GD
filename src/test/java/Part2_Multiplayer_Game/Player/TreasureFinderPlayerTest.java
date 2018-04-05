@@ -20,7 +20,7 @@ public class TreasureFinderPlayerTest {
      */
     @Before
     public void setup(){
-        player = new TreasureFinderPlayer(20,20);
+        player = new TreasureFinderPlayer(20,20,50);
     }
 
     /**
@@ -30,8 +30,8 @@ public class TreasureFinderPlayerTest {
     @Test
     public void testUppCharacter(){
         player.move('U');
-        assertEquals(20,player.getPosition().getX());
-        assertEquals(21,player.getPosition().getY());
+        assertEquals(19,player.getPosition().getX());
+        assertEquals(20,player.getPosition().getY());
     }
 
     /**
@@ -41,8 +41,8 @@ public class TreasureFinderPlayerTest {
     @Test
     public void testDownCharacter(){
         player.move('D');
-        assertEquals(20,player.getPosition().getX());
-        assertEquals(19,player.getPosition().getY());
+        assertEquals(21,player.getPosition().getX());
+        assertEquals(20,player.getPosition().getY());
     }
 
     /**
@@ -52,8 +52,8 @@ public class TreasureFinderPlayerTest {
     @Test
     public void testLeftCharacter(){
         player.move('L');
-        assertEquals(19,player.getPosition().getX());
-        assertEquals(20,player.getPosition().getY());
+        assertEquals(20,player.getPosition().getX());
+        assertEquals(19,player.getPosition().getY());
     }
 
     /**
@@ -63,8 +63,8 @@ public class TreasureFinderPlayerTest {
     @Test
     public void testRightCharacter(){
         player.move('R');
-        assertEquals(21,player.getPosition().getX());
-        assertEquals(20,player.getPosition().getY());
+        assertEquals(20,player.getPosition().getX());
+        assertEquals(21,player.getPosition().getY());
     }
 
     /**

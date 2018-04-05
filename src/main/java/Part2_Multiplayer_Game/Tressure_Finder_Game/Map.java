@@ -58,8 +58,17 @@ public class Map {
             }
         }
         Random rand = new Random(System.currentTimeMillis());
-        int xTreasure = rand.nextInt(size);
-        int yTreasure = rand.nextInt(size);
+        int xTreasure;
+        int yTreasure;
+
+        do { // make sure treasure is not on the last column or first column in order to not be surrounded by water
+            xTreasure = rand.nextInt(size);
+        }while(xTreasure==0 || xTreasure == size-1);
+
+        do { //make sure treasure is not on the last or fist column in order to not be surrounded by water
+            yTreasure = rand.nextInt(size);
+        }while(yTreasure==0 || yTreasure ==size-1);
+
         MatrixOfTiles[xTreasure][yTreasure] = 'T'; // Determine the position of the treasure.
 
         int numberOfWaterTiles;

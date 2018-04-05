@@ -11,19 +11,21 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
  */
 public class TreasureFinderPlayer {
     private Position position = new Position(); // Stores the position of the player in the map
-    //private boolean[][] isVisited;
+    public boolean[][] isVisited;
 
 
     /**
      * A constructor used to give the created player a position in the map
      * @param x
      * Stores the x co-ordinate that will be given to the position of this new player
+     * @param mapSize
+     * Stores the map size so that the isVisited array is initialized
      * @param y
      * Stores the y co-ordinate that will be given to the position of this new player
      */
-    public TreasureFinderPlayer(int x, int y){
+    public TreasureFinderPlayer(int x, int y, int mapSize){
+        isVisited = new boolean[mapSize][mapSize];
         setPosition(x,y);
-        //isVisited[x][y] = true;
     }
 
     /**
@@ -34,10 +36,10 @@ public class TreasureFinderPlayer {
      * Stores the new y co-ordinate of the position of the player
      */
 
-    private void setPosition(int x,int y){
+    public void setPosition(int x,int y){
         position.setX(x);
         position.setY(y);
-        //isVisited[x][y] = true;
+        isVisited[x][y] = true;
     }
 
     /**
@@ -60,16 +62,16 @@ public class TreasureFinderPlayer {
     public void move(char direction){
         switch (direction){
             case 'U':
-                setPosition(position.getX(),position.getY()+1);
-                break;
-            case 'D':
-                setPosition(position.getX(),position.getY()-1);
-                break;
-            case 'L':
                 setPosition(position.getX()-1,position.getY());
                 break;
-            case 'R':
+            case 'D':
                 setPosition(position.getX()+1,position.getY());
+                break;
+            case 'L':
+                setPosition(position.getX(),position.getY()-1);
+                break;
+            case 'R':
+                setPosition(position.getX(),position.getY()+1);
                 break;
         }
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" time="0" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test" time="1.051" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="9.0.4+11"/>
@@ -64,18 +64,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidMoveRightByUser" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidMapSizeNonDefaultConstructorM" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testStartingPositionCorrectness" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testValidNumberOfPlayersInput" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidNumberOfPlayersNonDefaultConstructorM" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidMoveUpByUser" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testValidMoveByUser" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidMoveDownByUser" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testValidMapSizeInput" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidMapSizeInput1" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidMapSizeInput2" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidMoveLeftByUser" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidMoveCharacterByUser" time="0"/>
-  <testcase classname="Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest" name="testInvalidNumberOfPlayersInput" time="0"/>
+  <testcase classname="Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test" name="isPlayerHereTest" time="0.739"/>
+  <testcase classname="Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test" name="getTileColourTest" time="0.312"/>
 </testsuite>
