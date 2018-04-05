@@ -18,7 +18,7 @@ public class Map {
     /**
      * This constructor is used whenever a default map is to be initialized with default size . The default value was
      * set to be 50 as to take the maximum worst case as per specification.After the size has been set then the matrix
-     * of tiles is declared and the map is generated accordingly.
+     * of tiles is initialized and the map is generated accordingly.
      */
     public Map(){
         size = 50;
@@ -46,7 +46,7 @@ public class Map {
      * water tiles are determined according to the size of the map in order not to offload the map with a lot of water
      * tiles since the game would never stop. Then water tiles are randomly generated and replace grass tiles only
      * so that the treasure tile is not modified. Note that the number of water tiles were chosen this way in order
-     * to make sure that the treasure is never unaccessable due to the surrounding of water tiles . The same can be said
+     * to make sure that the treasure is never unacceptable due to the surrounding of water tiles . The same can be said
      * to the position of the player. Also in order to avoid having a lot of restarts in the game engine the number of
      * water tiles was chosen to be small.
      */
