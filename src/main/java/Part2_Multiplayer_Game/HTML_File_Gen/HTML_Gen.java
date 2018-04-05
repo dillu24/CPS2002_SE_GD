@@ -13,12 +13,14 @@ public class HTML_Gen {
 
     //Constructor used to call the private methods found in the class
     /**
-     * This constructor is used to all the private methods found in the class. Thus the game engine class
+     * This constructor is used to run the generate player file method found in the class. Thus the game engine class
      * can simply pass the parameters and call the constructor to generate the HTML File of a specific player.
      * @param players
      * Stores the information of all the players
      * @param playerNo
      * stores the index of the player currently playing the game
+     * @param turnNo
+     * stores the current turn number the players are on
      * @param mapSize
      * stores the size of the map of 1 dimension (given it's a square it will be (mapSize x mapSize)
      * @param map
@@ -34,11 +36,14 @@ public class HTML_Gen {
     }
 
     /**
-     * This method will write and output the html files of the player map and information inputted.
+     * This method will run the methods relating for creation and writing of html files of the player map
+     * and information inputted.
      * @param players
      * Stores the information of all the players
      * @param playerNo
      * stores the index of the player currently playing the game
+     * @param turnNo
+     * stores the current turn number the players are on
      * @param mapSize
      * stores the size of the map of 1 dimension (given it's a square it will be (mapSize x mapSize)
      * @param map
@@ -52,7 +57,7 @@ public class HTML_Gen {
     public File generatePlayerFile(TreasureFinderPlayer[] players, int playerNo, int turnNo,
                                            int mapSize, Map map, boolean[][] isVisited) throws IOException {
 
-        String file = "map_player_" + (playerNo+1) + ".html";
+        String file = "map_player_" + (playerNo+1) + ".html"; //File Name of this player map
 
         File f = new File(file);
 
@@ -62,11 +67,37 @@ public class HTML_Gen {
         return f;
     }
 
+    /**
+     * This method will output the html files of the player map.
+     * @param f
+     * Stores the player file to be displayed
+     * @throws IOException
+     * Whenever there occurs a failed or interrupted I/O operations.
+     */
     public void displayFile(File f)throws IOException{
         Desktop.getDesktop().browse(f.toURI());
     }
 
-    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException{
+    /**
+     * This method will handle the writing of html files of the player map and information inputted.
+     * @param players
+     * Stores the information of all the players
+     * @param playerNo
+     * stores the index of the player currently playing the game
+     * @param turnNo
+     * stores the current turn number the players are on
+     * @param mapSize
+     * stores the size of the map of 1 dimension (given it's a square it will be (mapSize x mapSize)
+     * @param map
+     * stores the actual map of the player. This is of type Map.
+     * @param isVisited
+     * stores a 2-d array of boolean, which determines which tiles have been already visited. Will be used to indicate
+     * that if visited the tile colour should show in the HTML file.
+     * @throws IOException
+     * Whenever there occurs a failed or interrupted I/O operations.
+     */
+    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int playerNo, int turnNo,
+                               int mapSize, Map map, boolean[][] isVisited) throws IOException{
         int i,j;
         int tileSize = 20;
         int borderSize = 3;
@@ -121,7 +152,7 @@ public class HTML_Gen {
      * @returns
      * The background colour of the tile specified
      */
-     String getTileColour(int i,int j,Map map, boolean [][] isVisited){
+     public String getTileColour(int i,int j,Map map, boolean [][] isVisited){
         char colour = 'X';
 
         if(isVisited[i][j])
@@ -144,7 +175,6 @@ public class HTML_Gen {
         }
         return "";
     }
-    //@org.jetbrains.annotations.NotNull
     /**
      * This method is used to insert HTML code regarding the existence of a player in each tile in the map.
      * @param players
@@ -158,7 +188,7 @@ public class HTML_Gen {
      * @returns
      * A string if the player is in the tile or not
      */
-    String isPlayerHere(TreasureFinderPlayer[]players, int pNo, int i, int j){
+    public String isPlayerHere(TreasureFinderPlayer[]players, int pNo, int i, int j){
         if(i == players[pNo].getPosition().getX() && j == players[pNo].getPosition().getY()){
             return "P"+(pNo+1);
         }
