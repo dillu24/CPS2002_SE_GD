@@ -19,9 +19,10 @@ public class GameEngine {
     TreasureFinderPlayer []players; //Stores the list of players
     Map map; //Stores the game map
     Position startingPosition[]; //An array of all the starting position of each player , so that whenever a player
-                                 //Enters a water tile , he can restart again from that same position.
+    //Enters a water tile , he can restart again from that same position.
     int mapSize; //Stores the size of the map
     int numberOfPlayers; //stores the number of players playing the game
+    int turnNo; //stores the turn number
     boolean treasureFound = false; //The game will end when the treasure is found.
     boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
     HTML_Gen htmlGenerator;
@@ -130,7 +131,7 @@ public class GameEngine {
             int xStartPos = rand.nextInt(mapSize);
             int yStartPos = rand.nextInt(mapSize);
             while(!validStartingPosition(xStartPos,yStartPos)){ //generate  random numbers until the position is a valid
-                                                                // starting position
+                // starting position
                 xStartPos = rand.nextInt(mapSize);
                 yStartPos = rand.nextInt(mapSize);
             }
@@ -146,6 +147,7 @@ public class GameEngine {
      */
 
     void initializeGame(){
+        turnNo = 0;
         map = new Map(mapSize);
         initializeGamePlayers();
     }
@@ -172,10 +174,10 @@ public class GameEngine {
                 }
             case 'D': //if down check if player position is in bottom row
                 if(players[playerID].getPosition().getX() != mapSize-1){
-                return true;
-            }else{
-                throw new InvalidCharacterInputMoveException(input);
-            }
+                    return true;
+                }else{
+                    throw new InvalidCharacterInputMoveException(input);
+                }
             case 'L': // if left check if player position is in first column
                 if(players[playerID].getPosition().getY() != 0){
                     return true;
@@ -233,27 +235,31 @@ public class GameEngine {
             playerLivingStatus[playerNo] = false;
         } else if (map.getTileType(players[playerNo].getPosition().getX(), players[playerNo].getPosition().getY()) == 'T') {
             treasureFound = true;
-            System.out.println("Player #"+(playerNo+1)+" has won the game.");
         }
     }
 
-     private void generateFiles(){
-         File playerFiles[] = new File[numberOfPlayers];
-         for(int i=0;i<numberOfPlayers;i++){
-             File playerFile = null;
-             try {
-                 playerFile = htmlGenerator.generatePlayerFile(players,i,mapSize,map,players[i].isVisited);
-             } catch (IOException e) {
-                 e.printStackTrace();
-             }
-             playerFiles[i] = playerFile;
-             try {
-                 htmlGenerator.displayFile(playerFiles[i]);
-             } catch (IOException e) {
-                 e.printStackTrace();
-             }
-         }
-     }
+    private void generateFiles(){
+        File playerFiles[] = new File[numberOfPlayers];
+        for(int i=0;i<numberOfPlayers;i++){
+            File playerFile = null;
+            try {
+                playerFile = htmlGenerator.generatePlayerFile(players,i,turnNo,mapSize,map,players[i].isVisited);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            playerFiles[i] = playerFile;
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            try {
+                htmlGenerator.displayFile(playerFiles[i]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     /**
      * This method combines all the game logic of the Treasure game
@@ -262,6 +268,7 @@ public class GameEngine {
     public void StartGame(){
         initializeGame();
         while(!treasureFound){
+            turnNo++;
             generateFiles();
             for(int i=0;i<numberOfPlayers;i++){
                 if(!playerLivingStatus[i]) {
@@ -273,5 +280,10 @@ public class GameEngine {
             }
         }
         generateFiles();
+        for(int i=0;i<numberOfPlayers;i++){
+            if (map.getTileType(players[i].getPosition().getX(), players[i].getPosition().getY()) == 'T') {
+                System.out.println("Player #" + (i + 1) + " has won the game.");
+            }
+        }
     }
 }

@@ -16,6 +16,7 @@ public class HTML_Gen_Test {
 
     private TreasureFinderPlayer player;
     private int i, j;
+    private int turnNo;
     private Map map;
     private boolean [][] isVisited;
     private int mapSize;
@@ -30,6 +31,7 @@ public class HTML_Gen_Test {
      */
     @Before
     public void setup() {
+        turnNo = 2;
         playerNo = 0;
         mapSize = 5;
         player = new TreasureFinderPlayer(0, 0,mapSize);
@@ -41,7 +43,7 @@ public class HTML_Gen_Test {
 
         hGen = null;
         try {
-            hGen = new HTML_Gen(players,playerNo,mapSize,map,isVisited);
+            hGen = new HTML_Gen(players,playerNo,turnNo,mapSize,map,isVisited);
         } catch (IOException e) {
             e.printStackTrace();
         }

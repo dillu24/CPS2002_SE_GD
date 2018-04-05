@@ -29,8 +29,8 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    public HTML_Gen(TreasureFinderPlayer [] players, int playerNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
-        generatePlayerFile(players, playerNo, mapSize, map, isVisited);
+    public HTML_Gen(TreasureFinderPlayer [] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
+        generatePlayerFile(players, playerNo, turnNo, mapSize, map, isVisited);
     }
 
     /**
@@ -49,7 +49,7 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    public File generatePlayerFile(TreasureFinderPlayer[] players, int playerNo,
+    public File generatePlayerFile(TreasureFinderPlayer[] players, int playerNo, int turnNo,
                                            int mapSize, Map map, boolean[][] isVisited) throws IOException {
 
         String file = "map_player_" + (playerNo+1) + ".html";
@@ -58,7 +58,7 @@ public class HTML_Gen {
 
         BufferedWriter bw = new BufferedWriter(new FileWriter(f));
 
-        writeHTMLFile(bw, players, playerNo, mapSize, map, isVisited);
+        writeHTMLFile(bw, players, playerNo, turnNo, mapSize, map, isVisited);
         return f;
     }
 
@@ -66,8 +66,7 @@ public class HTML_Gen {
         Desktop.getDesktop().browse(f.toURI());
     }
 
-    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int playerNo,
-                               int mapSize, Map map, boolean[][] isVisited) throws IOException{
+    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException{
         int i,j;
         int tileSize = 20;
         int borderSize = 3;
@@ -91,7 +90,7 @@ public class HTML_Gen {
         bw.write("</style>");
         bw.write("</head>");
         bw.write("<body>");
-        bw.write("<h2>Player #"+(playerNo+1)+" Map</h2>");
+        bw.write("<h2>Player #"+(playerNo+1)+" Map:"+" Turn #"+turnNo+"</h2>");
         bw.write("<table>");
         for(i = 0; i<mapSize; i++){
             bw.write("<tr>");
