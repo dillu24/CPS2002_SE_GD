@@ -235,31 +235,46 @@ public class GameEngine {
         return moveInput;
     }
 
+	/**
+	 * This method is used to check the different events a player may experience. These are when a player dies because
+	 * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
+	 * stop the game after and announce the winner/s after this round of turns is completed
+	 * @param PlayerNo
+	 * used to store the player number
+	 */
     void playersEvents(int playerNo){
         if (map.getTileType(players[playerNo].getPosition().getX(), players[playerNo].getPosition().getY()) == 'W') {
-            playerLivingStatus[playerNo] = false;
+            playerLivingStatus[playerNo] = false; //player dies
         } else if (map.getTileType(players[playerNo].getPosition().getX(), players[playerNo].getPosition().getY()) == 'T') {
-            treasureFound = true;
+            treasureFound = true; //treasure is found
         }
     }
 
+	
+	/**
+	 * This method is used to create and write the HTML map files of each player. This will be done by calling
+	 * the generatePlayerFile method save the file string to an array, then wait 1 second and display the file
+	 * via a browser, and repeat till all files are displayed. The 1 second delay is done due to the browser having
+	 * to open the files some errors may occur when one has a slow computer
+	 */
     private void generateFiles(){
         File playerFiles[] = new File[numberOfPlayers];
         for(int i=0;i<numberOfPlayers;i++){
             File playerFile = null;
             try {
                 playerFile = htmlGenerator.generatePlayerFile(players,i,turnNo,mapSize,map,players[i].isVisited);
+				//call the generatePlayerFile method
             } catch (IOException e) {
                 e.printStackTrace();
             }
             playerFiles[i] = playerFile;
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1000); //wait 1 second
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
             try {
-                htmlGenerator.displayFile(playerFiles[i]);
+                htmlGenerator.displayFile(playerFiles[i]);//display the file via browser
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -267,7 +282,13 @@ public class GameEngine {
     }
 
     /**
-     * This method combines all the game logic of the Treasure game
+     * This method combines all the game logic of the Treasure game.
+	 * Whilst the treasure has not been found, the turn counter is incremented and the players will
+	 * have theire map files displayed via browser. Then their turn starts, if they are dead they will
+	 * respawn to their starting positions. Then they will move 1 tile in the direction they want to move 
+	 * and finally we will check if any special event occurs, eg if they die or fidn the treasure.
+	 * When the treasure is found the map files will be created, written and displayed one last time 
+	 * and whoever is in the treasure tile is deemed as a winner.
      */
 
     public void StartGame(){
