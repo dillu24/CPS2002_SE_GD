@@ -227,7 +227,11 @@ public class GameEngineTest {
     }
 
     /**
-     * This test checks if the player when accesses a water tile dies
+     * This test checks if the player when accesses a water tile dies.
+	 * The map is set in a particular fashion that we want to be.
+	 * This is done by set the player 1 tile away from the water, then 
+	 * commanding the player to move to the right (where the water is).
+	 * Then we will check the playerLivingStatus, expecting it to be true.
      */
     @Test
     public void testPlayerDiesByWater() {
@@ -245,6 +249,11 @@ public class GameEngineTest {
         treasureGame3.playersEvents(0);
         assertEquals(false,treasureGame3.playerLivingStatus[0]);
     }
+	
+	/**
+	 * This test is used to test when a player finds the treasure  
+	 * if the variable treasure found is ticked as is expected
+	 */
     @Test
     public void testPlayerFindsTreasure() {
         treasureGame3.initializeGame();
@@ -271,5 +280,4 @@ public class GameEngineTest {
         treasureGame2 = null;
         treasureGame3 = null;
     }
-
 }
