@@ -126,13 +126,13 @@ public class GameEngine {
         players = new TreasureFinderPlayer[numberOfPlayers]; //initialize the player array
         startingPosition = new Position[numberOfPlayers]; // initialize the starting position array
         for(int i=0;i<numberOfPlayers;i++){
-            int xStartPos = 0;// rand.nextInt(mapSize);
-            int yStartPos = 0;//rand.nextInt(mapSize);
-            /*while(!validStartingPosition(xStartPos,yStartPos)){ //generate  random numbers until the position is a valid
+            int xStartPos = rand.nextInt(mapSize);
+            int yStartPos = rand.nextInt(mapSize);
+            while(!validStartingPosition(xStartPos,yStartPos)){ //generate  random numbers until the position is a valid
                                                                 // starting position
-                xStartPos = 0;//rand.nextInt(mapSize);
-                yStartPos = 0;//rand.nextInt(mapSize);
-            }*/
+                xStartPos = rand.nextInt(mapSize);
+                yStartPos = rand.nextInt(mapSize);
+            }
             players[i] = new TreasureFinderPlayer(xStartPos,yStartPos,mapSize);
             startingPosition[i] = new Position(); //create new player according to his starting position
             startingPosition[i].setX(xStartPos);
