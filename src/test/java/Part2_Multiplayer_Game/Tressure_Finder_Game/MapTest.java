@@ -1,4 +1,9 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  * This class is used to test the Map class , this class was tested by testing the generation of the Map method
@@ -6,13 +11,6 @@ package Part2_Multiplayer_Game.Tressure_Finder_Game;
  * to different number of water tiles , the Map generation was tested . This was done by checking the number of
  * different tiles created by each map .
  */
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
 
 public class MapTest {
     private Map map1 ; //Stores map 1 of size default i.e 50
@@ -119,6 +117,7 @@ public class MapTest {
     public void tearDown(){
         map1 = null;
         map2 = null;
+        map3 = null;
     }
 
 }

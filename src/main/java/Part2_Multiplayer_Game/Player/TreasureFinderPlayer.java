@@ -7,11 +7,13 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
  * position , where this position represents the player's location in the map . This class also contains a move method
  * that allows the player to move to a new position in the map , note that this method does not verify if the position
  * within the map is valid , but assumes that in the game engine the move was verified to be correct , and thus in this
- * method the new position of the player in the map is set
+ * method the new position of the player in the map is set. Also , each move is done according to the index of the
+ * the 2-D array and not the actual x-y plane . The player also has an isVisited boolean 2-D array that is used by the
+ * HTML object to check the parts of the map that are uncovered and hence need to be viewed.
  */
 public class TreasureFinderPlayer {
     private Position position = new Position(); // Stores the position of the player in the map
-    public boolean[][] isVisited;
+    public boolean[][] isVisited; // The array used to specify which tiles are uncovered or not
 
 
     /**
@@ -29,7 +31,7 @@ public class TreasureFinderPlayer {
     }
 
     /**
-     * The method is used to set the position of the player to a new position in the map
+     * The method is used to set the position of the player to a new position in the map , and uncover the starting position
      * @param x
      * Stores the new x co-ordinate of the position of the player
      * @param y

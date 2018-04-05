@@ -18,8 +18,8 @@ import static org.junit.Assert.*;
 
 public class GameEngineTest {
     private GameEngine treasureGame ; //stores the treasure game to be tested
-    private GameEngine treasureGame2;
-    private GameEngine treasureGame3;
+    private GameEngine treasureGame2; //stores one of the treasure games to be tested
+    private GameEngine treasureGame3; //stores one of the treasure games to be tested
 
     /**
      * A rule done in order to test for exceptions
@@ -28,7 +28,7 @@ public class GameEngineTest {
     public ExpectedException exceptionExcepted = ExpectedException.none();
 
     /**
-     * This method is used to initialize the treasure game
+     * This method is used to check incorrect initialization
      */
     @Before
     public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
@@ -129,7 +129,7 @@ public class GameEngineTest {
     @Test
     public void testInvalidMapSizeNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
         exceptionExcepted.expect(InvalidMapSizeException.class);
-        GameEngine game = new GameEngine(1,5);
+        new GameEngine(1,5);
     }
 
     /**
@@ -139,7 +139,7 @@ public class GameEngineTest {
     @Test
     public void testInvalidNumberOfPlayersNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
         exceptionExcepted.expect(InvalidNumberOfPlayersException.class);
-        GameEngine game = new GameEngine(5,1);
+        new GameEngine(5,1);
     }
 
     /**
@@ -161,7 +161,7 @@ public class GameEngineTest {
      * This test checks whether the validate method returns an exception when the user tries to generate an up move
      * if he is in the top row
      * @throws InvalidCharacterInputMoveException
-     * If this is thrown test result is sucessfull
+     * If this is thrown test result is successful
      */
     @Test
     public void testInvalidMoveUpByUser() throws InvalidCharacterInputMoveException{
@@ -227,7 +227,11 @@ public class GameEngineTest {
     }
 
     /**
-     * This test checks if the player when accesses a water tile dies
+     * This test checks if the player when accesses a water tile dies.
+	 * The map is set in a particular fashion that we want to be.
+	 * This is done by set the player 1 tile away from the water, then 
+	 * commanding the player to move to the right (where the water is).
+	 * Then we will check the playerLivingStatus, expecting it to be true.
      */
     @Test
     public void testPlayerDiesByWater() {
@@ -245,6 +249,11 @@ public class GameEngineTest {
         treasureGame3.playersEvents(0);
         assertEquals(false,treasureGame3.playerLivingStatus[0]);
     }
+	
+	/**
+	 * This test is used to test when a player finds the treasure  
+	 * if the variable treasure found is ticked as is expected
+	 */
     @Test
     public void testPlayerFindsTreasure() {
         treasureGame3.initializeGame();
@@ -271,5 +280,4 @@ public class GameEngineTest {
         treasureGame2 = null;
         treasureGame3 = null;
     }
-
 }

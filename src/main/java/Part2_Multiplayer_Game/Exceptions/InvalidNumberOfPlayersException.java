@@ -22,7 +22,7 @@ public class InvalidNumberOfPlayersException extends Exception {
      * The value of the invalid number that caused the exception.
      */
 
-    public int getInvalidNumber(){
+    int getInvalidNumber(){
         return invalidNumber;
     }
 }

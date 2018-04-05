@@ -15,7 +15,7 @@ public class InvalidMapSizeExceptionTest {
     private InvalidMapSizeException exception; // Stores the object of type InvalidMapSizeException
 
     /**
-     * This method is used to initialize the InvalidMapSizeExeption object with some dummy invalid value of 60
+     * This method is used to initialize the InvalidMapSizeException object with some dummy invalid value of 60
      */
     @Before
     public void setUp(){
