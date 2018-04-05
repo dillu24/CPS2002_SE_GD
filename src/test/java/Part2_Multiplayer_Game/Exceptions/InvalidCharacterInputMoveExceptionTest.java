@@ -33,6 +33,9 @@ public class InvalidCharacterInputMoveExceptionTest {
         assertEquals('c',invException.getInvalidCharacter());
     }
 
+    /**
+     * Deallocates the objects memory
+     */
     @After
     public void tearDown(){
         invException = null;

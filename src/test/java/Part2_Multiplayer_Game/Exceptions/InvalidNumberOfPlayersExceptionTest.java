@@ -34,7 +34,6 @@ public class InvalidNumberOfPlayersExceptionTest {
      * This method is used to remove the object memory after termination of the test.
      */
 
-
     @After
     public void tearDown() throws Exception {
         exception = null;

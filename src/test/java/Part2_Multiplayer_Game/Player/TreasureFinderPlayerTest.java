@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
  * supplied since if the setters and getters are wrong than the move test would also fail.
  */
 public class TreasureFinderPlayerTest {
-    private TreasureFinderPlayer player;
+    private TreasureFinderPlayer player; //stores the play object
 
     /**
      * Creates a new player in a dummy position irrespective of the map size , since only the move function is tested
@@ -25,7 +25,7 @@ public class TreasureFinderPlayerTest {
 
     /**
      *Tests whenever the user inputs a 'U' character which means the player wants to move up by 1 position . Thus
-     * only the y co-ordinate changes by increasing it's value by 1.
+     * only the x co-ordinate changes by increasing it's value by 1 , since 2-D array indexing is considered
      */
     @Test
     public void testUppCharacter(){
@@ -36,7 +36,7 @@ public class TreasureFinderPlayerTest {
 
     /**
      *Tests whenever the user inputs a 'D' character which means the player wants to move down by 1 position . Thus
-     * only the y co-ordinate changes by decreasing it's value by 1.
+     * only the x co-ordinate changes by decreasing it's value by 1 , since 2-D array indexing is considered
      */
     @Test
     public void testDownCharacter(){
@@ -47,7 +47,7 @@ public class TreasureFinderPlayerTest {
 
     /**
      *Tests whenever the user inputs a 'L' character which means the player wants to move left by 1 position . Thus
-     * only the x co-ordinate changes by decreasing it's value by 1.
+     * only the y co-ordinate changes by decreasing it's value by 1 , since 2-D array indexing is considered.
      */
     @Test
     public void testLeftCharacter(){
@@ -58,7 +58,7 @@ public class TreasureFinderPlayerTest {
 
     /**
      *Tests whenever the user inputs a 'R' character which means the player wants to move right by 1 position . Thus
-     * only the x co-ordinate changes by increasing it's value by 1.
+     * only the y co-ordinate changes by increasing it's value by 1, since 2-D array indexing is considered.
      */
     @Test
     public void testRightCharacter(){
@@ -78,6 +78,9 @@ public class TreasureFinderPlayerTest {
         assertEquals(20,player.getPosition().getY());
     }
 
+    /**
+     * Deallocate the object's memory
+     */
     @After
     public void teardown(){
         player = null;
