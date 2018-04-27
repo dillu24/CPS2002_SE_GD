@@ -1,120 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18bc7bae-1a8b-4ac8-9eaf-d196e69c9c85" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_16_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidNumberOfPlayersException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Map.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveExceptionTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeExceptionTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Exceptions/InvalidNumberOfPlayersExceptionTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Exceptions/InvalidNumberOfPlayersException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/GameLauncher.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Map.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Exceptions/InvalidNumberOfPlayersException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/GameLauncher.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Map.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/generated-classes/emma/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Position.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/2.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/3.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/4.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/5.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/6.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/7.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/8.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/9.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/a.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/b.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/c.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/d.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/e.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/site/emma/_files/f.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveExceptionTest.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidMapSizeExceptionTest.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersExceptionTest.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Player.TreasureFinderPlayerTest.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Part2_Multiplayer_Game.Tressure_Finder_Game.MapTest.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveExceptionTest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Exceptions.InvalidMapSizeExceptionTest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersExceptionTest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Player.TreasureFinderPlayerTest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngineTest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Part2_Multiplayer_Game.Tressure_Finder_Game.MapTest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Exceptions/InvalidCharacterInputMoveExceptionTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Exceptions/InvalidMapSizeExceptionTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Exceptions/InvalidNumberOfPlayersExceptionTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Player/TreasureFinderPlayerTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/MapTest.class" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CPS2002_SE_GD.iml" afterPath="$PROJECT_DIR$/CPS2002_SE_GD.iml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/SE_Assignment-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/target/coverage-0.ec" afterPath="$PROJECT_DIR$/target/coverage-0.ec" />
-      <change beforePath="$PROJECT_DIR$/target/coverage.em" afterPath="$PROJECT_DIR$/target/coverage.em" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/site/emma/_files/0.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/0.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/emma/_files/1.html" afterPath="$PROJECT_DIR$/target/site/emma/_files/1.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/emma/coverage.xml" afterPath="$PROJECT_DIR$/target/site/emma/coverage.xml" />
-      <change beforePath="$PROJECT_DIR$/target/site/emma/index.html" afterPath="$PROJECT_DIR$/target/site/emma/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Calculator.SimpleCalculatorTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/Calculator.SimpleCalculatorTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Calculator.SimpleCalculatorTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Calculator.SimpleCalculatorTest.xml" />
+    <list default="true" id="b6749ec7-caaf-4af6-8af3-7d1e189e06dc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="GameLauncher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1378" />
-    <option name="height" value="744" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="V2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="V2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="V2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="V2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="V2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Calculator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="V2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Part2_Multiplayer_Game" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -218,13 +194,6 @@
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="18bc7bae-1a8b-4ac8-9eaf-d196e69c9c85" name="Default" comment="" />
-      <created>1524814631560</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1524814631560</updated>
-    </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -232,6 +201,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -242,7 +212,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20631425" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -257,11 +227,20 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
