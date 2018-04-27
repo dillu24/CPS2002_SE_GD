@@ -22,6 +22,13 @@ public class GameEngineTest {
     private GameEngine treasureGame ; //stores the treasure game to be tested
     private GameEngine treasureGame2; //stores one of the treasure games to be tested
     private GameEngine treasureGame3; //stores one of the treasure games to be tested
+    private char [][] tileMap = {
+            {'G','W','G','W','W'},
+            {'T','G','G','G','G'},
+            {'G','G','G','G','G'},
+            {'G','G','G','G','G'},
+            {'G','G','G','G','G'}};
+
 
     /**
      * A rule done in order to test for exceptions
@@ -105,24 +112,34 @@ public class GameEngineTest {
     }
 
     /**
-     * This test is used in order to check that the validation for the starting position is correct , i.e that
-     * each starting position is on a grass tile.
+     * This test is used in order to check that the validation for starting on water is incorrect
      */
     @Test
-    public void testStartingPositionCorrectness(){
+    public void testStartingPositionInWater(){
         treasureGame.map = new SafeMap(5);
-        treasureGame.map.generateMap();
-        for(int i=0;i<5;i++){
-            for(int j=0;j<5;j++){
-                if(treasureGame.map.getTileType(i,j)=='W'){
-                    assertEquals(false, treasureGame.validStartingPosition(i,j));
-                }else if(treasureGame.map.getTileType(i,j)=='T'){
-                    assertEquals(false, treasureGame.validStartingPosition(i,j));
-                }else {
-                    assertEquals(true, treasureGame.validStartingPosition(i,j));
-                }
-            }
-        }
+        treasureGame.map.setMap(tileMap);
+        assertEquals(false,treasureGame.validStartingPosition(0,1));
+    }
+
+    /**
+     * This test is used in order to check that the validation for starting on treasure is incorrect
+     */
+    @Test
+    public void testStartingPositionInTreasure(){
+        treasureGame.map = new SafeMap(5);
+        treasureGame.map.setMap(tileMap);
+        assertEquals(false,treasureGame.validStartingPosition(1,0));
+
+    }
+
+    /**
+     * This test is used in order to check that the validation for starting on green is correct
+     */
+    @Test
+    public void testStartingPositionInGreen(){
+        treasureGame.map = new SafeMap(5);
+        treasureGame.map.setMap(tileMap);
+        assertEquals(true,treasureGame.validStartingPosition(0,0));
     }
 
     /**
@@ -240,13 +257,6 @@ public class GameEngineTest {
     public void testPlayerDiesByWater() {
         treasureGame3.initializeGame();
         treasureGame3.players[0].setPosition(0,0);
-
-        char [][] tileMap = {
-                {'G','W','G','W','W'},
-                {'T','G','G','G','G'},
-                {'G','G','G','G','G'},
-                {'G','G','G','G','G'},
-                {'G','G','G','G','G'}};
         treasureGame3.map.setMap(tileMap);
         treasureGame3.players[0].move('R');
         treasureGame3.playersEvents(0);
