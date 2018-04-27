@@ -271,13 +271,6 @@ public class GameEngineTest {
     public void testPlayerFindsTreasure() {
         treasureGame3.initializeGame();
         treasureGame3.players[0].setPosition(0,0);
-
-        char [][] tileMap = {
-                {'G','W','G','W','W'},
-                {'T','G','G','G','G'},
-                {'G','G','G','G','G'},
-                {'G','G','G','G','G'},
-                {'G','G','G','G','G'}};
         treasureGame3.map.setMap(tileMap);
         treasureGame3.players[0].move('D');
         treasureGame3.playersEvents(0);
