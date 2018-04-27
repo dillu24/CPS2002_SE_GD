@@ -19,8 +19,7 @@ public class SafeMapCreatorTest {
 
     @Before
     public void setUp() {
-        mapSize1 = 10;
-        SafeMap.setInstanceNull();
+        mapSize1 = 5;
         creator1 = new SafeMapCreator();
     }
 
@@ -40,7 +39,7 @@ public class SafeMapCreatorTest {
         Map sM = creator1.createMap("Safe",mapSize1);
         int size =  sM.getMapSize();
         String type =  sM.getMapType();
-        assertEquals(10,size);
+        assertEquals(5,size);
         assertEquals("Safe",type);
     }
 }

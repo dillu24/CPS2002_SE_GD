@@ -13,8 +13,7 @@ public class HazardousMapTest {
     private HazardousMap map1;
     @Before
     public void setUp(){
-        HazardousMap.setInstanceNull();
-        map1 = HazardousMap.getInstance(50);
+        map1 = HazardousMap.getInstance(5);
         map1.generateMap();
     }
 
@@ -32,8 +31,8 @@ public class HazardousMapTest {
     }
     private int numberOfTreasuresInMap(){
         int numberOfTreasures = 0;
-        for(int i=0;i<50;i++){ //for loop going through all the tiles in map
-            for(int j=0;j<50;j++){
+        for(int i=0;i<5;i++){ //for loop going through all the tiles in map
+            for(int j=0;j<5;j++){
                 if(map1.getTileType(i,j)=='T'){ //checking their type to see if they are a treasure
                     numberOfTreasures++; //if they are, count it
                 }
@@ -47,12 +46,12 @@ public class HazardousMapTest {
      */
     @Test
     public void testIfNumberOfWaterTilesIsCorrect(){
-        assertEquals(Math.round(map1.percentageOfWaterTiles*50*50),numberOfWaterTilesInMap());
+        assertEquals(Math.round(map1.percentageOfWaterTiles*5*5),numberOfWaterTilesInMap());
     }
     private int numberOfWaterTilesInMap(){
         int numberOfWaterTiles = 0;
-        for(int i=0;i<50;i++){ //loops through all the tiles in the map
-            for(int j=0;j<50;j++){
+        for(int i=0;i<5;i++){ //loops through all the tiles in the map
+            for(int j=0;j<5;j++){
                 if(map1.getTileType(i,j)=='W'){ //checks which are water tile
                     numberOfWaterTiles++; //counts the water
                 }
@@ -67,13 +66,13 @@ public class HazardousMapTest {
      */
     @Test
     public void testIfNumberOfGreenTilesIsCorrect(){
-        assertEquals(((50*50)-1-Math.round(map1.percentageOfWaterTiles*50*50)),numberOfGreenTilesInMap());
+        assertEquals(((5*5)-1-Math.round(map1.percentageOfWaterTiles*5*5)),numberOfGreenTilesInMap());
         //Total number of tiles minus 1 treasure tile minus the water tiles
     }
     private int numberOfGreenTilesInMap(){
         int numberOfGreenTiles = 0;
-        for(int i=0;i<50;i++){
-            for(int j=0;j<50;j++){
+        for(int i=0;i<5;i++){
+            for(int j=0;j<5;j++){
                 if(map1.getTileType(i,j)=='G'){//checks on grass tiles
                     numberOfGreenTiles++;
                 }
@@ -84,6 +83,6 @@ public class HazardousMapTest {
 
     @Test
     public void testSameMapInstance(){
-        assertEquals(HazardousMap.getInstance(50),map1);
+        assertEquals(HazardousMap.getInstance(5),map1);
     }
 }

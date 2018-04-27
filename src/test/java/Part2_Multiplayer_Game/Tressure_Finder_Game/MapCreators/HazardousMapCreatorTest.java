@@ -17,8 +17,7 @@ public class HazardousMapCreatorTest {
     private HazardousMapCreator creator1;
     @Before
     public void setUp() {
-        mapSize1 = 20;
-        HazardousMap.setInstanceNull();
+        mapSize1 = 5;
         creator1 = new HazardousMapCreator();
     }
 
@@ -38,7 +37,7 @@ public class HazardousMapCreatorTest {
         Map hM = creator1.createMap("Hazardous",mapSize1);
         int size =  hM.getMapSize();
         String type =  hM.getMapType();
-        assertEquals(20,size);
+        assertEquals(5,size);
         assertEquals("Hazardous",type);
     }
 }

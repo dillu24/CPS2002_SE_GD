@@ -12,18 +12,6 @@ public class SafeMap extends Map {
     private static SafeMap instance = null; //Create a null instance
     float percentageOfWaterTiles; // stores the percentage of water tiles to be used for checking in unit tests
 
-    /**
-     * This method is used for tests to be able to make the instance null again, to then test
-     * different scenarios, such as different map sizes, types, having specific tiles at specific
-     * positions etc...
-     *
-     * This is NOT part of the design pattern and is only public accessible for the tests. Tests aside it
-     * would not be used.
-     */
-    public static void setInstanceNull(){
-        instance = null;
-    }
-
     public static SafeMap getInstance(int mapSize){
         if (instance == null){//if no instance has yet been created
             instance = new SafeMap(mapSize); //create a new one
