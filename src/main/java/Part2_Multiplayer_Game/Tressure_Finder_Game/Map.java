@@ -42,6 +42,14 @@ public abstract class Map{
         }
     }
 
+    public int getMapSize(){
+        return size;
+    }
+
+    public String getMapType(){
+        return type;
+    }
+
 }
 
 

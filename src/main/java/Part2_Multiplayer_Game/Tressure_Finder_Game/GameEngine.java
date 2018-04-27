@@ -247,7 +247,7 @@ public class GameEngine {
         return moveInput;
     }
 
-<<<<<<< HEAD
+
     /**
      * This method is used to check the different events a player may experience. These are when a player dies because
      * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
@@ -255,7 +255,7 @@ public class GameEngine {
      * @param playerNo
      * used to store the player number
      */
-=======
+
 	/**
 	 * This method is used to check the different events a player may experience. These are when a player dies because
 	 * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
@@ -263,7 +263,7 @@ public class GameEngine {
 	 * @param playerNo
 	 * used to store the player number
 	 */
->>>>>>> 0f6cec85f47dd7df443076a3292f6089de0832bf
+
     void playersEvents(int playerNo){
         if (map.getTileType(players[playerNo].getPosition().getX(), players[playerNo].getPosition().getY()) == 'W') {
             playerLivingStatus[playerNo] = false; //player dies
