@@ -2,6 +2,7 @@ package Part2_Multiplayer_Game.Tressure_Finder_Game;
 
 import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
+import Part2_Multiplayer_Game.Exceptions.InvalidMapTypeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
 import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen;
@@ -31,7 +32,7 @@ public class GameEngine {
     boolean treasureFound = false; //The game will end when the treasure is found.
     boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
     private HTML_Gen htmlGenerator; //An object used to generate the HTML Files
-
+    private String mapType;
 
     GameEngine(){} //default constructor used for testing the GameEngine class
 
@@ -49,13 +50,23 @@ public class GameEngine {
      * Whenever the number of players passed as parameters is not as specified
      */
 
-    public GameEngine(int mapSize , int numberOfPlayers) throws InvalidNumberOfPlayersException,InvalidMapSizeException{
+    public GameEngine(int mapSize , int numberOfPlayers,String mapType) throws InvalidNumberOfPlayersException,InvalidMapSizeException,InvalidMapTypeException{
         validNumberOfPlayers(numberOfPlayers); //validate number of players
         this.numberOfPlayers = numberOfPlayers; //store it if correct
         validMapSize(numberOfPlayers,mapSize); //validate map size
         this.mapSize = mapSize; //store it if correct
+        validMapType(mapType);
+        this.mapType = mapType;
         playerLivingStatus = new boolean[mapSize]; //initialize li playerLiving Status
         htmlGenerator = new HTML_Gen(); //initializes the html object
+    }
+
+    boolean validMapType(String mapType) throws InvalidMapTypeException{
+        if(mapType.equals("Hazardous") || mapType.equals("Safe")){
+            return true;
+        }else{
+            throw new InvalidMapTypeException(mapType);
+        }
     }
 
     /**
@@ -153,7 +164,8 @@ public class GameEngine {
 
     void initializeGame(){
         turnNo = 0;
-        map = new Map(mapSize);
+        MapCreator creator = new MapCreator();
+        map = creator.createMap(mapType,mapSize);
         initializeGamePlayers();
     }
 
@@ -235,13 +247,23 @@ public class GameEngine {
         return moveInput;
     }
 
+
+    /**
+     * This method is used to check the different events a player may experience. These are when a player dies because
+     * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
+     * stop the game after and announce the winner/s after this round of turns is completed
+     * @param playerNo
+     * used to store the player number
+     */
+
 	/**
 	 * This method is used to check the different events a player may experience. These are when a player dies because
 	 * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
 	 * stop the game after and announce the winner/s after this round of turns is completed
-	 * @param PlayerNo
+	 * @param playerNo
 	 * used to store the player number
 	 */
+
     void playersEvents(int playerNo){
         if (map.getTileType(players[playerNo].getPosition().getX(), players[playerNo].getPosition().getY()) == 'W') {
             playerLivingStatus[playerNo] = false; //player dies
@@ -250,20 +272,20 @@ public class GameEngine {
         }
     }
 
-	
-	/**
-	 * This method is used to create and write the HTML map files of each player. This will be done by calling
-	 * the generatePlayerFile method save the file string to an array, then wait 1 second and display the file
-	 * via a browser, and repeat till all files are displayed. The 1 second delay is done due to the browser having
-	 * to open the files some errors may occur when one has a slow computer
-	 */
+
+    /**
+     * This method is used to create and write the HTML map files of each player. This will be done by calling
+     * the generatePlayerFile method save the file string to an array, then wait 1 second and display the file
+     * via a browser, and repeat till all files are displayed. The 1 second delay is done due to the browser having
+     * to open the files some errors may occur when one has a slow computer
+     */
     private void generateFiles(){
         File playerFiles[] = new File[numberOfPlayers];
         for(int i=0;i<numberOfPlayers;i++){
             File playerFile = null;
             try {
                 playerFile = htmlGenerator.generatePlayerFile(players,i,turnNo,mapSize,map,players[i].isVisited);
-				//call the generatePlayerFile method
+                //call the generatePlayerFile method
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -283,12 +305,21 @@ public class GameEngine {
 
     /**
      * This method combines all the game logic of the Treasure game.
+<<<<<<< HEAD
+     * Whilst the treasure has not been found, the turn counter is incremented and the players will
+     * have their  map files displayed via browser. Then their turn starts, if they are dead they will
+     * respawn to their starting positions. Then they will move 1 tile in the direction they want to move
+     * and finally we will check if any special event occurs, eg if they die or fidn the treasure.
+     * When the treasure is found the map files will be created, written and displayed one last time
+     * and whoever is in the treasure tile is deemed as a winner.
+=======
 	 * Whilst the treasure has not been found, the turn counter is incremented and the players will
-	 * have theire map files displayed via browser. Then their turn starts, if they are dead they will
+	 * have their  map files displayed via browser. Then their turn starts, if they are dead they will
 	 * respawn to their starting positions. Then they will move 1 tile in the direction they want to move 
 	 * and finally we will check if any special event occurs, eg if they die or fidn the treasure.
 	 * When the treasure is found the map files will be created, written and displayed one last time 
 	 * and whoever is in the treasure tile is deemed as a winner.
+>>>>>>> 0f6cec85f47dd7df443076a3292f6089de0832bf
      */
 
     public void StartGame(){
