@@ -3,6 +3,7 @@ package Part2_Multiplayer_Game.HTML_File_Gen;
 import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngine;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.SafeMap;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
 import org.junit.After;
 import org.junit.Before;
@@ -33,7 +34,8 @@ public class HTML_Gen_Test {
         playerNo = 0;
         mapSize = 5;
         player = new TreasureFinderPlayer(0, 0,mapSize);
-        map = new Map(mapSize);
+        map = new SafeMap(mapSize);
+        map.generateMap();
 
         players = new TreasureFinderPlayer[1]; //initialize the player array //added 1 instead by dylan coz you were initializing empty array
         players[0] = player; //added player by dylan coz you need to add player

@@ -16,6 +16,7 @@ public class GameLauncher {
     public static void main(String args[]) throws IOException {
         int numberOfPlayers = 0; //stores the number of players to play the game
         int mapSize = 0; //stores the map size
+        String mapType;
         Scanner sc = new Scanner(System.in);
         GameEngine game =null;
 
@@ -33,6 +34,8 @@ public class GameLauncher {
                         sc.next();
                     }
                 }
+                System.out.println("Enter Safe if you want a safe map , or Hazardous if you want a hazardous map");
+                mapType = sc.next();
                 if (numberOfPlayers <= 4) { //Each player size has different minimum size of maps
                     System.out.println("Please enter the map size , the minimum size is 5 , the maximum number is 50");
                 } else {
@@ -49,7 +52,7 @@ public class GameLauncher {
                     }
                 }
                 validInput = false;
-                game = new GameEngine(mapSize,numberOfPlayers); //try to create a game object
+                game = new GameEngine(mapSize,numberOfPlayers,mapType); //try to create a game object
                 validInput = true;
             }catch (Exception e){ //if the parameters passed are not correct notify the user and iterate again untill
                                   //proper parameters are entered
