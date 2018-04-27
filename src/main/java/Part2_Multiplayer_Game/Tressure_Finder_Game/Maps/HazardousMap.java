@@ -41,7 +41,6 @@ public class HazardousMap extends Map {
         MatrixOfTiles[xTreasure][yTreasure] = 'T'; // Determine the position of the treasure.
         percentageOfWaterTiles = (((float) (Math.random()*10)+25))/100;
         int numberOfWaterTiles = Math.round(percentageOfWaterTiles*size*size);
-        System.out.println(percentageOfWaterTiles);
         for(int i=0;i<numberOfWaterTiles;i++){ //Determine the water tiles position
             int xWater = rand.nextInt(size);
             int yWater = rand.nextInt(size);

@@ -39,7 +39,7 @@ public class HazardousMapTest {
 
     @Test
     public void testIfNumberOfWaterTilesIsCorrect(){
-        assertEquals(Math.round(map1.percentageOfWaterTiles*50),numberOfWaterTilesInMap());
+        assertEquals(Math.round(map1.percentageOfWaterTiles*50*50),numberOfWaterTilesInMap());
     }
     private int numberOfWaterTilesInMap(){
         int numberOfWaterTiles = 0;
@@ -55,7 +55,7 @@ public class HazardousMapTest {
 
     @Test
     public void testIfNumberOfGreenTilesIsCorrect(){
-        assertEquals(((50*50)-1-Math.round(map1.percentageOfWaterTiles*50)),numberOfGreenTilesInMap());
+        assertEquals(((50*50)-1-Math.round(map1.percentageOfWaterTiles*50*50)),numberOfGreenTilesInMap());
     }
     private int numberOfGreenTilesInMap(){
         int numberOfGreenTiles = 0;
