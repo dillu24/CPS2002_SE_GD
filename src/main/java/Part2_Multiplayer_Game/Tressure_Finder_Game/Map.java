@@ -42,10 +42,18 @@ public abstract class Map{
         }
     }
 
+    /**
+     * This method is used for tests to get the map property of size
+     * @return size: the size of the border of a map
+     */
     public int getMapSize(){
         return size;
     }
 
+    /**
+     * This method is used for tests to get the map property of type
+     * @return size: the size of the type of a map
+     */
     public String getMapType(){
         return type;
     }

@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+
 public class SafeMapTest {
     private SafeMap map1;
     @Before
