@@ -5,12 +5,13 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.MapCreator;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.HazardousMap;
 
 /**
- * Created by Dylan Galea on 27/04/2018.
+ * This class is used to create a new concrete creator of type Hazardous.
  */
+
 public class HazardousMapCreator extends MapCreator{
     public Map createMap(String type,int size){
-        HazardousMap map = new HazardousMap(size);
-        map.generateMap();
+        HazardousMap map = new HazardousMap(size); //crate hazardous map
+        map.generateMap(); //generatethe tiles
         return map;
     }
 }

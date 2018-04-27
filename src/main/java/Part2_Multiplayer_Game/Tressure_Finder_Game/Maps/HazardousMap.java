@@ -1,14 +1,13 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.Maps;
-
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
-
 import java.util.Random;
 
 /**
- * Created by Dylan Galea on 27/04/2018.
+ * This class is used to encode a Hazardous map , i.e having between 25-30 percent of water tiles
  */
+
 public class HazardousMap extends Map {
-    float percentageOfWaterTiles;
+    float percentageOfWaterTiles; //stores the percetnage of water tiles to be used in tests
     HazardousMap(){
         size = 50;
         type = "Hazardous";

@@ -1,16 +1,15 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.Maps;
-
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
-
 import java.util.Random;
 
 /**
- * Created by Dylan Galea on 27/04/2018.
+ * This class is used to encode the SafeMap class , it generates a map with at most 10 percent water tiles
  */
+
 public class SafeMap extends Map {
-    float percentageOfWaterTiles;
+    float percentageOfWaterTiles; // stores the percentage of water tiles to be used for checking in unit tests
     SafeMap(){
-        size = 50;
+        size = 50; //give default values
         type = "Safe";
         MatrixOfTiles = new char[50][50];
         generateMap();
@@ -40,7 +39,7 @@ public class SafeMap extends Map {
         }while(yTreasure==0 || yTreasure ==size-1);
 
         MatrixOfTiles[xTreasure][yTreasure] = 'T'; // Determine the position of the treasure.
-        percentageOfWaterTiles = ((float) (Math.random()*10)/100);
+        percentageOfWaterTiles = ((float) (Math.random()*10)/100); //determine random percentange
         int numberOfWaterTiles = Math.round(percentageOfWaterTiles*size*size);
         for(int i=0;i<numberOfWaterTiles;i++){ //Determine the water tiles position
             int xWater = rand.nextInt(size);

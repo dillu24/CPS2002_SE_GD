@@ -277,12 +277,22 @@ public class GameEngineTest {
         assertEquals(true,treasureGame3.treasureFound);
     }
 
+    /**
+     * This test is used to check that the validator is correct
+     * @throws InvalidMapTypeException
+     * If the validator is not correct
+     */
     @Test
     public void testValidMapType() throws InvalidMapTypeException{
         assertEquals(true,treasureGame.validMapType("Safe"));
         assertEquals(true,treasureGame.validMapType("Hazardous"));
     }
 
+    /**
+     * This test is used to check that the validator is correct
+     * @throws InvalidMapTypeException
+     * If the validtor is incorrect
+     */
     @Test
     public void testInvalidMapType() throws InvalidMapTypeException{
         exceptionExcepted.expect(InvalidMapTypeException.class);
