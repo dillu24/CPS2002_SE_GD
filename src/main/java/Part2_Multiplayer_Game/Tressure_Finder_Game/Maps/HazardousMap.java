@@ -7,14 +7,28 @@ import java.util.Random;
  */
 
 public class HazardousMap extends Map {
-    float percentageOfWaterTiles; //stores the percetnage of water tiles to be used in tests
-    HazardousMap(){
-        size = 50;
-        type = "Hazardous";
-        MatrixOfTiles = new char[50][50];
-        generateMap();
+    private static HazardousMap instance = null; //Create a null instance
+    float percentageOfWaterTiles; // stores the percentage of water tiles to be used for checking in unit tests
+
+    /**
+     * This method is used for tests to be able to make the instance null again, to then test
+     * different scenarios, such as different map sizes, types, having specific tiles at specific
+     * positions etc...
+     *
+     * This is NOT part of the design pattern and is only public accessible for the tests. Tests aside it
+     * would not be used.
+     */
+    public static void setInstanceNull(){
+        instance = null;
     }
-    public HazardousMap(int size){
+
+    public static HazardousMap getInstance(int mapSize){
+        if (instance == null){ //if no instance has yet been created
+            instance = new HazardousMap(mapSize); //create a new one
+        }
+        return instance;//show our only immutable instance
+    }
+    private HazardousMap(int size){
         setMapSize(size);
         type = "Hazardous";
         MatrixOfTiles = new char [size][size];

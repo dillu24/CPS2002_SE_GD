@@ -34,7 +34,7 @@ public class HTML_Gen_Test {
         playerNo = 0;
         mapSize = 5;
         player = new TreasureFinderPlayer(0, 0,mapSize);
-        map = new SafeMap(mapSize);
+        map = SafeMap.getInstance(mapSize);
         map.generateMap();
 
         players = new TreasureFinderPlayer[1]; //initialize the player array //added 1 instead by dylan coz you were initializing empty array

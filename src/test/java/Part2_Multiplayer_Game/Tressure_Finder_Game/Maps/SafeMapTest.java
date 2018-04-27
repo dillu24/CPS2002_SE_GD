@@ -11,7 +11,9 @@ public class SafeMapTest {
     private SafeMap map1;
     @Before
     public void setUp(){
-        map1 = new SafeMap();
+        SafeMap.setInstanceNull();
+        map1 = SafeMap.getInstance(50);
+        map1.generateMap();
     }
 
     @After
@@ -65,6 +67,11 @@ public class SafeMapTest {
             }
         }
         return numberOfGreenTiles;
+    }
+
+    @Test
+    public void testSameMapInstance(){
+        assertEquals(SafeMap.getInstance(50),map1);
     }
 
 }

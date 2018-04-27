@@ -1,10 +1,13 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game;
 
 public abstract class Map{
+
     protected String type;
     protected char MatrixOfTiles[][];
     protected int size;
     public abstract void generateMap();
+
+
     /**
      * This getter is used to get the tile type in the co-ordinate position x,y
      * @param x

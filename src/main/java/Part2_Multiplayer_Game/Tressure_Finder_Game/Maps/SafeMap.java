@@ -1,5 +1,7 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.Maps;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.MapCreators.SafeMapCreator;
+
 import java.util.Random;
 
 /**
@@ -7,15 +9,30 @@ import java.util.Random;
  */
 
 public class SafeMap extends Map {
+    private static SafeMap instance = null; //Create a null instance
     float percentageOfWaterTiles; // stores the percentage of water tiles to be used for checking in unit tests
-    SafeMap(){
-        size = 50; //give default values
-        type = "Safe";
-        MatrixOfTiles = new char[50][50];
-        generateMap();
 
+    /**
+     * This method is used for tests to be able to make the instance null again, to then test
+     * different scenarios, such as different map sizes, types, having specific tiles at specific
+     * positions etc...
+     *
+     * This is NOT part of the design pattern and is only public accessible for the tests. Tests aside it
+     * would not be used.
+     */
+    public static void setInstanceNull(){
+        instance = null;
     }
-    public SafeMap(int size){
+
+    public static SafeMap getInstance(int mapSize){
+        if (instance == null){//if no instance has yet been created
+            instance = new SafeMap(mapSize); //create a new one
+        }
+        return instance;//show our only immutable instance
+    }
+
+
+    private SafeMap(int size){
         setMapSize(size);
         type = "Safe";
         MatrixOfTiles = new char [size][size];

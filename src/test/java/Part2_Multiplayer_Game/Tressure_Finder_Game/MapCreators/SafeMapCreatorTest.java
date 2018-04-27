@@ -1,6 +1,7 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.MapCreators;
 
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.SafeMap;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,6 +20,7 @@ public class SafeMapCreatorTest {
     @Before
     public void setUp() {
         mapSize1 = 10;
+        SafeMap.setInstanceNull();
         creator1 = new SafeMapCreator();
     }
 

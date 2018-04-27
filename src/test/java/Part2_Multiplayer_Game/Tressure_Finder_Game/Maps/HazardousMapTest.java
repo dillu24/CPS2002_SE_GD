@@ -13,7 +13,9 @@ public class HazardousMapTest {
     private HazardousMap map1;
     @Before
     public void setUp(){
-        map1 = new HazardousMap();
+        HazardousMap.setInstanceNull();
+        map1 = HazardousMap.getInstance(50);
+        map1.generateMap();
     }
 
     @After
@@ -52,7 +54,7 @@ public class HazardousMapTest {
         for(int i=0;i<50;i++){ //loops through all the tiles in the map
             for(int j=0;j<50;j++){
                 if(map1.getTileType(i,j)=='W'){ //checks which are water tile
-                    numberOfWaterTiles++; //coutns the water
+                    numberOfWaterTiles++; //counts the water
                 }
             }
         }
@@ -78,5 +80,10 @@ public class HazardousMapTest {
             }
         }
         return numberOfGreenTiles;
+    }
+
+    @Test
+    public void testSameMapInstance(){
+        assertEquals(HazardousMap.getInstance(50),map1);
     }
 }
