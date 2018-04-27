@@ -239,7 +239,7 @@ public class GameEngine {
 	 * This method is used to check the different events a player may experience. These are when a player dies because
 	 * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
 	 * stop the game after and announce the winner/s after this round of turns is completed
-	 * @param PlayerNo
+	 * @param playerNo
 	 * used to store the player number
 	 */
     void playersEvents(int playerNo){
