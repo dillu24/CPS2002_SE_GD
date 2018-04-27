@@ -2,7 +2,9 @@ package Part2_Multiplayer_Game.Tressure_Finder_Game;
 
 import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
+import Part2_Multiplayer_Game.Exceptions.InvalidMapTypeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.SafeMap;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -31,11 +33,11 @@ public class GameEngineTest {
      * This method is used to check incorrect initialization
      */
     @Before
-    public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
+    public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException,InvalidMapTypeException{
         treasureGame = new GameEngine();
         treasureGame.mapSize =50;
-        treasureGame2 = new GameEngine(50,3);
-        treasureGame3 = new GameEngine(5, 2);
+        treasureGame2 = new GameEngine(50,3,"Safe");
+        treasureGame3 = new GameEngine(5, 2,"Hazardous");
     }
 
     /**
@@ -108,7 +110,8 @@ public class GameEngineTest {
      */
     @Test
     public void testStartingPositionCorrectness(){
-        treasureGame.map = new Map(5);
+        treasureGame.map = new SafeMap(5);
+        treasureGame.map.generateMap();
         for(int i=0;i<5;i++){
             for(int j=0;j<5;j++){
                 if(treasureGame.map.getTileType(i,j)=='W'){
@@ -127,9 +130,9 @@ public class GameEngineTest {
      * exception is generated
      */
     @Test
-    public void testInvalidMapSizeNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
+    public void testInvalidMapSizeNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException,InvalidMapTypeException{
         exceptionExcepted.expect(InvalidMapSizeException.class);
-        new GameEngine(1,5);
+        new GameEngine(1,5,"Safe");
     }
 
     /**
@@ -137,9 +140,9 @@ public class GameEngineTest {
      * exception is generated
      */
     @Test
-    public void testInvalidNumberOfPlayersNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException{
+    public void testInvalidNumberOfPlayersNonDefaultConstructorM() throws InvalidMapSizeException,InvalidNumberOfPlayersException,InvalidMapTypeException{
         exceptionExcepted.expect(InvalidNumberOfPlayersException.class);
-        new GameEngine(5,1);
+        new GameEngine(5,1,"Safe");
     }
 
     /**
@@ -269,6 +272,18 @@ public class GameEngineTest {
         treasureGame3.players[0].move('D');
         treasureGame3.playersEvents(0);
         assertEquals(true,treasureGame3.treasureFound);
+    }
+
+    @Test
+    public void testValidMapType() throws InvalidMapTypeException{
+        assertEquals(true,treasureGame.validMapType("Safe"));
+        assertEquals(true,treasureGame.validMapType("Hazardous"));
+    }
+
+    @Test
+    public void testInvalidMapType() throws InvalidMapTypeException{
+        exceptionExcepted.expect(InvalidMapTypeException.class);
+        treasureGame.validMapType("In-safe");
     }
 
     /**

@@ -247,6 +247,7 @@ public class GameEngine {
         return moveInput;
     }
 
+<<<<<<< HEAD
     /**
      * This method is used to check the different events a player may experience. These are when a player dies because
      * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
@@ -254,6 +255,15 @@ public class GameEngine {
      * @param playerNo
      * used to store the player number
      */
+=======
+	/**
+	 * This method is used to check the different events a player may experience. These are when a player dies because
+	 * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
+	 * stop the game after and announce the winner/s after this round of turns is completed
+	 * @param playerNo
+	 * used to store the player number
+	 */
+>>>>>>> 0f6cec85f47dd7df443076a3292f6089de0832bf
     void playersEvents(int playerNo){
         if (map.getTileType(players[playerNo].getPosition().getX(), players[playerNo].getPosition().getY()) == 'W') {
             playerLivingStatus[playerNo] = false; //player dies
@@ -295,12 +305,21 @@ public class GameEngine {
 
     /**
      * This method combines all the game logic of the Treasure game.
+<<<<<<< HEAD
      * Whilst the treasure has not been found, the turn counter is incremented and the players will
      * have their  map files displayed via browser. Then their turn starts, if they are dead they will
      * respawn to their starting positions. Then they will move 1 tile in the direction they want to move
      * and finally we will check if any special event occurs, eg if they die or fidn the treasure.
      * When the treasure is found the map files will be created, written and displayed one last time
      * and whoever is in the treasure tile is deemed as a winner.
+=======
+	 * Whilst the treasure has not been found, the turn counter is incremented and the players will
+	 * have their  map files displayed via browser. Then their turn starts, if they are dead they will
+	 * respawn to their starting positions. Then they will move 1 tile in the direction they want to move 
+	 * and finally we will check if any special event occurs, eg if they die or fidn the treasure.
+	 * When the treasure is found the map files will be created, written and displayed one last time 
+	 * and whoever is in the treasure tile is deemed as a winner.
+>>>>>>> 0f6cec85f47dd7df443076a3292f6089de0832bf
      */
 
     public void StartGame(){
