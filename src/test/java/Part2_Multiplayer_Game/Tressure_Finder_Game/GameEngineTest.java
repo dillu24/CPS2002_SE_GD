@@ -41,10 +41,10 @@ public class GameEngineTest {
      * This method is used to check incorrect initialization
      */
     @Before
-    public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException,InvalidMapTypeException{
+    public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException,InvalidMapTypeException,InvalidNumberOfTeamsException{
         treasureGame = new GameEngine();
         treasureGame.mapSize =5;
-        treasureGame2 = new GameEngine(5,3,"Safe");
+        treasureGame2 = new GameEngine(5,3,"Safe",2);
         treasureGame3 = new GameEngine(5, 2,"Hazardous");
         safeMap = SafeMap.getInstance(5);
     }
