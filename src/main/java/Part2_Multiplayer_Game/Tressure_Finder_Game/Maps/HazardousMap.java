@@ -7,14 +7,16 @@ import java.util.Random;
  */
 
 public class HazardousMap extends Map {
-    float percentageOfWaterTiles; //stores the percetnage of water tiles to be used in tests
-    HazardousMap(){
-        size = 50;
-        type = "Hazardous";
-        MatrixOfTiles = new char[50][50];
-        generateMap();
+    private static HazardousMap instance = null; //Create a null instance
+    float percentageOfWaterTiles; // stores the percentage of water tiles to be used for checking in unit tests
+
+    public static HazardousMap getInstance(int mapSize){
+        if (instance == null){ //if no instance has yet been created
+            instance = new HazardousMap(mapSize); //create a new one
+        }
+        return instance;//show our only immutable instance
     }
-    public HazardousMap(int size){
+    private HazardousMap(int size){
         setMapSize(size);
         type = "Hazardous";
         MatrixOfTiles = new char [size][size];

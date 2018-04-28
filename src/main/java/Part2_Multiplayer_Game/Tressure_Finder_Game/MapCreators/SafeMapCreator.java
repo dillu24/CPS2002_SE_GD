@@ -9,9 +9,11 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.SafeMap;
  */
 
 public class SafeMapCreator extends MapCreator {
-    public Map createMap(String Type,int size){
-        SafeMap map = new SafeMap(size); // create map
-        map.generateMap(); //generate the map tiles
-        return map;
+
+    public Map createMap(String Type, int size){
+        SafeMap safeMap;
+        safeMap = SafeMap.getInstance(size);//Call the method that gets the single instance
+        safeMap.generateMap(); //generate the map tiles
+        return safeMap;
     }
 }

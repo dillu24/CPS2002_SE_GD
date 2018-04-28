@@ -1,5 +1,7 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.Maps;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.MapCreators.SafeMapCreator;
+
 import java.util.Random;
 
 /**
@@ -7,15 +9,18 @@ import java.util.Random;
  */
 
 public class SafeMap extends Map {
+    private static SafeMap instance = null; //Create a null instance
     float percentageOfWaterTiles; // stores the percentage of water tiles to be used for checking in unit tests
-    SafeMap(){
-        size = 50; //give default values
-        type = "Safe";
-        MatrixOfTiles = new char[50][50];
-        generateMap();
 
+    public static SafeMap getInstance(int mapSize){
+        if (instance == null){//if no instance has yet been created
+            instance = new SafeMap(mapSize); //create a new one
+        }
+        return instance;//show our only immutable instance
     }
-    public SafeMap(int size){
+
+
+    private SafeMap(int size){
         setMapSize(size);
         type = "Safe";
         MatrixOfTiles = new char [size][size];

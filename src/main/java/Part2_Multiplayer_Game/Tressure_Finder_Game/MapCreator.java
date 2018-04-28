@@ -7,9 +7,10 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.MapCreators.SafeMapCreator;
  * This class is used as the super class of all creators , thus calling the concrete creator's createMap method.
  */
 public class MapCreator {
+
     public Map createMap(String type,int size){
         MapCreator creator = findConcreteCreator(type,size); //get the concrete class according to type passed by user
-        return creator.createMap(type,size); // call it's factory method
+        return creator.createMap(type,size); // call its factory method
     }
 
     /**

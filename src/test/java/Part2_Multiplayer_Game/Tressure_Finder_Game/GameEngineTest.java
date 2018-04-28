@@ -29,7 +29,7 @@ public class GameEngineTest {
             {'G','G','G','G','G'},
             {'G','G','G','G','G'}};
 
-
+    private SafeMap safeMap;
     /**
      * A rule done in order to test for exceptions
      */
@@ -42,9 +42,10 @@ public class GameEngineTest {
     @Before
     public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException,InvalidMapTypeException{
         treasureGame = new GameEngine();
-        treasureGame.mapSize =50;
-        treasureGame2 = new GameEngine(50,3,"Safe");
+        treasureGame.mapSize =5;
+        treasureGame2 = new GameEngine(5,3,"Safe");
         treasureGame3 = new GameEngine(5, 2,"Hazardous");
+        safeMap = SafeMap.getInstance(5);
     }
 
     /**
@@ -116,7 +117,8 @@ public class GameEngineTest {
      */
     @Test
     public void testStartingPositionInWater(){
-        treasureGame.map = new SafeMap(5);
+
+        treasureGame.map = safeMap;
         treasureGame.map.setMap(tileMap);
         assertEquals(false,treasureGame.validStartingPosition(0,1));
     }
@@ -126,7 +128,7 @@ public class GameEngineTest {
      */
     @Test
     public void testStartingPositionInTreasure(){
-        treasureGame.map = new SafeMap(5);
+        treasureGame.map = safeMap;
         treasureGame.map.setMap(tileMap);
         assertEquals(false,treasureGame.validStartingPosition(1,0));
 
@@ -137,7 +139,7 @@ public class GameEngineTest {
      */
     @Test
     public void testStartingPositionInGreen(){
-        treasureGame.map = new SafeMap(5);
+        treasureGame.map = safeMap;
         treasureGame.map.setMap(tileMap);
         assertEquals(true,treasureGame.validStartingPosition(0,0));
     }
@@ -187,7 +189,7 @@ public class GameEngineTest {
     public void testInvalidMoveUpByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(0,5);
+        treasureGame2.players[0].setPosition(0,4);
         treasureGame2.validateMove('U',0);
     }
 
@@ -201,7 +203,7 @@ public class GameEngineTest {
     public void testInvalidMoveDownByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(treasureGame2.mapSize-1,5);
+        treasureGame2.players[0].setPosition(treasureGame2.mapSize-1,4);
         treasureGame2.validateMove('D',0);
     }
 
@@ -215,7 +217,7 @@ public class GameEngineTest {
     public void testInvalidMoveLeftByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(5,0);
+        treasureGame2.players[0].setPosition(4,0);
         treasureGame2.validateMove('L',0);
     }
 
@@ -229,7 +231,7 @@ public class GameEngineTest {
     public void testInvalidMoveRightByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(5,treasureGame2.mapSize-1);
+        treasureGame2.players[0].setPosition(4,treasureGame2.mapSize-1);
         treasureGame2.validateMove('R',0);
     }
 
@@ -242,7 +244,7 @@ public class GameEngineTest {
     public void testInvalidMoveCharacterByUser() throws InvalidCharacterInputMoveException{
         exceptionExcepted.expect(InvalidCharacterInputMoveException.class);
         treasureGame2.initializeGame();
-        treasureGame2.players[0].setPosition(treasureGame2.mapSize-1,5);
+        treasureGame2.players[0].setPosition(treasureGame2.mapSize-1,4);
         treasureGame2.validateMove('G',0);
     }
 
@@ -307,5 +309,6 @@ public class GameEngineTest {
         treasureGame = null;
         treasureGame2 = null;
         treasureGame3 = null;
+        safeMap = null;
     }
 }
