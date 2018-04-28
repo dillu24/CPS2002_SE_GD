@@ -1,7 +1,6 @@
 package Part2_Multiplayer_Game.HTML_File_Gen;
 
-import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
-import Part2_Multiplayer_Game.Tressure_Finder_Game.GameEngine;
+import Part2_Multiplayer_Game.Observer.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.SafeMap;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;

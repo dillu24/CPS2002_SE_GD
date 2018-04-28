@@ -1,7 +1,6 @@
 package Part2_Multiplayer_Game.HTML_File_Gen;
 
-import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
-import Part2_Multiplayer_Game.*;
+import Part2_Multiplayer_Game.Observer.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
 
 import java.awt.Desktop;
@@ -121,7 +120,7 @@ public class HTML_Gen {
         bw.write("</style>");
         bw.write("</head>");
         bw.write("<body>");
-        bw.write("<h2>Player #"+(playerNo+1)+" Map:"+" Turn #"+turnNo+"</h2>");
+        bw.write("<h2>Observer #"+(playerNo+1)+" Map:"+" Turn #"+turnNo+"</h2>");
         bw.write("<table>");
         for(i = 0; i<mapSize; i++){
             bw.write("<tr>");
