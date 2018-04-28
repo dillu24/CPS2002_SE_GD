@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6a00a06f-f164-48d2-8d0a-de4fcb1f21f6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map_player_1.html" afterPath="$PROJECT_DIR$/map_player_1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map_player_2.html" afterPath="$PROJECT_DIR$/map_player_2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map_player_3.html" afterPath="$PROJECT_DIR$/map_player_3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map_player_4.html" afterPath="$PROJECT_DIR$/map_player_4.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,21 +35,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameLauncher.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameLauncher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
+            <state relative-caret-position="594">
               <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameEngine.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameEngine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+            <state relative-caret-position="3071">
+              <caret line="380" column="44" lean-forward="true" selection-start-line="380" selection-start-column="44" selection-end-line="380" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -54,11 +58,11 @@
       <file leaf-file-name="TreasureFinderPlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="75" column="74" lean-forward="true" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
+            <state relative-caret-position="238">
+              <caret line="34" column="70" lean-forward="false" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
               <folding>
-                <element signature="e#4829#4830#0" expanded="true" />
-                <element signature="e#4876#4877#0" expanded="true" />
+                <element signature="e#4734#4735#0" expanded="true" />
+                <element signature="e#4781#4782#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -589,7 +593,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40694007" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.045387994" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -718,29 +722,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+        <state relative-caret-position="594">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="75" column="74" lean-forward="true" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
+        <state relative-caret-position="238">
+          <caret line="34" column="70" lean-forward="false" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
           <folding>
-            <element signature="e#4829#4830#0" expanded="true" />
-            <element signature="e#4876#4877#0" expanded="true" />
+            <element signature="e#4734#4735#0" expanded="true" />
+            <element signature="e#4781#4782#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="3071">
+          <caret line="380" column="44" lean-forward="true" selection-start-line="380" selection-start-column="44" selection-end-line="380" selection-end-column="44" />
           <folding />
         </state>
       </provider>
