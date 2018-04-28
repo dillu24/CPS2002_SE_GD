@@ -32,7 +32,7 @@ public class GameEngine {
     boolean treasureFound = false; //The game will end when the treasure is found.
     boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
     private HTML_Gen htmlGenerator; //An object used to generate the HTML Files
-    private String mapType;
+    private String mapType; //stores whether the map is safe or hazardous
 
     GameEngine(){} //default constructor used for testing the GameEngine class
 
@@ -61,6 +61,15 @@ public class GameEngine {
         htmlGenerator = new HTML_Gen(); //initializes the html object
     }
 
+    /**
+     * This method is used to check that the map types entered by the user are correct
+     * @param mapType
+     * Stores the map type name the user entered
+     * @return
+     * True if the map type is Hazardous or Safe
+     * @throws InvalidMapTypeException
+     * If the map Type is not Hazardous or Safe
+     */
     boolean validMapType(String mapType) throws InvalidMapTypeException{
         if(mapType.equals("Hazardous") || mapType.equals("Safe")){
             return true;
@@ -247,15 +256,6 @@ public class GameEngine {
         return moveInput;
     }
 
-
-    /**
-     * This method is used to check the different events a player may experience. These are when a player dies because
-     * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
-     * stop the game after and announce the winner/s after this round of turns is completed
-     * @param playerNo
-     * used to store the player number
-     */
-
 	/**
 	 * This method is used to check the different events a player may experience. These are when a player dies because
 	 * they entered a water tile OR when a player finds the treasure to alert the game the treasure is found to then
@@ -305,21 +305,12 @@ public class GameEngine {
 
     /**
      * This method combines all the game logic of the Treasure game.
-<<<<<<< HEAD
-     * Whilst the treasure has not been found, the turn counter is incremented and the players will
-     * have their  map files displayed via browser. Then their turn starts, if they are dead they will
-     * respawn to their starting positions. Then they will move 1 tile in the direction they want to move
-     * and finally we will check if any special event occurs, eg if they die or fidn the treasure.
-     * When the treasure is found the map files will be created, written and displayed one last time
-     * and whoever is in the treasure tile is deemed as a winner.
-=======
 	 * Whilst the treasure has not been found, the turn counter is incremented and the players will
 	 * have their  map files displayed via browser. Then their turn starts, if they are dead they will
-	 * respawn to their starting positions. Then they will move 1 tile in the direction they want to move 
+	 * respawn to their starting positions. Then they will move 1 tile in the direction they want to move
 	 * and finally we will check if any special event occurs, eg if they die or fidn the treasure.
-	 * When the treasure is found the map files will be created, written and displayed one last time 
+	 * When the treasure is found the map files will be created, written and displayed one last time
 	 * and whoever is in the treasure tile is deemed as a winner.
->>>>>>> 0f6cec85f47dd7df443076a3292f6089de0832bf
      */
 
     public void StartGame(){
@@ -339,7 +330,7 @@ public class GameEngine {
         generateFiles();
         for(int i=0;i<numberOfPlayers;i++){
             if (map.getTileType(players[i].getPosition().getX(), players[i].getPosition().getY()) == 'T') {
-                System.out.println("Observer #" + (i + 1) + " has won the game.");
+                System.out.println("Player #" + (i + 1) + " has won the game.");
             }
         }
     }
