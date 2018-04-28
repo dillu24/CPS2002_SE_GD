@@ -4,6 +4,7 @@ import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapTypeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.TeamSubject;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen;
 
@@ -33,6 +34,8 @@ public class GameEngine {
     boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
     private HTML_Gen htmlGenerator; //An object used to generate the HTML Files
     private String mapType; //stores whether the map is safe or hazardous
+    TeamSubject teamList;
+    int numberOfTeams;
 
     GameEngine(){} //default constructor used for testing the GameEngine class
 
@@ -50,15 +53,22 @@ public class GameEngine {
      * Whenever the number of players passed as parameters is not as specified
      */
 
-    public GameEngine(int mapSize , int numberOfPlayers,String mapType) throws InvalidNumberOfPlayersException,InvalidMapSizeException,InvalidMapTypeException{
+    public GameEngine(int mapSize , int numberOfPlayers,String mapType,int numberOfTeams) throws
+            InvalidNumberOfPlayersException,InvalidMapSizeException,InvalidMapTypeException,InvalidTeamSizeException{
         validNumberOfPlayers(numberOfPlayers); //validate number of players
         this.numberOfPlayers = numberOfPlayers; //store it if correct
         validMapSize(numberOfPlayers,mapSize); //validate map size
         this.mapSize = mapSize; //store it if correct
         validMapType(mapType);
         this.mapType = mapType;
+        validTeamSize(numberOfTeams);
+        this.numberOfTeams = numberOfTeams;
         playerLivingStatus = new boolean[mapSize]; //initialize li playerLiving Status
         htmlGenerator = new HTML_Gen(); //initializes the html object
+    }
+
+    boolean validTeamSize(int numberOfTeams){
+        if(numberOfTeams >=2)
     }
 
     /**
