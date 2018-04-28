@@ -21,6 +21,7 @@ public class HTML_Gen_Test {
     private int mapSize;
     private TreasureFinderPlayer []players;
     private int playerNo;
+    private int teamNo;
     private Position playerPosition;
     private int xPos, yPos;
     private HTML_Gen hGen;
