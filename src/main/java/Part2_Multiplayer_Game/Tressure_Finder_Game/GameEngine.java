@@ -28,7 +28,7 @@ public class GameEngine {
     private Position startingPosition[]; //An array of all the starting position of each player , so that whenever a player
     //Enters a water tile , he can restart again from that same position.
     int mapSize; //Stores the size of the map
-    private int numberOfPlayers; //stores the number of players playing the game
+    int numberOfPlayers; //stores the number of players playing the game
     private int turnNo; //stores the turn number
     boolean treasureFound = false; //The game will end when the treasure is found.
     boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
@@ -53,19 +53,19 @@ public class GameEngine {
      * Whenever the number of players passed as parameters is not as specified
      * @throws InvalidMapSizeException
      * Whenever the number of players passed as parameters is not as specified
-     * @throws InvalidTeamSizeException
+     * @throws InvalidNumberOfTeamsException
      * Whenever the number of teams is not valid
      */
 
     public GameEngine(int mapSize , int numberOfPlayers,String mapType,int numberOfTeams) throws
-            InvalidNumberOfPlayersException,InvalidMapSizeException,InvalidMapTypeException,InvalidTeamSizeException{
+            InvalidNumberOfPlayersException,InvalidMapSizeException,InvalidMapTypeException,InvalidNumberOfTeamsException{
         validNumberOfPlayers(numberOfPlayers); //validate number of players
         this.numberOfPlayers = numberOfPlayers; //store it if correct
         validMapSize(numberOfPlayers,mapSize); //validate map size
         this.mapSize = mapSize; //store it if correct
         validMapType(mapType);
         this.mapType = mapType;
-        validTeamSize(numberOfTeams);
+        validNumberOfTeams(numberOfTeams);
         this.numberOfTeams = numberOfTeams;
         playerLivingStatus = new boolean[mapSize]; //initialize li playerLiving Status
         htmlGenerator = new HTML_Gen(); //initializes the html object
@@ -97,8 +97,19 @@ public class GameEngine {
         htmlGenerator = new HTML_Gen(); //initializes the html object
     }
 
-    boolean validTeamSize(int numberOfTeams){
-        if(numberOfTeams >=2)
+    /**
+     * This method is used to check that the number of teams is valid
+     * @param numberOfTeams
+     * Stores the value to be checked
+     * @return
+     * true if correct , exception if incorrect
+     */
+    boolean validNumberOfTeams(int numberOfTeams){
+        if(numberOfTeams >=2 && numberOfTeams<numberOfPlayers){
+            return true;
+        }else{
+            throw new InvalidNumberOfTeamsException(numberOfTeams);
+        }
     }
 
     /**

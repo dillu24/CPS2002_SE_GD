@@ -302,6 +302,43 @@ public class GameEngineTest {
     }
 
     /**
+     * This method is used to test that the validator returns true when entering a valid team size
+     * @throws InvalidNumberOfTeamsException
+     * If the test fails
+     */
+    @Test
+    public void testValidNumberOfTeams() throws InvalidNumberOfTeamsException{
+        treasureGame.numberOfPlayers = 5;
+        assertEquals(true,treasureGame.validNumberOfTeams(4));
+        assertEquals(true,treasureGame.validNumberOfTeams(2));
+        assertEquals(true,treasureGame.validNumberOfTeams(3));
+    }
+
+    /**
+     * This method is used to test that the validator returns an exception when entering a invalid team size
+     * @throws InvalidNumberOfTeamsException
+     * What is expected to be thrown
+     */
+    @Test
+    public void testNumberOfTeamsIsZero() throws InvalidNumberOfTeamsException{
+        exceptionExcepted.expect(InvalidNumberOfTeamsException.class);
+        treasureGame.numberOfPlayers = 5;
+        treasureGame.validNumberOfTeams(0);
+    }
+
+    /**
+     * This method is used to test that the validator returns an exception when entering a invalid team size
+     * @throws InvalidNumberOfTeamsException
+     * What is expected to be thrown
+     */
+    @Test
+    public void testNumberOfTeamsGreaterThanNumberOfPlayers() throws InvalidNumberOfTeamsException{
+        exceptionExcepted.expect(InvalidNumberOfTeamsException.class);
+        treasureGame.numberOfPlayers = 5;
+        treasureGame.validNumberOfTeams(5);
+    }
+
+    /**
      * This method makes removes the allocated memory to the object.
      */
     @After
