@@ -345,7 +345,11 @@ public class GameEngine {
         for (int i = 0; i < numberOfPlayers; i++) {
             File playerFile = null;
             try {
-                playerFile = htmlGenerator.generatePlayerFile(players, playerTeam[i], i, turnNo, mapSize, map, players[i].isVisited);
+                if (gameMode.equals("Collaborative")) {
+                    playerFile = htmlGenerator.generatePlayerFile(players, playerTeam[i], i, turnNo, mapSize, map, players[i].isVisited);
+                }else if(gameMode.equals("Single")){
+                    playerFile = htmlGenerator.generatePlayerFile(players, -1, i, turnNo, mapSize, map, players[i].isVisited);
+                }
                 //call the generatePlayerFile method
             } catch (IOException e) {
                 e.printStackTrace();
