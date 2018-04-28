@@ -57,6 +57,7 @@ public class GameLauncher {
                         }
                     }
                 }
+                else if (numberOfPlayers == 2){gameMode = "S";}
                 System.out.println("Enter Safe if you want a safe map , or Hazardous if you want a hazardous map");
                 mapType = sc.next();
                 if (numberOfPlayers <= 4) { //Each player size has different minimum size of maps
