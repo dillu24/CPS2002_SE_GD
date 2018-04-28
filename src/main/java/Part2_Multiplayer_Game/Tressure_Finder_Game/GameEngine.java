@@ -291,7 +291,7 @@ public class GameEngine {
 
     private char getMoveFromUser(int playerID){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Observer "+(playerID+1)+
+        System.out.println("Player "+(playerID+1)+
                 " Please enter 'U' to move up , 'D' to move down , 'L' to move left or 'R' to move right.");
         boolean validInput = false; //used to check if the player input is valid
         char moveInput = 'F'; //stores the player input character
