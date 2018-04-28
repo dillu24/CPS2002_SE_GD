@@ -56,8 +56,9 @@ public class GameLauncher {
                             }
                         }
                     }
+                }else{
+                    gameMode = "S";
                 }
-                else if (numberOfPlayers == 2){gameMode = "S";}
                 System.out.println("Enter Safe if you want a safe map , or Hazardous if you want a hazardous map");
                 mapType = sc.next();
                 if (numberOfPlayers <= 4) { //Each player size has different minimum size of maps
@@ -85,6 +86,7 @@ public class GameLauncher {
             }catch (Exception e){ //if the parameters passed are not correct notify the user and iterate again untill
                                   //proper parameters are entered
                 System.out.println("You did not enter input as specified");
+                gameMode = "z"; //to invalidate previously saved game mode
             }
         }
         if(game != null){ //start the game if everything went well.
