@@ -11,9 +11,7 @@ import Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.InputMismatchException;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * This is the Game Engine class and it encodes the game's logic , valid moves and rules of the game as specified by
@@ -35,7 +33,7 @@ public class GameEngine {
     boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
     private HTML_Gen htmlGenerator; //An object used to generate the HTML Files
     private String mapType; //stores whether the map is safe or hazardous
-    private TeamSubject teamList;
+    private ArrayList<TeamSubject> teamList;
     private int numberOfTeams;
 
     GameEngine(){} //default constructor used for testing the GameEngine class
@@ -70,6 +68,7 @@ public class GameEngine {
         this.numberOfTeams = numberOfTeams;
         playerLivingStatus = new boolean[mapSize]; //initialize li playerLiving Status
         htmlGenerator = new HTML_Gen(); //initializes the html object
+        teamList = new ArrayList<TeamSubject>();
     }
 
     /**
@@ -96,6 +95,7 @@ public class GameEngine {
         this.mapType = mapType;
         playerLivingStatus = new boolean[mapSize]; //initialize li playerLiving Status
         htmlGenerator = new HTML_Gen(); //initializes the html object
+        teamList = new ArrayList<TeamSubject>();
     }
 
     /**
@@ -105,7 +105,7 @@ public class GameEngine {
      * @return
      * true if correct , exception if incorrect
      */
-    boolean validNumberOfTeams(int numberOfTeams){
+    boolean validNumberOfTeams(int numberOfTeams) throws InvalidNumberOfTeamsException{
         if(numberOfTeams >=2 && numberOfTeams<numberOfPlayers){
             return true;
         }else{
@@ -212,7 +212,11 @@ public class GameEngine {
                 xStartPos = rand.nextInt(mapSize);
                 yStartPos = rand.nextInt(mapSize);
             }
-            players[i] = new TreasureFinderPlayer(xStartPos,yStartPos,mapSize);
+            if(numberOfTeams>0){
+                players[i] = new TreasureFinderPlayer(teamList.get(i%numberOfTeams),xStartPos,yStartPos,mapSize);
+            }else{
+                players[i] = new TreasureFinderPlayer(xStartPos,yStartPos,mapSize);
+            }
             startingPosition[i] = new Position(); //create new player according to his starting position
             startingPosition[i].setX(xStartPos);
             startingPosition[i].setY(yStartPos);
@@ -224,6 +228,9 @@ public class GameEngine {
      */
 
     void initializeGame(){
+        for(int i=0;i<numberOfTeams;i++){
+            teamList.add(new TeamSubject(mapSize));
+        }
         turnNo = 0;
         MapCreator creator = new MapCreator();
         map = creator.createMap(mapType,mapSize);

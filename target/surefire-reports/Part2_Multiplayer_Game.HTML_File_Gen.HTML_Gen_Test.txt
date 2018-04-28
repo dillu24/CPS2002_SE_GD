@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen_Test
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
