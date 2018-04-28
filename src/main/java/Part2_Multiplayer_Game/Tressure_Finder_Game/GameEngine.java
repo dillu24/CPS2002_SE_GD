@@ -34,10 +34,42 @@ public class GameEngine {
     boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
     private HTML_Gen htmlGenerator; //An object used to generate the HTML Files
     private String mapType; //stores whether the map is safe or hazardous
-    TeamSubject teamList;
-    int numberOfTeams;
+    private TeamSubject teamList;
+    private int numberOfTeams;
 
     GameEngine(){} //default constructor used for testing the GameEngine class
+
+    /**
+     * This constructor is used to initialize the game fields according to the assignment specification.Thus the
+     * game engine class is initialized correctly only when the passed mapSize and numberOfPlayers values are
+     * in the specified ranges. Other wise the game instance is not created.
+     * @param mapSize
+     * Stores the map size
+     * @param numberOfPlayers
+     * stores the number of players playing the game
+     * @param numberOfTeams
+     * Stores the number of teams to play against each other
+     * @throws InvalidNumberOfPlayersException
+     * Whenever the number of players passed as parameters is not as specified
+     * @throws InvalidMapSizeException
+     * Whenever the number of players passed as parameters is not as specified
+     * @throws InvalidTeamSizeException
+     * Whenever the number of teams is not valid
+     */
+
+    public GameEngine(int mapSize , int numberOfPlayers,String mapType,int numberOfTeams) throws
+            InvalidNumberOfPlayersException,InvalidMapSizeException,InvalidMapTypeException,InvalidTeamSizeException{
+        validNumberOfPlayers(numberOfPlayers); //validate number of players
+        this.numberOfPlayers = numberOfPlayers; //store it if correct
+        validMapSize(numberOfPlayers,mapSize); //validate map size
+        this.mapSize = mapSize; //store it if correct
+        validMapType(mapType);
+        this.mapType = mapType;
+        validTeamSize(numberOfTeams);
+        this.numberOfTeams = numberOfTeams;
+        playerLivingStatus = new boolean[mapSize]; //initialize li playerLiving Status
+        htmlGenerator = new HTML_Gen(); //initializes the html object
+    }
 
     /**
      * This constructor is used to initialize the game fields according to the assignment specification.Thus the
@@ -53,16 +85,14 @@ public class GameEngine {
      * Whenever the number of players passed as parameters is not as specified
      */
 
-    public GameEngine(int mapSize , int numberOfPlayers,String mapType,int numberOfTeams) throws
-            InvalidNumberOfPlayersException,InvalidMapSizeException,InvalidMapTypeException,InvalidTeamSizeException{
+    public GameEngine(int mapSize , int numberOfPlayers,String mapType) throws
+            InvalidNumberOfPlayersException,InvalidMapSizeException,InvalidMapTypeException{
         validNumberOfPlayers(numberOfPlayers); //validate number of players
         this.numberOfPlayers = numberOfPlayers; //store it if correct
         validMapSize(numberOfPlayers,mapSize); //validate map size
         this.mapSize = mapSize; //store it if correct
         validMapType(mapType);
         this.mapType = mapType;
-        validTeamSize(numberOfTeams);
-        this.numberOfTeams = numberOfTeams;
         playerLivingStatus = new boolean[mapSize]; //initialize li playerLiving Status
         htmlGenerator = new HTML_Gen(); //initializes the html object
     }
