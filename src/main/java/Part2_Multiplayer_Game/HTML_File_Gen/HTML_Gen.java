@@ -16,6 +16,8 @@ public class HTML_Gen {
      * can simply pass the parameters and call the constructor to generate the HTML File of a specific player.
      * @param players
      * Stores the information of all the players
+     * @param teamNo
+     * stores the index of the team currently playing the game
      * @param playerNo
      * stores the index of the player currently playing the game
      * @param turnNo
@@ -30,8 +32,11 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
+    public HTML_Gen(TreasureFinderPlayer [] players, int teamNo, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
+        generatePlayerFile(players, teamNo, playerNo, turnNo, mapSize, map, isVisited);
+    }
     public HTML_Gen(TreasureFinderPlayer [] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
-        generatePlayerFile(players, playerNo, turnNo, mapSize, map, isVisited);
+        generatePlayerFile(players, -1, playerNo, turnNo, mapSize, map, isVisited);
     }
 
     /**
@@ -39,6 +44,8 @@ public class HTML_Gen {
      * and information inputted.
      * @param players
      * Stores the information of all the players
+     * @param teamNo
+     * stores the index of the team currently playing the game
      * @param playerNo
      * stores the index of the player currently playing the game
      * @param turnNo
@@ -53,7 +60,7 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    public File generatePlayerFile(TreasureFinderPlayer[] players, int playerNo, int turnNo,
+    public File generatePlayerFile(TreasureFinderPlayer[] players, int teamNo, int playerNo, int turnNo,
                                            int mapSize, Map map, boolean[][] isVisited) throws IOException {
 
         String file = "map_player_" + (playerNo+1) + ".html"; //File Name of this player map
@@ -62,7 +69,7 @@ public class HTML_Gen {
 
         BufferedWriter bw = new BufferedWriter(new FileWriter(f));
 
-        writeHTMLFile(bw, players, playerNo, turnNo, mapSize, map, isVisited);
+        writeHTMLFile(bw, players, teamNo, playerNo, turnNo, mapSize, map, isVisited);
         return f;
     }
 
@@ -81,6 +88,8 @@ public class HTML_Gen {
      * This method will handle the writing of html files of the player map and information inputted.
      * @param players
      * Stores the information of all the players
+     * @param teamNo
+     * stores the index of the player currently playing the game
      * @param playerNo
      * stores the index of the player currently playing the game
      * @param turnNo
@@ -95,7 +104,7 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int playerNo, int turnNo,
+    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int teamNo, int playerNo, int turnNo,
                                int mapSize, Map map, boolean[][] isVisited) throws IOException{
         int i,j;
         int tileSize = 20;
@@ -120,7 +129,11 @@ public class HTML_Gen {
         bw.write("</style>");
         bw.write("</head>");
         bw.write("<body>");
-        bw.write("<h2>Observer #"+(playerNo+1)+" Map:"+" Turn #"+turnNo+"</h2>");
+        if(teamNo>=0) {
+            bw.write("<h2>Team #" + (teamNo + 1) + " Player #" + (playerNo + 1) + " Map:" + " Turn #" + turnNo + "</h2>");
+        }else{
+            bw.write("<h2>Player #" + (playerNo + 1) + " Map:" + " Turn #" + turnNo + "</h2>");
+        }
         bw.write("<table>");
         for(i = 0; i<mapSize; i++){
             bw.write("<tr>");
