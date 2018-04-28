@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcbb3c8-e109-4db5-bdd7-b591c736fa3e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Observer/TreasureFinderPlayerTest.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Observer/Observer.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/Observer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Observer/TreasureFinderPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Observer/TreasureFinderPlayerTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/GameLauncher.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/GameLauncher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngineTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/Subject.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/Subject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TeamSubject.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TeamSubject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/SubjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/SubjectTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TeamSubjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TeamSubjectTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,7 +96,18 @@
     <favorites_list name="CPS2002_SE_GD" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GameLauncher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="58" column="72" lean-forward="false" selection-start-line="58" selection-start-column="72" selection-end-line="58" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -136,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Exceptions/InvalidMapTypeExceptionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidMapTypeException.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Map.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreator.java" />
@@ -159,6 +154,7 @@
         <option value="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TeamSubjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Observer/TreasureFinderPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/Subject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java" />
       </list>
     </option>
   </component>
@@ -838,7 +834,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -856,7 +852,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3133236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3133236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1040,14 +1036,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidMapTypeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1330,6 +1318,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="58" column="72" lean-forward="false" selection-start-line="58" selection-start-column="72" selection-end-line="58" selection-end-column="72" />
           <folding />
         </state>
       </provider>

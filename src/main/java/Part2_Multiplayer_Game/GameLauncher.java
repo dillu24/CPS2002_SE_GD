@@ -56,7 +56,7 @@ public class GameLauncher {
                 validInput = true;
             }catch (Exception e){ //if the parameters passed are not correct notify the user and iterate again untill
                                   //proper parameters are entered
-                System.out.println("You did not enter in specified ranges");
+                System.out.println("You did not enter input as specified");
             }
         }
         if(game != null){ //start the game if everything went well.
