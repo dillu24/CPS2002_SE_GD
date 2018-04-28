@@ -4,7 +4,7 @@ import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapTypeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
-import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
+import Part2_Multiplayer_Game.Observer.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen;
 
 import java.io.File;
@@ -223,7 +223,7 @@ public class GameEngine {
 
     private char getMoveFromUser(int playerID){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Player "+(playerID+1)+
+        System.out.println("Observer "+(playerID+1)+
                 " Please enter 'U' to move up , 'D' to move down , 'L' to move left or 'R' to move right.");
         boolean validInput = false; //used to check if the player input is valid
         char moveInput = 'F'; //stores the player input character
@@ -339,7 +339,7 @@ public class GameEngine {
         generateFiles();
         for(int i=0;i<numberOfPlayers;i++){
             if (map.getTileType(players[i].getPosition().getX(), players[i].getPosition().getY()) == 'T') {
-                System.out.println("Player #" + (i + 1) + " has won the game.");
+                System.out.println("Observer #" + (i + 1) + " has won the game.");
             }
         }
     }

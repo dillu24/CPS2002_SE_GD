@@ -1,9 +1,9 @@
-package Part2_Multiplayer_Game.Player;
+package Part2_Multiplayer_Game.Observer;
 
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
 
 /**
- * This class is used to define the Player in the Treasure Finder multi-player game ,in this game each player has a
+ * This class is used to define the Observer in the Treasure Finder multi-player game ,in this game each player has a
  * position , where this position represents the player's location in the map . This class also contains a move method
  * that allows the player to move to a new position in the map , note that this method does not verify if the position
  * within the map is valid , but assumes that in the game engine the move was verified to be correct , and thus in this
@@ -11,7 +11,7 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
  * the 2-D array and not the actual x-y plane . The player also has an isVisited boolean 2-D array that is used by the
  * HTML object to check the parts of the map that are uncovered and hence need to be viewed.
  */
-public class TreasureFinderPlayer {
+public class TreasureFinderPlayer extends Observer{ //PANINA extended Observer !!!!!!!!!!!!!!!
     private Position position = new Position(); // Stores the position of the player in the map
     public boolean[][] isVisited; // The array used to specify which tiles are uncovered or not
 
@@ -26,6 +26,7 @@ public class TreasureFinderPlayer {
      * Stores the y co-ordinate that will be given to the position of this new player
      */
     public TreasureFinderPlayer(int x, int y, int mapSize){
+
         isVisited = new boolean[mapSize][mapSize];
         setPosition(x,y);
     }
@@ -39,6 +40,7 @@ public class TreasureFinderPlayer {
      */
 
     public void setPosition(int x,int y){
+        isVisited = getMapState(); //!!! Added by PANINA before moving the player gets the previous
         position.setX(x);
         position.setY(y);
         isVisited[x][y] = true;
@@ -62,6 +64,7 @@ public class TreasureFinderPlayer {
      */
 
     public void move(char direction){
+
         switch (direction){
             case 'U':
                 setPosition(position.getX()-1,position.getY());
@@ -76,6 +79,26 @@ public class TreasureFinderPlayer {
                 setPosition(position.getX(),position.getY()+1);
                 break;
         }
+    }
+
+   /*PANINA added the below code*/
+
+    public TreasureFinderPlayer(){}
+
+    public TreasureFinderPlayer(TeamSubject tSubject,int x, int y, int mapSize){
+            tSubject = new TeamSubject (mapSize);
+            tSubject.attach(this);
+            isVisited = new boolean[mapSize][mapSize];
+            setPosition(x,y);
+    }
+
+    public boolean[][] getMapState(){
+        return TeamSubject.getState();
+    }
+
+    @Override
+    public void update() {
+        //System.out.println( "Binary String: " + Integer.toBinaryString( subject.getState() ) );
     }
 
 }
