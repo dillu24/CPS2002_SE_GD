@@ -72,6 +72,9 @@ public class TreasureFinderPlayer extends Observer {
     public void setPosition(int x,int y){
         position.setX(x);
         position.setY(y);
+        if(tSubject != null){
+            isVisited = tSubject.getState(); //to not loose previous moves
+        }
         isVisited[x][y] = true;
         if(tSubject != null){ //in order to check if we are in collaborative mode
             tSubject.setState(isVisited);
