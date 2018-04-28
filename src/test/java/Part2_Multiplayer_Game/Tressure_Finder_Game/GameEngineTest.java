@@ -4,6 +4,7 @@ import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapTypeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
+import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfTeamsException;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.SafeMap;
 import org.junit.After;
 import org.junit.Before;

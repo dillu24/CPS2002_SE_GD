@@ -36,11 +36,12 @@ public class GameLauncher {
                         sc.next();
                     }
                 }
+                validInput = false;
                 if(numberOfPlayers > 2) {
                     System.out.println("Please enter the game mode you wish to play: 'S' for single Mode or 'C' for "+
                                     "Collaborative/Team Mode in the game.");
                     gameMode = sc.next();
-                    if (gameMode == "C" || gameMode == "c"){
+                    if (gameMode.equals("C") || gameMode.equals("c")){
                         System.out.println("Please enter the number of teams you wish to play in the game, please "+
                                         "enter a number between 2 and "+(numberOfPlayers-1));
                         while (!validInput) { //until input is valid
@@ -72,9 +73,9 @@ public class GameLauncher {
                     }
                 }
                 validInput = false;
-                if(gameMode == "C"||gameMode=="c") {
+                if(gameMode.equals("C")||gameMode.equals("c")) {
                     game = new GameEngine(mapSize, numberOfPlayers, mapType, numberOfTeams); //try to create a game object
-                }else if (gameMode == "S"||gameMode=="s"){
+                }else if (gameMode.equals("S")||gameMode.equals("s")){
                     game = new GameEngine(mapSize, numberOfPlayers, mapType);
                 }
                 validInput = true;
