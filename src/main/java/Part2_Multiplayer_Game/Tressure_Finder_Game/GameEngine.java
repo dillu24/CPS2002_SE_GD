@@ -36,9 +36,9 @@ public class GameEngine {
     private String mapType; //stores whether the map is safe or hazardous
     private ArrayList<TeamSubject> teamList;
     private int numberOfTeams;
-    boolean teamsChosen[];
-    int playerTeam[];
-    String gameMode;
+    private boolean teamsChosen[];
+    private int playerTeam[];
+    private String gameMode;
 
     GameEngine() {
     } //default constructor used for testing the GameEngine class
@@ -206,14 +206,14 @@ public class GameEngine {
             if (numberOfTeams > 0) {
                 boolean teamAssigned = false;
                 for (int j = 0; j < numberOfTeams; j++) {
-                    if (teamsChosen[j] == false) {
+                    if (!teamsChosen[j]) {
                         teamNo = j;
                         teamsChosen[j] = true;
                         teamAssigned = true;
                         break;
                     }
                 }
-                if (teamAssigned == false) {
+                if (!teamAssigned) {
                     teamNo = rand.nextInt(numberOfTeams);
                 }
                 playerTeam[i] = teamNo;
