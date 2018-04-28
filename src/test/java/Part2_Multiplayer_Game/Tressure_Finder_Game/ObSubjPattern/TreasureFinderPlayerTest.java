@@ -1,10 +1,10 @@
-package Part2_Multiplayer_Game.Observer;
+package Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern;
 
+import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.TreasureFinderPlayer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -14,12 +14,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class TreasureFinderPlayerTest {
     private TreasureFinderPlayer player; //stores the play object
-    private boolean[][] isVisited1 = {
-            {true,true,true,false,false},
-            {false,false,false,false,false},
-            {false,false,false,false,false},
-            {false,false,false,false,false},
-            {false,false,false,false,false}};
 
     /**
      * Creates a new player in a dummy position irrespective of the map size , since only the move function is tested
@@ -85,18 +79,10 @@ public class TreasureFinderPlayerTest {
         assertEquals(20,player.getPosition().getY());
     }
 
-    @Test
-    public void testUpdate(){ //Trying to test first we will have a player with some info, then we will update the subject
-        //We will moce and update again and check if it is working by comparing the player's isVisited and the subject's isVisited
-        isVisited1 = player.getMapState();
-        TeamSubject tSubject = player.update();
-        player.move('R');
-        TeamSubject tSubject = player.update();
-        assertArrayEquals(isVisited1,tSubject.getState());
-    }
     /**
      * Deallocate the object's memory
      */
+
     @After
     public void teardown(){
         player = null;

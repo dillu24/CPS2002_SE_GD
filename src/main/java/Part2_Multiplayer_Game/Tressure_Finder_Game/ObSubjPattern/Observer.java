@@ -1,7 +1,5 @@
-package Part2_Multiplayer_Game.Observer;
+package Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern;
 
 public abstract class Observer {
-        public Subject subject;
         public abstract void update();
-
 }

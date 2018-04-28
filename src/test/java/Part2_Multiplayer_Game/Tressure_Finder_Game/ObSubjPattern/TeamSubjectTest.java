@@ -1,11 +1,10 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern;
 
-import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * This class is used to test the Team Subject
@@ -32,8 +31,7 @@ public class TeamSubjectTest {
     @Before
     public void setUp(){
         teamSubject = new TeamSubject(5);
-        player = new TreasureFinderPlayer();
-        teamSubject.attach(player);
+        player = new TreasureFinderPlayer(teamSubject,4,4,5);
         player.isVisited = playerMapState;
     }
 
@@ -51,7 +49,7 @@ public class TeamSubjectTest {
      */
     @Test
     public void testCorrectNotificationAndUpdateOfMapState(){
-        teamSubject.setMapState(teamMapState);
-        assertEquals(teamSubject.getMapState(),player.isVisited);
+        teamSubject.setState(teamMapState);
+        assertEquals(teamSubject.getState(),player.isVisited);
     }
 }

@@ -1,5 +1,6 @@
-package Part2_Multiplayer_Game.Observer;
-
+package Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.Observer;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.TeamSubject;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
 
 /**
@@ -11,9 +12,29 @@ import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
  * the 2-D array and not the actual x-y plane . The player also has an isVisited boolean 2-D array that is used by the
  * HTML object to check the parts of the map that are uncovered and hence need to be viewed.
  */
-public class TreasureFinderPlayer extends Observer{ //PANINA extended Observer !!!!!!!!!!!!!!!
+public class TreasureFinderPlayer extends Observer {
     private Position position = new Position(); // Stores the position of the player in the map
     public boolean[][] isVisited; // The array used to specify which tiles are uncovered or not
+    private TeamSubject tSubject; //stores the team subject
+
+    /**
+     * This constructor is used to create a new player with given parameters below
+     * @param tSubject
+     * Stores the team subject the player is assigned to
+     * @param x
+     * Stores the x value position of the player
+     * @param y
+     * Stores the y value position of the player
+     * @param mapSize
+     * Stores the map size the player is playing in
+     */
+
+    public TreasureFinderPlayer(TeamSubject tSubject, int x, int y, int mapSize){
+        this.tSubject = tSubject;
+        this.tSubject.attach(this);
+        isVisited = new boolean[mapSize][mapSize];
+        setPosition(x,y);
+    }
 
 
     /**
@@ -32,6 +53,15 @@ public class TreasureFinderPlayer extends Observer{ //PANINA extended Observer !
     }
 
     /**
+     * This method was created to give access to the private variable tSubject
+     * @return
+     * The private variable tSubject
+     */
+    public TeamSubject getTeamSubject(){
+        return tSubject;
+    }
+
+    /**
      * The method is used to set the position of the player to a new position in the map , and uncover the starting position
      * @param x
      * Stores the new x co-ordinate of the position of the player
@@ -40,7 +70,6 @@ public class TreasureFinderPlayer extends Observer{ //PANINA extended Observer !
      */
 
     public void setPosition(int x,int y){
-        isVisited = getMapState(); //!!! Added by PANINA before moving the player gets the previous
         position.setX(x);
         position.setY(y);
         isVisited[x][y] = true;
@@ -81,24 +110,13 @@ public class TreasureFinderPlayer extends Observer{ //PANINA extended Observer !
         }
     }
 
-   /*PANINA added the below code*/
-
-    public TreasureFinderPlayer(){}
-
-    public TreasureFinderPlayer(TeamSubject tSubject,int x, int y, int mapSize){
-            tSubject = new TeamSubject (mapSize);
-            tSubject.attach(this);
-            isVisited = new boolean[mapSize][mapSize];
-            setPosition(x,y);
-    }
-
-    public boolean[][] getMapState(){
-        return TeamSubject.getState();
-    }
+    /**
+     * This method is used by the subject to update the observer's state
+     */
 
     @Override
     public void update() {
-        //System.out.println( "Binary String: " + Integer.toBinaryString( subject.getState() ) );
+        isVisited = tSubject.getState();
     }
 
 }

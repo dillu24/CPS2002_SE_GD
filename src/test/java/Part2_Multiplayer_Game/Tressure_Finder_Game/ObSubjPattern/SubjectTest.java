@@ -1,16 +1,9 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern;
 
-import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-import java.util.Observer;
-
-/**
- * Created by Dylan Galea on 28/04/2018.
- */
 
 /**
  * This test class is used to check that the basic methods for the observers are correct
@@ -40,7 +33,7 @@ public class SubjectTest {
      */
     @Test
     public void testValidAttach(){
-        Observer player = new TreasureFinderPlayer();
+        Observer player = new TreasureFinderPlayer(4,4,5);
         subject.attach(player);
         assertEquals(1,subject.observerList.size());
     }
@@ -51,7 +44,7 @@ public class SubjectTest {
      */
     @Test
     public void testValidDetach(){
-        Observer player = new TreasureFinderPlayer();
+        Observer player = new TreasureFinderPlayer(4,4,5);
         subject.detach(player);
         assertEquals(0,subject.observerList.size());
     }

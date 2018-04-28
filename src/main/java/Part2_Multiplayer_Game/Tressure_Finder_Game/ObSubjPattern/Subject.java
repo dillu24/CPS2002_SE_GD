@@ -4,15 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Dylan Galea on 28/04/2018.
- */
-
-/**
  * This class is used to encode the Subject for the Observer Design pattern .This class providesthe basic functions
  * for the concrete observers.
  */
 public class Subject {
-    protected List<Observer> observerList = new ArrayList<Observer>(); //Stores the List of observers
+    List<Observer> observerList = new ArrayList<Observer>(); //Stores the List of observers
 
     /**
      * This method is used to add a new observer to the observer list

@@ -4,7 +4,7 @@ import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapTypeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
-import Part2_Multiplayer_Game.Observer.TreasureFinderPlayer;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.HTML_File_Gen.HTML_Gen;
 
 import java.io.File;

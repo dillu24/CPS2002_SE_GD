@@ -23,7 +23,7 @@ public class TeamSubject extends Subject {
      * @return
      * The mapState 2-D array
      */
-    public boolean[][] getMapState(){
+    public boolean[][] getState(){
         return mapState;
     }
 
@@ -33,7 +33,7 @@ public class TeamSubject extends Subject {
      * @param mapState
      * The state that will be assigned to this.mapState
      */
-    public void setMapState(boolean mapState[][]){
+    public void setState(boolean mapState[][]){
         this.mapState = mapState;
         Notify();
     }
