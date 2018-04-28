@@ -38,19 +38,21 @@ public class GameLauncher {
                 }
                 validInput = false;
                 if(numberOfPlayers > 2) {
-                    System.out.println("Please enter the game mode you wish to play: 'S' for single Mode or 'C' for "+
-                                    "Collaborative/Team Mode in the game.");
-                    gameMode = sc.next();
-                    if (gameMode.equals("C") || gameMode.equals("c")){
-                        System.out.println("Please enter the number of teams you wish to play in the game, please "+
-                                        "enter a number between 2 and "+(numberOfPlayers-1));
-                        while (!validInput) { //until input is valid
-                            try {
-                                numberOfTeams = sc.nextInt();
-                                validInput = true; // if valid break loop
-                            } catch (InputMismatchException e) { //if input not an integer
-                                System.out.println("Please enter an integer!");
-                                sc.next();
+                    while(!(gameMode.equals("C")||gameMode.equals("c")||gameMode.equals("S")||gameMode.equals("s"))){
+                        System.out.println("Please enter the game mode you wish to play: 'S' for single Mode or 'C' for " +
+                                "Collaborative/Team Mode in the game.");
+                        gameMode = sc.next();
+                        if (gameMode.equals("C") || gameMode.equals("c")) {
+                            System.out.println("Please enter the number of teams you wish to play in the game, please " +
+                                    "enter a number between 2 and " + (numberOfPlayers - 1));
+                            while (!validInput) { //until input is valid
+                                try {
+                                    numberOfTeams = sc.nextInt();
+                                    validInput = true; // if valid break loop
+                                } catch (InputMismatchException e) { //if input not an integer
+                                    System.out.println("Please enter an integer!");
+                                    sc.next();
+                                }
                             }
                         }
                     }
