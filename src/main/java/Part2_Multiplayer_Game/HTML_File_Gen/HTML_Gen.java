@@ -10,35 +10,8 @@ public class HTML_Gen {
 
     public HTML_Gen(){}
 
-    //Constructor used to call the private methods found in the class
     /**
-     * This constructor is used to run the generate player file method found in the class. Thus the game engine class
-     * can simply pass the parameters and call the constructor to generate the HTML File of a specific player.
-     * @param players
-     * Stores the information of all the players
-     * @param teamNo
-     * stores the index of the team currently playing the game
-     * @param playerNo
-     * stores the index of the player currently playing the game
-     * @param turnNo
-     * stores the current turn number the players are on
-     * @param mapSize
-     * stores the size of the map of 1 dimension (given it's a square it will be (mapSize x mapSize)
-     * @param map
-     * stores the actual map of the player. This is of type Map.
-     * @param isVisited
-     * stores a 2-d array of boolean, which determines which tiles have been already visited. Will be used to indicate
-     * that if visited the tile colour should show in the HTML file.
-     * @throws IOException
-     * Whenever there occurs a failed or interrupted I/O operations.
-     */
-    public HTML_Gen(TreasureFinderPlayer [] players, int teamNo, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
-        generatePlayerFile(players, teamNo, playerNo, turnNo, mapSize, map, isVisited);
-    }
-    /**
-     * This constructor uses exactly everything that is found in the previous one, with the difference teamNo is set to
-     * -1, this is because this method is used for single game mode, and we don't need an input for teamNo whilst not
-     * wasting more lines of code.
+     * This constructor is used for tests
      *      * @param players
      * Stores the information of all the players
      * @param playerNo
@@ -56,7 +29,7 @@ public class HTML_Gen {
      * Whenever there occurs a failed or interrupted I/O operations.
      */
 
-    public HTML_Gen(TreasureFinderPlayer [] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
+    HTML_Gen(TreasureFinderPlayer[] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
         generatePlayerFile(players, -1, playerNo, turnNo, mapSize, map, isVisited);
     }
 
@@ -131,8 +104,8 @@ public class HTML_Gen {
         int tileSize = 20;
         int borderSize = 3;
 
-        String tileColour = "";
-        String player = "";
+        String tileColour;
+        String player;
 
         bw.write("<!DOCTYPE html>");
         bw.write("<html>");
@@ -183,10 +156,10 @@ public class HTML_Gen {
      * @param isVisited
      * stores a 2-d array of boolean, which determines which tiles have been already visited. Will be used to indicate
      * that if visited the tile colour should show in the HTML file.
-     * @returns
+     * @return
      * The background colour of the tile specified
      */
-     public String getTileColour(int i,int j,Map map, boolean [][] isVisited){
+    String getTileColour(int i, int j, Map map, boolean[][] isVisited){
         char colour = 'X';
 
         if(isVisited[i][j])
@@ -219,10 +192,10 @@ public class HTML_Gen {
      * Stores the row number of the tile.
      * @param j
      * stores the column number of the tile.
-     * @returns
+     * @return
      * A string if the player is in the tile or not
      */
-    public String isPlayerHere(TreasureFinderPlayer[]players, int pNo, int i, int j){
+    String isPlayerHere(TreasureFinderPlayer[] players, int pNo, int i, int j){
         if(i == players[pNo].getPosition().getX() && j == players[pNo].getPosition().getY()){
             return "P"+(pNo+1);
         }

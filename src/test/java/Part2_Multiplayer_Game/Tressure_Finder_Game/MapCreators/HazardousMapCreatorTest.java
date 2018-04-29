@@ -1,7 +1,6 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.MapCreators;
 
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
-import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.HazardousMap;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

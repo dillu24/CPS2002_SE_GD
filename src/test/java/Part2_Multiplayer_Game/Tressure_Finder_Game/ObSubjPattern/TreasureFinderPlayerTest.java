@@ -1,6 +1,5 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern;
 
-import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.TreasureFinderPlayer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

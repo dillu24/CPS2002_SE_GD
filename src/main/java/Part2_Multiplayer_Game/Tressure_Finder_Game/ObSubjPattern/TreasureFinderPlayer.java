@@ -1,6 +1,4 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern;
-import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.Observer;
-import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.TeamSubject;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Position;
 
 /**
@@ -50,15 +48,6 @@ public class TreasureFinderPlayer extends Observer {
 
         isVisited = new boolean[mapSize][mapSize];
         setPosition(x,y);
-    }
-
-    /**
-     * This method was created to give access to the private variable tSubject
-     * @return
-     * The private variable tSubject
-     */
-    public TeamSubject getTeamSubject(){
-        return tSubject;
     }
 
     /**
