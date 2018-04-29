@@ -21,7 +21,7 @@ public class InvalidMapTypeException extends Exception {
      * @return
      * The error message of type string
      */
-    public String getInvalidMapType(){
+    String getInvalidMapType(){
         return invalidMapType;
     }
 

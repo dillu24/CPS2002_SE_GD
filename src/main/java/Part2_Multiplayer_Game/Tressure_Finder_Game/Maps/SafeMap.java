@@ -1,6 +1,5 @@
 package Part2_Multiplayer_Game.Tressure_Finder_Game.Maps;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
-import Part2_Multiplayer_Game.Tressure_Finder_Game.MapCreators.SafeMapCreator;
 
 import java.util.Random;
 

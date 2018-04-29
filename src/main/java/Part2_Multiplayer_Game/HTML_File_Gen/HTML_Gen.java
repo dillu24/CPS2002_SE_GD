@@ -1,7 +1,6 @@
 package Part2_Multiplayer_Game.HTML_File_Gen;
 
-import Part2_Multiplayer_Game.Player.TreasureFinderPlayer;
-import Part2_Multiplayer_Game.*;
+import Part2_Multiplayer_Game.Tressure_Finder_Game.ObSubjPattern.TreasureFinderPlayer;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Map;
 
 import java.awt.Desktop;
@@ -11,11 +10,9 @@ public class HTML_Gen {
 
     public HTML_Gen(){}
 
-    //Constructor used to call the private methods found in the class
     /**
-     * This constructor is used to run the generate player file method found in the class. Thus the game engine class
-     * can simply pass the parameters and call the constructor to generate the HTML File of a specific player.
-     * @param players
+     * This constructor is used for tests
+     *      * @param players
      * Stores the information of all the players
      * @param playerNo
      * stores the index of the player currently playing the game
@@ -31,8 +28,9 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    public HTML_Gen(TreasureFinderPlayer [] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
-        generatePlayerFile(players, playerNo, turnNo, mapSize, map, isVisited);
+
+    HTML_Gen(TreasureFinderPlayer[] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
+        generatePlayerFile(players, -1, playerNo, turnNo, mapSize, map, isVisited);
     }
 
     /**
@@ -40,6 +38,8 @@ public class HTML_Gen {
      * and information inputted.
      * @param players
      * Stores the information of all the players
+     * @param teamNo
+     * stores the index of the team currently playing the game
      * @param playerNo
      * stores the index of the player currently playing the game
      * @param turnNo
@@ -54,7 +54,7 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    public File generatePlayerFile(TreasureFinderPlayer[] players, int playerNo, int turnNo,
+    public File generatePlayerFile(TreasureFinderPlayer[] players, int teamNo, int playerNo, int turnNo,
                                            int mapSize, Map map, boolean[][] isVisited) throws IOException {
 
         String file = "map_player_" + (playerNo+1) + ".html"; //File Name of this player map
@@ -63,7 +63,7 @@ public class HTML_Gen {
 
         BufferedWriter bw = new BufferedWriter(new FileWriter(f));
 
-        writeHTMLFile(bw, players, playerNo, turnNo, mapSize, map, isVisited);
+        writeHTMLFile(bw, players, teamNo, playerNo, turnNo, mapSize, map, isVisited);
         return f;
     }
 
@@ -82,6 +82,8 @@ public class HTML_Gen {
      * This method will handle the writing of html files of the player map and information inputted.
      * @param players
      * Stores the information of all the players
+     * @param teamNo
+     * stores the index of the player currently playing the game
      * @param playerNo
      * stores the index of the player currently playing the game
      * @param turnNo
@@ -96,14 +98,14 @@ public class HTML_Gen {
      * @throws IOException
      * Whenever there occurs a failed or interrupted I/O operations.
      */
-    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int playerNo, int turnNo,
+    private void writeHTMLFile(BufferedWriter bw, TreasureFinderPlayer[] players, int teamNo, int playerNo, int turnNo,
                                int mapSize, Map map, boolean[][] isVisited) throws IOException{
         int i,j;
         int tileSize = 20;
         int borderSize = 3;
 
-        String tileColour = "";
-        String player = "";
+        String tileColour;
+        String player;
 
         bw.write("<!DOCTYPE html>");
         bw.write("<html>");
@@ -121,7 +123,12 @@ public class HTML_Gen {
         bw.write("</style>");
         bw.write("</head>");
         bw.write("<body>");
-        bw.write("<h2>Player #"+(playerNo+1)+" Map:"+" Turn #"+turnNo+"</h2>");
+        if(teamNo>=0) { //If we are in gamemode "Collaborative" we will find a positive/0 integer for teamNo
+            //Output the team Number with it.
+            bw.write("<h2>Team #" + (teamNo + 1) + " Player #" + (playerNo + 1) + " Map:" + " Turn #" + turnNo + "</h2>");
+        }else{ //Or else we are in gamemode "Single" thus we will find a negative integer for teamNo
+            bw.write("<h2>Player #" + (playerNo + 1) + " Map:" + " Turn #" + turnNo + "</h2>");
+        }
         bw.write("<table>");
         for(i = 0; i<mapSize; i++){
             bw.write("<tr>");
@@ -149,10 +156,10 @@ public class HTML_Gen {
      * @param isVisited
      * stores a 2-d array of boolean, which determines which tiles have been already visited. Will be used to indicate
      * that if visited the tile colour should show in the HTML file.
-     * @returns
+     * @return
      * The background colour of the tile specified
      */
-     public String getTileColour(int i,int j,Map map, boolean [][] isVisited){
+    String getTileColour(int i, int j, Map map, boolean[][] isVisited){
         char colour = 'X';
 
         if(isVisited[i][j])
@@ -185,10 +192,10 @@ public class HTML_Gen {
      * Stores the row number of the tile.
      * @param j
      * stores the column number of the tile.
-     * @returns
+     * @return
      * A string if the player is in the tile or not
      */
-    public String isPlayerHere(TreasureFinderPlayer[]players, int pNo, int i, int j){
+    String isPlayerHere(TreasureFinderPlayer[] players, int pNo, int i, int j){
         if(i == players[pNo].getPosition().getX() && j == players[pNo].getPosition().getY()){
             return "P"+(pNo+1);
         }

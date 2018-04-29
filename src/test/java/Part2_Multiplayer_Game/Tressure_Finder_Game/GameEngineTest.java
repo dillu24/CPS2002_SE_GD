@@ -4,6 +4,7 @@ import Part2_Multiplayer_Game.Exceptions.InvalidCharacterInputMoveException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapSizeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidMapTypeException;
 import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfPlayersException;
+import Part2_Multiplayer_Game.Exceptions.InvalidNumberOfTeamsException;
 import Part2_Multiplayer_Game.Tressure_Finder_Game.Maps.SafeMap;
 import org.junit.After;
 import org.junit.Before;
@@ -40,10 +41,10 @@ public class GameEngineTest {
      * This method is used to check incorrect initialization
      */
     @Before
-    public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException,InvalidMapTypeException{
+    public void setUp() throws InvalidMapSizeException,InvalidNumberOfPlayersException,InvalidMapTypeException,InvalidNumberOfTeamsException{
         treasureGame = new GameEngine();
         treasureGame.mapSize =5;
-        treasureGame2 = new GameEngine(5,3,"Safe");
+        treasureGame2 = new GameEngine(5,3,"Safe",2);
         treasureGame3 = new GameEngine(5, 2,"Hazardous");
         safeMap = SafeMap.getInstance(5);
     }
@@ -299,6 +300,43 @@ public class GameEngineTest {
     public void testInvalidMapType() throws InvalidMapTypeException{
         exceptionExcepted.expect(InvalidMapTypeException.class);
         treasureGame.validMapType("In-safe");
+    }
+
+    /**
+     * This method is used to test that the validator returns true when entering a valid team size
+     * @throws InvalidNumberOfTeamsException
+     * If the test fails
+     */
+    @Test
+    public void testValidNumberOfTeams() throws InvalidNumberOfTeamsException{
+        treasureGame.numberOfPlayers = 5;
+        assertEquals(true,treasureGame.validNumberOfTeams(4));
+        assertEquals(true,treasureGame.validNumberOfTeams(2));
+        assertEquals(true,treasureGame.validNumberOfTeams(3));
+    }
+
+    /**
+     * This method is used to test that the validator returns an exception when entering a invalid team size
+     * @throws InvalidNumberOfTeamsException
+     * What is expected to be thrown
+     */
+    @Test
+    public void testNumberOfTeamsIsZero() throws InvalidNumberOfTeamsException{
+        exceptionExcepted.expect(InvalidNumberOfTeamsException.class);
+        treasureGame.numberOfPlayers = 5;
+        treasureGame.validNumberOfTeams(0);
+    }
+
+    /**
+     * This method is used to test that the validator returns an exception when entering a invalid team size
+     * @throws InvalidNumberOfTeamsException
+     * What is expected to be thrown
+     */
+    @Test
+    public void testNumberOfTeamsGreaterThanNumberOfPlayers() throws InvalidNumberOfTeamsException{
+        exceptionExcepted.expect(InvalidNumberOfTeamsException.class);
+        treasureGame.numberOfPlayers = 5;
+        treasureGame.validNumberOfTeams(5);
     }
 
     /**
