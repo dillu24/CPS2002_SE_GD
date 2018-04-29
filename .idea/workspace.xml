@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
-              <caret line="29" column="79" lean-forward="true" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+              <caret line="29" column="79" lean-forward="false" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -102,6 +102,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Maps/SafeMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/GameLauncher.java" />
       </list>
     </option>
   </component>
@@ -1427,7 +1428,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="29" column="79" lean-forward="true" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+          <caret line="29" column="79" lean-forward="false" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
           <folding />
         </state>
       </provider>
