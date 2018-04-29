@@ -15,6 +15,8 @@ import java.util.Scanner;
 public class GameLauncher {
     public static void main(String args[]) throws IOException {
         int numberOfPlayers = 0; //stores the number of players to play the game
+        String gameMode = "";
+        int numberOfTeams = 1;
         int mapSize = 0; //stores the map size
         String mapType;
         Scanner sc = new Scanner(System.in);
@@ -23,8 +25,8 @@ public class GameLauncher {
         boolean validInput = false; //used to check for valid input
         while(!validInput){
             try{
-                System.out.println("Please enter the number of players you wish to play the game , please enter a number between" +
-                        " 2 and 8");
+                System.out.println("Please enter the number of players you wish to play in the game , please enter a "+
+                                "number between 2 and 8");
                 while (!validInput) { //until input is valid
                     try {
                         numberOfPlayers = sc.nextInt();
@@ -33,6 +35,31 @@ public class GameLauncher {
                         System.out.println("Please enter an integer!");
                         sc.next();
                     }
+                }
+                validInput = false;
+                //If more than 2 players exist then there is a choice of whether they want to play in single or
+                //collaborative mode
+                if(numberOfPlayers > 2) {
+                    while(!(gameMode.equals("C")||gameMode.equals("c")||gameMode.equals("S")||gameMode.equals("s"))){
+                        System.out.println("Please enter the game mode you wish to play: 'S' for single Mode or 'C' for " +
+                                "Collaborative/Team Mode in the game.");
+                        gameMode = sc.next();
+                        if (gameMode.equals("C") || gameMode.equals("c")) {
+                            System.out.println("Please enter the number of teams you wish to play in the game, please " +
+                                    "enter a number between 2 and " + (numberOfPlayers - 1));
+                            while (!validInput) { //until input is valid
+                                try {
+                                    numberOfTeams = sc.nextInt();
+                                    validInput = true; // if valid break loop
+                                } catch (InputMismatchException e) { //if input not an integer
+                                    System.out.println("Please enter an integer!");
+                                    sc.next();
+                                }
+                            }
+                        }
+                    }
+                }else{ //if tehre are 2 teams, tehn it has to be single mode.
+                    gameMode = "S";
                 }
                 System.out.println("Enter Safe if you want a safe map , or Hazardous if you want a hazardous map");
                 mapType = sc.next();
@@ -52,11 +79,16 @@ public class GameLauncher {
                     }
                 }
                 validInput = false;
-                game = new GameEngine(mapSize,numberOfPlayers,mapType); //try to create a game object
+                if(gameMode.equals("C")||gameMode.equals("c")) {
+                    game = new GameEngine(mapSize, numberOfPlayers, mapType, numberOfTeams); //try to create a game object
+                }else if (gameMode.equals("S")||gameMode.equals("s")){
+                    game = new GameEngine(mapSize, numberOfPlayers, mapType);
+                }
                 validInput = true;
             }catch (Exception e){ //if the parameters passed are not correct notify the user and iterate again untill
                                   //proper parameters are entered
-                System.out.println("You did not enter in specified ranges");
+                System.out.println("You did not enter input as specified");
+                gameMode = "z"; //to invalidate previously saved game mode
             }
         }
         if(game != null){ //start the game if everything went well.

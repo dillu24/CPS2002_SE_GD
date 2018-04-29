@@ -22,10 +22,10 @@ public class HazardousMapTest {
         map1 = null;
     }
 
-    @Test
     /**
      * This test is used to ensure that a generated map contains only 1 treasure
      */
+    @Test
     public void testIf1TreasureIsPresentInMap(){
         assertEquals(1,numberOfTreasuresInMap());
     }

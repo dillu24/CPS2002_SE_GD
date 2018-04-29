@@ -29,12 +29,12 @@ public class SafeMapCreatorTest {
         creator1= null;
     }
 
-    @Test
     /**
      * This test is used to check if when creating a map from this class,
      * it is actually creating a map with the type of 'Safe' as well checking
      * it has the inputted map size to ensure it was inserted in the right constructor
      */
+    @Test
     public void testCreateSafeMap() {
         Map sM = creator1.createMap("Safe",mapSize1);
         int size =  sM.getMapSize();
