@@ -35,6 +35,27 @@ public class HTML_Gen {
     public HTML_Gen(TreasureFinderPlayer [] players, int teamNo, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
         generatePlayerFile(players, teamNo, playerNo, turnNo, mapSize, map, isVisited);
     }
+    /**
+     * This constructor uses exactly everything that is found in the previous one, with the difference teamNo is set to
+     * -1, this is because this method is used for single game mode, and we don't need an input for teamNo whilst not
+     * wasting more lines of code.
+     *      * @param players
+     * Stores the information of all the players
+     * @param playerNo
+     * stores the index of the player currently playing the game
+     * @param turnNo
+     * stores the current turn number the players are on
+     * @param mapSize
+     * stores the size of the map of 1 dimension (given it's a square it will be (mapSize x mapSize)
+     * @param map
+     * stores the actual map of the player. This is of type Map.
+     * @param isVisited
+     * stores a 2-d array of boolean, which determines which tiles have been already visited. Will be used to indicate
+     * that if visited the tile colour should show in the HTML file.
+     * @throws IOException
+     * Whenever there occurs a failed or interrupted I/O operations.
+     */
+
     public HTML_Gen(TreasureFinderPlayer [] players, int playerNo, int turnNo, int mapSize, Map map, boolean[][] isVisited) throws IOException {
         generatePlayerFile(players, -1, playerNo, turnNo, mapSize, map, isVisited);
     }
@@ -129,9 +150,10 @@ public class HTML_Gen {
         bw.write("</style>");
         bw.write("</head>");
         bw.write("<body>");
-        if(teamNo>=0) {
+        if(teamNo>=0) { //If we are in gamemode "Collaborative" we will find a positive/0 integer for teamNo
+            //Output the team Number with it.
             bw.write("<h2>Team #" + (teamNo + 1) + " Player #" + (playerNo + 1) + " Map:" + " Turn #" + turnNo + "</h2>");
-        }else{
+        }else{ //Or else we are in gamemode "Single" thus we will find a negative integer for teamNo
             bw.write("<h2>Player #" + (playerNo + 1) + " Map:" + " Turn #" + turnNo + "</h2>");
         }
         bw.write("<table>");

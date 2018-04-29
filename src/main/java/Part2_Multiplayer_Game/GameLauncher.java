@@ -37,6 +37,8 @@ public class GameLauncher {
                     }
                 }
                 validInput = false;
+                //If more than 2 players exist then there is a choice of whether they want to play in single or
+                //collaborative mode
                 if(numberOfPlayers > 2) {
                     while(!(gameMode.equals("C")||gameMode.equals("c")||gameMode.equals("S")||gameMode.equals("s"))){
                         System.out.println("Please enter the game mode you wish to play: 'S' for single Mode or 'C' for " +
@@ -56,7 +58,7 @@ public class GameLauncher {
                             }
                         }
                     }
-                }else{
+                }else{ //if tehre are 2 teams, tehn it has to be single mode.
                     gameMode = "S";
                 }
                 System.out.println("Enter Safe if you want a safe map , or Hazardous if you want a hazardous map");

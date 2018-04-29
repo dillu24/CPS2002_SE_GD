@@ -34,11 +34,11 @@ public class GameEngine {
     boolean playerLivingStatus[]; //Will be used to track if players are alive or dead.
     private HTML_Gen htmlGenerator; //An object used to generate the HTML Files
     private String mapType; //stores whether the map is safe or hazardous
-    private ArrayList<TeamSubject> teamList;
-    private int numberOfTeams;
-    private boolean teamsChosen[];
-    private int playerTeam[];
-    private String gameMode;
+    private ArrayList<TeamSubject> teamList; //stores the subject according to the team
+    private int numberOfTeams; //stores the number of teams
+    private boolean teamsChosen[]; //boolean array used to ensure all teams are filled with at least 1 person
+    private int playerTeam[]; //array used to store which team a player is in
+    private String gameMode; //stores the game mode type
 
     GameEngine() {
     } //default constructor used for testing the GameEngine class
@@ -373,9 +373,14 @@ public class GameEngine {
      * Whilst the treasure has not been found, the turn counter is incremented and the players will
      * have their  map files displayed via browser. Then their turn starts, if they are dead they will
      * respawn to their starting positions. Then they will move 1 tile in the direction they want to move
-     * and finally we will check if any special event occurs, eg if they die or fidn the treasure.
+     * and finally we will check if any special event occurs, eg if they die or find the treasure.
      * When the treasure is found the map files will be created, written and displayed one last time
      * and whoever is in the treasure tile is deemed as a winner.
+     *
+     * Another addition to this is whether the game type is Single or Collaborative. The above explains a single game.
+     * Now if a collaborative game is in use, with each player iteration, a player is allocated to a team, sequentially
+     * if a team does not yet have a team member it is filled up, the rest are assigned to a random team. In
+     * Collaborative mode the winning statement gives out the team that won and the players in that team.
      */
 
     public void StartGame() {
