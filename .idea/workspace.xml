@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a00a06f-f164-48d2-8d0a-de4fcb1f21f6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Exceptions/InvalidMapTypeException.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Exceptions/InvalidMapTypeException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/GameLauncher.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/GameLauncher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/GameEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/HazardousMapCreator.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/HazardousMapCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Maps/SafeMap.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/Maps/SafeMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.class" afterPath="$PROJECT_DIR$/target/classes/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/HazardousMapCreatorTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/HazardousMapCreatorTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayerTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidMapTypeException.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Exceptions/InvalidMapTypeException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/HazardousMapCreator.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/HazardousMapCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Maps/SafeMap.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Maps/SafeMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/HTML_File_Gen/HTML_Gen_Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/HazardousMapCreatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/HazardousMapCreatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/SafeMapCreatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/MapCreators/SafeMapCreatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Maps/HazardousMapTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/Maps/HazardousMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayerTest.java" afterPath="$PROJECT_DIR$/src/test/java/Part2_Multiplayer_Game/Tressure_Finder_Game/ObSubjPattern/TreasureFinderPlayerTest.java" />
-    </list>
+    <list default="true" id="6a00a06f-f164-48d2-8d0a-de4fcb1f21f6" name="Default" comment="" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
